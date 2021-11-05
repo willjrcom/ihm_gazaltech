@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<G_Picture G_PictureVer="2.0">
+	<G_bmplib SaveAsJpg="0" G_bmplib.blb_CT="20211027  17:15:46" G_bmplib.blb_MT="20211018  10:16:56" CurBmpTotal="89" AllBmpTotal="116">
+		<G_bmp szFilename="contract" nId="8" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" enumPicType="0" bTransparent="1" cTransColor="16777215"/>
+		<G_bmp szFilename="home " nId="10" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="NEXT" nId="11" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="play-button" nId="12" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="stop (1)" nId="14" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="eco" nId="22" nWidth="157" nHeigth="215" nFileSize="0" enumPicType="0" nTotalStatus="2" bTransparent="1" cTransColor="11592943">
+			<MulStatus szFilename="eco.MID0" dwMID="0"/>
+			<MulStatus szFilename="eco.MID1" dwMID="1"/></G_bmp>
+		<G_bmp szFilename="fundoeco" nId="23" nWidth="320" nHeigth="237" nFileSize="0" enumPicType="0" nTotalStatus="2" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="fundoeco.MID1" dwMID="1"/></G_bmp>
+		<G_bmp szFilename="Icons1_ICWD2_0.bmp" nId="24" nTotalStatus="1" nWidth="100" nHeigth="100" nFileSize="30040" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="transparente" nId="27" nTotalStatus="1" nWidth="320" nHeigth="169" nFileSize="162280" enumPicType="0" bTransparent="1" cTransColor="11592943"/>
+		<G_bmp szFilename="recipe" nId="30" nTotalStatus="1" nWidth="60" nHeigth="60" nFileSize="10840" enumPicType="0" bTransparent="1" cTransColor="11592943"/>
+		<G_bmp szFilename="gear" nId="32" nTotalStatus="1" nWidth="60" nHeigth="60" nFileSize="10840" enumPicType="0" bTransparent="1" cTransColor="11592943"/>
+		<G_bmp szFilename="200x60" nId="33" nTotalStatus="1" nWidth="200" nHeigth="60" nFileSize="36040" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="280x60" nId="34" nTotalStatus="1" nWidth="280" nHeigth="60" nFileSize="50440" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="280x54geral" nId="35" nTotalStatus="1" nWidth="280" nHeigth="54" nFileSize="45400" enumPicType="0" bTransparent="0" cTransColor="0"/>
+		<G_bmp szFilename="280x54temp" nId="36" nTotalStatus="1" nWidth="280" nHeigth="54" nFileSize="45400" enumPicType="0" bTransparent="0" cTransColor="0"/>
+		<G_bmp szFilename="280x54vel" nId="37" nTotalStatus="1" nWidth="280" nHeigth="54" nFileSize="45400" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="homep" nId="38" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="back" nId="39" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="Azul.bmp" nId="40" nTotalStatus="1" nWidth="319" nHeigth="167" nFileSize="160360" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="next" nId="41" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="beep" nId="42" nWidth="75" nHeigth="37" nFileSize="0" enumPicType="0" nTotalStatus="2" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="beep.MID0" dwMID="0"/>
+			<MulStatus szFilename="beep.MID1" dwMID="1"/></G_bmp>
+		<G_bmp szFilename="onoff" nId="43" nWidth="300" nHeigth="60" nFileSize="0" enumPicType="0" nTotalStatus="2" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="onoff.MID0" dwMID="0"/>
+			<MulStatus szFilename="onoff.MID1" dwMID="1"/></G_bmp>
+		<G_bmp szFilename="pizza" nId="44" nWidth="50" nHeigth="50" nFileSize="0" enumPicType="0" nTotalStatus="4" bTransparent="1" cTransColor="0">
+			<MulStatus szFilename="pizza.MID0" dwMID="0"/>
+			<MulStatus szFilename="pizza.MID1" dwMID="1"/>
+			<MulStatus szFilename="pizza.MID2" dwMID="2"/>
+			<MulStatus szFilename="pizza.MID3" dwMID="3"/></G_bmp>
+		<G_bmp szFilename="300x45" nId="45" nTotalStatus="1" nWidth="300" nHeigth="45" nFileSize="40540" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="edit50" nId="46" nTotalStatus="1" nWidth="52" nHeigth="52" nFileSize="8152" enumPicType="0" bTransparent="0" cTransColor="0"/>
+		<G_bmp szFilename="save" nId="47" nTotalStatus="1" nWidth="52" nHeigth="52" nFileSize="8152" enumPicType="0" bTransparent="0" cTransColor="0"/>
+		<G_bmp szFilename="recipe1" nId="48" nWidth="51" nHeigth="42" nFileSize="0" enumPicType="0" nTotalStatus="11" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="recipe1.MID0" dwMID="0"/>
+			<MulStatus szFilename="recipe1.MID1" dwMID="1"/>
+			<MulStatus szFilename="recipe1.MID2" dwMID="2"/>
+			<MulStatus szFilename="recipe1.MID3" dwMID="3"/>
+			<MulStatus szFilename="recipe1.MID4" dwMID="4"/>
+			<MulStatus szFilename="recipe1.MID5" dwMID="5"/>
+			<MulStatus szFilename="recipe1.MID6" dwMID="6"/>
+			<MulStatus szFilename="recipe1.MID7" dwMID="7"/>
+			<MulStatus szFilename="recipe1.MID8" dwMID="8"/>
+			<MulStatus szFilename="recipe1.MID9" dwMID="9"/>
+			<MulStatus szFilename="recipe1.MID10" dwMID="10"/></G_bmp>
+		<G_bmp szFilename="recipe2" nId="49" nWidth="51" nHeigth="42" nFileSize="0" enumPicType="0" nTotalStatus="11" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="recipe2.MID0" dwMID="0"/>
+			<MulStatus szFilename="recipe2.MID1" dwMID="1"/>
+			<MulStatus szFilename="recipe2.MID2" dwMID="2"/>
+			<MulStatus szFilename="recipe2.MID3" dwMID="3"/>
+			<MulStatus szFilename="recipe2.MID4" dwMID="4"/>
+			<MulStatus szFilename="recipe2.MID5" dwMID="5"/>
+			<MulStatus szFilename="recipe2.MID6" dwMID="6"/>
+			<MulStatus szFilename="recipe2.MID7" dwMID="7"/>
+			<MulStatus szFilename="recipe2.MID8" dwMID="8"/>
+			<MulStatus szFilename="recipe2.MID9" dwMID="9"/>
+			<MulStatus szFilename="recipe2.MID10" dwMID="10"/></G_bmp>
+		<G_bmp szFilename="recipe3" nId="50" nWidth="51" nHeigth="42" nFileSize="0" enumPicType="0" nTotalStatus="11" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="recipe3.MID0" dwMID="0"/>
+			<MulStatus szFilename="recipe3.MID1" dwMID="1"/>
+			<MulStatus szFilename="recipe3.MID2" dwMID="2"/>
+			<MulStatus szFilename="recipe3.MID3" dwMID="3"/>
+			<MulStatus szFilename="recipe3.MID4" dwMID="4"/>
+			<MulStatus szFilename="recipe3.MID5" dwMID="5"/>
+			<MulStatus szFilename="recipe3.MID6" dwMID="6"/>
+			<MulStatus szFilename="recipe3.MID7" dwMID="7"/>
+			<MulStatus szFilename="recipe3.MID8" dwMID="8"/>
+			<MulStatus szFilename="recipe3.MID9" dwMID="9"/>
+			<MulStatus szFilename="recipe3.MID10" dwMID="10"/></G_bmp>
+		<G_bmp szFilename="recipe4" nId="51" nWidth="51" nHeigth="42" nFileSize="0" enumPicType="0" nTotalStatus="11" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="recipe4.MID0" dwMID="0"/>
+			<MulStatus szFilename="recipe4.MID1" dwMID="1"/>
+			<MulStatus szFilename="recipe4.MID2" dwMID="2"/>
+			<MulStatus szFilename="recipe4.MID3" dwMID="3"/>
+			<MulStatus szFilename="recipe4.MID4" dwMID="4"/>
+			<MulStatus szFilename="recipe4.MID5" dwMID="5"/>
+			<MulStatus szFilename="recipe4.MID6" dwMID="6"/>
+			<MulStatus szFilename="recipe4.MID7" dwMID="7"/>
+			<MulStatus szFilename="recipe4.MID8" dwMID="8"/>
+			<MulStatus szFilename="recipe4.MID9" dwMID="9"/>
+			<MulStatus szFilename="recipe4.MID10" dwMID="10"/></G_bmp>
+		<G_bmp szFilename="recipe5" nId="52" nWidth="51" nHeigth="42" nFileSize="0" enumPicType="0" nTotalStatus="11" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="recipe5.MID0" dwMID="0"/>
+			<MulStatus szFilename="recipe5.MID1" dwMID="1"/>
+			<MulStatus szFilename="recipe5.MID2" dwMID="2"/>
+			<MulStatus szFilename="recipe5.MID3" dwMID="3"/>
+			<MulStatus szFilename="recipe5.MID4" dwMID="4"/>
+			<MulStatus szFilename="recipe5.MID5" dwMID="5"/>
+			<MulStatus szFilename="recipe5.MID6" dwMID="6"/>
+			<MulStatus szFilename="recipe5.MID7" dwMID="7"/>
+			<MulStatus szFilename="recipe5.MID8" dwMID="8"/>
+			<MulStatus szFilename="recipe5.MID9" dwMID="9"/>
+			<MulStatus szFilename="recipe5.MID10" dwMID="10"/></G_bmp>
+		<G_bmp szFilename="recipe6" nId="53" nWidth="51" nHeigth="42" nFileSize="0" enumPicType="0" nTotalStatus="11" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="recipe6.MID0" dwMID="0"/>
+			<MulStatus szFilename="recipe6.MID1" dwMID="1"/>
+			<MulStatus szFilename="recipe6.MID2" dwMID="2"/>
+			<MulStatus szFilename="recipe6.MID3" dwMID="3"/>
+			<MulStatus szFilename="recipe6.MID4" dwMID="4"/>
+			<MulStatus szFilename="recipe6.MID5" dwMID="5"/>
+			<MulStatus szFilename="recipe6.MID6" dwMID="6"/>
+			<MulStatus szFilename="recipe6.MID7" dwMID="7"/>
+			<MulStatus szFilename="recipe6.MID8" dwMID="8"/>
+			<MulStatus szFilename="recipe6.MID9" dwMID="9"/>
+			<MulStatus szFilename="recipe6.MID10" dwMID="10"/></G_bmp>
+		<G_bmp szFilename="recipe7" nId="54" nWidth="51" nHeigth="42" nFileSize="0" enumPicType="0" nTotalStatus="11" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="recipe7.MID0" dwMID="0"/>
+			<MulStatus szFilename="recipe7.MID1" dwMID="1"/>
+			<MulStatus szFilename="recipe7.MID2" dwMID="2"/>
+			<MulStatus szFilename="recipe7.MID3" dwMID="3"/>
+			<MulStatus szFilename="recipe7.MID4" dwMID="4"/>
+			<MulStatus szFilename="recipe7.MID5" dwMID="5"/>
+			<MulStatus szFilename="recipe7.MID6" dwMID="6"/>
+			<MulStatus szFilename="recipe7.MID7" dwMID="7"/>
+			<MulStatus szFilename="recipe7.MID8" dwMID="8"/>
+			<MulStatus szFilename="recipe7.MID9" dwMID="9"/>
+			<MulStatus szFilename="recipe7.MID10" dwMID="10"/></G_bmp>
+		<G_bmp szFilename="recipe8" nId="55" nWidth="51" nHeigth="42" nFileSize="0" enumPicType="0" nTotalStatus="11" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="recipe8.MID0" dwMID="0"/>
+			<MulStatus szFilename="recipe8.MID1" dwMID="1"/>
+			<MulStatus szFilename="recipe8.MID2" dwMID="2"/>
+			<MulStatus szFilename="recipe8.MID3" dwMID="3"/>
+			<MulStatus szFilename="recipe8.MID4" dwMID="4"/>
+			<MulStatus szFilename="recipe8.MID5" dwMID="5"/>
+			<MulStatus szFilename="recipe8.MID6" dwMID="6"/>
+			<MulStatus szFilename="recipe8.MID7" dwMID="7"/>
+			<MulStatus szFilename="recipe8.MID8" dwMID="8"/>
+			<MulStatus szFilename="recipe8.MID9" dwMID="9"/>
+			<MulStatus szFilename="recipe8.MID10" dwMID="10"/></G_bmp>
+		<G_bmp szFilename="recipe9" nId="56" nWidth="51" nHeigth="42" nFileSize="0" enumPicType="0" nTotalStatus="11" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="recipe9.MID0" dwMID="0"/>
+			<MulStatus szFilename="recipe9.MID1" dwMID="1"/>
+			<MulStatus szFilename="recipe9.MID2" dwMID="2"/>
+			<MulStatus szFilename="recipe9.MID3" dwMID="3"/>
+			<MulStatus szFilename="recipe9.MID4" dwMID="4"/>
+			<MulStatus szFilename="recipe9.MID5" dwMID="5"/>
+			<MulStatus szFilename="recipe9.MID6" dwMID="6"/>
+			<MulStatus szFilename="recipe9.MID7" dwMID="7"/>
+			<MulStatus szFilename="recipe9.MID8" dwMID="8"/>
+			<MulStatus szFilename="recipe9.MID9" dwMID="9"/>
+			<MulStatus szFilename="recipe9.MID10" dwMID="10"/></G_bmp>
+		<G_bmp szFilename="recipe10" nId="57" nWidth="51" nHeigth="42" nFileSize="0" enumPicType="0" nTotalStatus="11" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="recipe10.MID0" dwMID="0"/>
+			<MulStatus szFilename="recipe10.MID1" dwMID="1"/>
+			<MulStatus szFilename="recipe10.MID2" dwMID="2"/>
+			<MulStatus szFilename="recipe10.MID3" dwMID="3"/>
+			<MulStatus szFilename="recipe10.MID4" dwMID="4"/>
+			<MulStatus szFilename="recipe10.MID5" dwMID="5"/>
+			<MulStatus szFilename="recipe10.MID6" dwMID="6"/>
+			<MulStatus szFilename="recipe10.MID7" dwMID="7"/>
+			<MulStatus szFilename="recipe10.MID8" dwMID="8"/>
+			<MulStatus szFilename="recipe10.MID9" dwMID="9"/>
+			<MulStatus szFilename="recipe10.MID10" dwMID="10"/></G_bmp>
+		<G_bmp szFilename="inicial" nId="58" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" enumPicType="0" bTransparent="0" cTransColor="0"/>
+		<G_bmp szFilename="retornar" nId="59" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" enumPicType="0" bTransparent="0" cTransColor="0"/>
+		<G_bmp szFilename="avançar" nId="60" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" enumPicType="0" bTransparent="0" cTransColor="0"/>
+		<G_bmp szFilename="plano" nId="61" nTotalStatus="3" nWidth="319" nHeigth="237" nFileSize="0" bTransparent="0" cTransColor="0" enumPicType="0">
+			<MulStatus szFilename="" dwMID="0"/>
+			<MulStatus szFilename="plano.MID1" dwMID="1"/>
+			<MulStatus szFilename="plano.MID2" dwMID="2"/></G_bmp>
+		<G_bmp szFilename="recipe50" nId="62" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" enumPicType="0" bTransparent="1" cTransColor="11592943"/>
+		<G_bmp szFilename="143x40" nId="63" nTotalStatus="1" nWidth="143" nHeigth="40" nFileSize="17320" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="73x40" nId="64" nTotalStatus="1" nWidth="73" nHeigth="40" nFileSize="8840" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="146x40" nId="65" nTotalStatus="1" nWidth="146" nHeigth="40" nFileSize="17640" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="96x53" nId="66" nTotalStatus="1" nWidth="96" nHeigth="53" nFileSize="15304" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="house100" nId="67" nTotalStatus="1" nWidth="100" nHeigth="100" nFileSize="30040" enumPicType="0" bTransparent="0" cTransColor="0"/>
+		<G_bmp szFilename="previous100" nId="68" nTotalStatus="1" nWidth="100" nHeigth="100" nFileSize="30040" enumPicType="0" bTransparent="0" cTransColor="0"/>
+		<G_bmp szFilename="next100" nId="69" nTotalStatus="1" nWidth="100" nHeigth="100" nFileSize="30040" enumPicType="0" bTransparent="0" cTransColor="0"/>
+		<G_bmp szFilename="conf" nId="70" nTotalStatus="1" nWidth="700" nHeigth="108" nFileSize="226840" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="conf1" nId="71" nTotalStatus="1" nWidth="700" nHeigth="108" nFileSize="226840" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="config2" nId="72" nTotalStatus="1" nWidth="700" nHeigth="108" nFileSize="226840" enumPicType="0" bTransparent="0" cTransColor="0"/>
+		<G_bmp szFilename="livro" nId="73" nTotalStatus="1" nWidth="100" nHeigth="100" nFileSize="30040" enumPicType="0" bTransparent="1" cTransColor="11592943"/>
+		<G_bmp szFilename="teste" nId="74" nTotalStatus="4" nWidth="100" nHeigth="100" nFileSize="0" enumPicType="0" bTransparent="1" cTransColor="16777215">
+			<MulStatus szFilename="teste.MID0" dwMID="0"/>
+			<MulStatus szFilename="teste.MID1" dwMID="1"/>
+			<MulStatus szFilename="teste.MID2" dwMID="2"/>
+			<MulStatus szFilename="teste.MID3" dwMID="3"/></G_bmp>
+		<G_bmp szFilename="edit" nId="75" nTotalStatus="1" nWidth="100" nHeigth="100" nFileSize="30040" enumPicType="0" bTransparent="0" cTransColor="0"/>
+		<G_bmp szFilename="save14" nId="76" nTotalStatus="1" nWidth="100" nHeigth="100" nFileSize="30040" enumPicType="0" bTransparent="0" cTransColor="0"/>
+		<G_bmp szFilename="warning" nId="78" nTotalStatus="1" nWidth="80" nHeigth="80" nFileSize="19240" enumPicType="0" bTransparent="1" cTransColor="16777215"/>
+		<G_bmp szFilename="liga" nId="79" nTotalStatus="2" nWidth="100" nHeigth="100" nFileSize="0" enumPicType="0" bTransparent="1" cTransColor="11592943">
+			<MulStatus szFilename="liga.MID0" dwMID="0"/>
+			<MulStatus szFilename="liga.MID1" dwMID="1"/></G_bmp>
+		<G_bmp szFilename="geral4" nId="81" nTotalStatus="2" nWidth="100" nHeigth="100" nFileSize="0" bTransparent="1" cTransColor="1241855" enumPicType="0">
+			<MulStatus szFilename="geral4.MID0" dwMID="0"/>
+			<MulStatus szFilename="geral4.MID1" dwMID="1"/></G_bmp>
+		<G_bmp szFilename="burguer" nId="82" nWidth="134" nHeigth="131" nFileSize="0" enumPicType="0" nTotalStatus="3" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="burguer.MID0" dwMID="0"/>
+			<MulStatus szFilename="burguer.MID1" dwMID="1"/>
+			<MulStatus szFilename="burguer.MID2" dwMID="2"/></G_bmp>
+		<G_bmp szFilename="logo.bmp" nId="83" nTotalStatus="1" nWidth="413" nHeigth="313" nFileSize="388160" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="Gazal fornos" nId="84" nTotalStatus="1" nWidth="480" nHeigth="480" nFileSize="691240" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="Gazal fornos 1" nId="85" nTotalStatus="1" nWidth="480" nHeigth="480" nFileSize="691240" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="Gazal fornos1" nId="86" nTotalStatus="1" nWidth="479" nHeigth="153" nFileSize="220360" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="home-solid" nId="89" nTotalStatus="1" nWidth="480" nHeigth="426" nFileSize="205544" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="return" nId="90" nTotalStatus="1" nWidth="480" nHeigth="480" nFileSize="231464" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="radio_check" nId="91" nTotalStatus="1" nWidth="430" nHeigth="64" nFileSize="82728" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="radio_uncheck" nId="92" nTotalStatus="1" nWidth="430" nHeigth="64" nFileSize="82728" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp nId="93" nWidth="430" nHeigth="64" nFileSize="0" enumPicType="0" szFilename="radio1" nTotalStatus="7" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="radio1.MID0" dwMID="0"/>
+			<MulStatus szFilename="radio1.MID1" dwMID="1"/>
+			<MulStatus szFilename="radio1.MID2" dwMID="2"/>
+			<MulStatus szFilename="radio1.MID3" dwMID="3"/>
+			<MulStatus szFilename="radio1.MID4" dwMID="4"/>
+			<MulStatus szFilename="radio1.MID5" dwMID="5"/>
+			<MulStatus szFilename="radio1.MID6" dwMID="6"/></G_bmp>
+		<G_bmp szFilename="radio2" nId="94" nWidth="430" nHeigth="64" nFileSize="0" enumPicType="0" nTotalStatus="7" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="radio2.MID0" dwMID="0"/>
+			<MulStatus szFilename="radio2.MID1" dwMID="1"/>
+			<MulStatus szFilename="radio2.MID2" dwMID="2"/>
+			<MulStatus szFilename="radio2.MID3" dwMID="3"/>
+			<MulStatus szFilename="radio2.MID4" dwMID="4"/>
+			<MulStatus szFilename="radio2.MID5" dwMID="5"/>
+			<MulStatus szFilename="radio2.MID6" dwMID="6"/></G_bmp>
+		<G_bmp szFilename="radio3" nId="95" nWidth="430" nHeigth="64" nFileSize="0" enumPicType="0" nTotalStatus="7" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="radio3.MID0" dwMID="0"/>
+			<MulStatus szFilename="radio3.MID1" dwMID="1"/>
+			<MulStatus szFilename="radio3.MID2" dwMID="2"/>
+			<MulStatus szFilename="radio3.MID3" dwMID="3"/>
+			<MulStatus szFilename="radio3.MID4" dwMID="4"/>
+			<MulStatus szFilename="radio3.MID5" dwMID="5"/>
+			<MulStatus szFilename="radio3.MID6" dwMID="6"/></G_bmp>
+		<G_bmp szFilename="radio4" nId="96" nWidth="430" nHeigth="64" nFileSize="0" enumPicType="0" nTotalStatus="7" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="radio4.MID0" dwMID="0"/>
+			<MulStatus szFilename="radio4.MID1" dwMID="1"/>
+			<MulStatus szFilename="radio4.MID2" dwMID="2"/>
+			<MulStatus szFilename="radio4.MID3" dwMID="3"/>
+			<MulStatus szFilename="radio4.MID4" dwMID="4"/>
+			<MulStatus szFilename="radio4.MID5" dwMID="5"/>
+			<MulStatus szFilename="radio4.MID6" dwMID="6"/></G_bmp>
+		<G_bmp szFilename="radio5" nId="97" nTotalStatus="7" nWidth="430" nHeigth="64" nFileSize="0" bTransparent="0" cTransColor="0" enumPicType="0">
+			<MulStatus szFilename="radio5.MID0" dwMID="0"/>
+			<MulStatus szFilename="radio5.MID1" dwMID="1"/>
+			<MulStatus szFilename="radio5.MID2" dwMID="2"/>
+			<MulStatus szFilename="radio5.MID3" dwMID="3"/>
+			<MulStatus szFilename="radio5.MID4" dwMID="4"/>
+			<MulStatus szFilename="radio5.MID5" dwMID="5"/>
+			<MulStatus szFilename="radio5.MID6" dwMID="6"/></G_bmp>
+		<G_bmp szFilename="radio6" nId="98" nWidth="430" nHeigth="64" nFileSize="0" enumPicType="0" nTotalStatus="7" bTransparent="0" cTransColor="0">
+			<MulStatus szFilename="radio6.MID0" dwMID="0"/>
+			<MulStatus szFilename="radio6.MID1" dwMID="1"/>
+			<MulStatus szFilename="radio6.MID2" dwMID="2"/>
+			<MulStatus szFilename="radio6.MID3" dwMID="3"/>
+			<MulStatus szFilename="radio6.MID4" dwMID="4"/>
+			<MulStatus szFilename="radio6.MID5" dwMID="5"/>
+			<MulStatus szFilename="radio6.MID6" dwMID="6"/></G_bmp>
+		<G_bmp szFilename="edit-solid_1" nId="99" nTotalStatus="1" nWidth="480" nHeigth="426" nFileSize="205544" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="save-solid" nId="100" nTotalStatus="1" nWidth="479" nHeigth="548" nFileSize="264104" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="return - Copia" nId="102" nTotalStatus="1" nWidth="480" nHeigth="480" nFileSize="231464" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="go" nId="103" nTotalStatus="1" nWidth="480" nHeigth="480" nFileSize="691240" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="cog-solid" nId="105" nTotalStatus="1" nWidth="479" nHeigth="479" nFileSize="230984" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="therm" nId="106" nTotalStatus="1" nWidth="399" nHeigth="799" nFileSize="958840" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="time" nId="107" nTotalStatus="1" nWidth="479" nHeigth="640" nFileSize="308264" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="leaf-solid" nId="108" nTotalStatus="1" nWidth="480" nHeigth="426" nFileSize="613480" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="book-solid" nId="109" nTotalStatus="1" nWidth="479" nHeigth="548" nFileSize="789160" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="configu" nId="110" nTotalStatus="1" nWidth="96" nHeigth="96" nFileSize="27688" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="img1" nId="111" nTotalStatus="1" nWidth="96" nHeigth="96" nFileSize="27688" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="img2" nId="112" nTotalStatus="1" nWidth="96" nHeigth="96" nFileSize="27688" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="img3" nId="113" nTotalStatus="1" nWidth="96" nHeigth="96" nFileSize="27688" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="img4" nId="114" nTotalStatus="1" nWidth="128" nHeigth="128" nFileSize="49192" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="bell-solid" nId="115" nTotalStatus="1" nWidth="479" nHeigth="548" nFileSize="789160" bTransparent="0" cTransColor="0" enumPicType="0"/>
+<G_bmp szFilename="img5" nId="116" nTotalStatus="1" nWidth="96" nHeigth="96" nFileSize="27688" bTransparent="1" cTransColor="0" enumPicType="0"/></G_bmplib>
+</G_Picture>
