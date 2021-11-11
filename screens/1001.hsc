@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrInfo ScreenNo="1001" ScreenType="" ScreenSize="0">
+<PartInfo PartType="keystoke" PartName="KY_20">
+<General Area="381 560 476 655" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff -1" BmpIndex="117" Align="3" LaStartPt="26 28"/>
+<Key IsCtrlKey="1" ASCIIKey="A" IsInputMethod="0"/>
+<Label Status="0" Bold="0" LaIndexID="ENTENTENTENTENT" CharSize="148 168 168 168 168 168 168 16" LaFrnColor="0xffff99 -1"/></PartInfo>
 <PartInfo PartType="String" PartName="STR_0">
 <General Desc="STR_0" Area="3 73 476 147" WordAddr="HSW45" Fast="0" stCount="15" IsInput="0" WriteAddr="HSW45" KbdScreen="-1" IsPopKeyBrod="0" FigureFile="" BorderColor="0xe8ceba 16777215" FrnColor="0xff0000 -1" BgColor="0xffffff -1" CharSize="184" IsHideNum="0" Transparent="0" IsShowPwd="0" IsIndirectR="0" IsIndirectW="0" IsInputDefault="0" IsDWord="0" IsHiLowRever="0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
@@ -9,12 +13,9 @@
 <Key IsCtrlKey="1" CtrlKey="2" ASCIIKey="A" IsInputMethod="0"/>
 <Label Status="0" Bold="0" LaIndexID="Limpar TudoLimpar TudoLimpar TudoCLRCLRCLRCLRCLR" CharSize="148 168 168 168 168 168 168 16" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_22">
-<General Area="0 558 98 658" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff -1" BmpIndex="-1" Align="3" LaStartPt="3 5"/>
+<General Area="3 561 98 656" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff -1" BmpIndex="120" Align="3" LaStartPt="3 5"/>
 <Key IsCtrlKey="1" CtrlKey="1" ASCIIKey="A" IsInputMethod="0"/>
 <Label Status="0" Bold="0" LaIndexID="&lt;--&lt;--&lt;--&lt;--&lt;--" CharSize="2598 168 168 168 168 168 168 16" LaFrnColor="0xffffff -1"/></PartInfo>
-<PartInfo PartType="Bitmap" PartName="BMP_1">
-<General Desc="BMP_0" StartPt="19 578" Width="60" Height="60" BmpIndex="120"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="BitSwitch" PartName="BS_0">
 <General Desc="BS_0" Area="0 460 109 560" OperateAddr="HSX216.00" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="HSX216.00" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0x101010 -1" BmpIndex="-1" Align="3" LaStartPt="5 29" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
@@ -25,14 +26,6 @@
 <General Area="401 0 478 70" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0x101010 -1" Align="3" LaStartPt="27 13"/>
 <Key IsCtrlKey="1" CtrlKey="3" ASCIIKey="A" IsInputMethod="0"/>
 <Label Status="0" Bold="0" LaIndexID="XXXESCESCESCESCESC" CharSize="148 168 168 168 168 168 168 16" LaFrnColor="0xffffff -1"/></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
-<PartInfo PartType="keystoke" PartName="KY_20">
-<General Area="355 559 480 659" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff -1" BmpIndex="-1" Align="3" LaStartPt="26 28"/>
-<Key IsCtrlKey="1" ASCIIKey="A" IsInputMethod="0"/>
-<Label Status="0" Bold="0" LaIndexID="ENTENTENTENTENTENTENTENT" CharSize="148 168 168 168 168 168 168 16" LaFrnColor="0xffff99 -1"/></PartInfo>
-<PartInfo PartType="Bitmap" PartName="BMP_0">
-<General Desc="BMP_0" StartPt="377 569" Width="80" Height="80" BmpIndex="117"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo>
 <PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="keystoke" PartName="KY_30">
 <General Area="432 153 479 253" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0x101010 -1" LaStartPt="18 10"/>
@@ -182,6 +175,6 @@
 <Key IsCtrlKey="0" ASCIIKey="Z" IsInputMethod="0"/>
 <Label Status="0" Bold="0" LaIndexID="ZZZZZZZZ" CharSize="2598 168 168 168 168 168 168 16" LaFrnColor="0xffffff -1"/></PartInfo></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_40">
-<General Area="99 558 354 658" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0x101010 -1" LaStartPt="37 27"/>
+<General Area="102 558 372 658" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0x101010 -1" LaStartPt="37 27"/>
 <Key IsCtrlKey="0" ASCIIKey=" " IsInputMethod="0"/>
 <Label Status="0" Bold="0" LaIndexID="SPASPASPASPASPA" CharSize="148 168 168 168 168 168 168 16" LaFrnColor="0xffffff -1"/></PartInfo></ScrInfo>
