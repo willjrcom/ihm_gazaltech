@@ -21,14 +21,13 @@
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2"/></PartInfo></PartInfo></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_12">
-<General Desc="KY_0" Area="409 11 473 75" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xe8ceba -1" BmpIndex="-1" Align="3" LaStartPt="16 2"/>
+<General Desc="KY_0" Area="403 7 467 71" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xe8ceba -1" BmpIndex="-1" Align="3" LaStartPt="16 2"/>
 <Key IsCtrlKey="1" CtrlKey="3" ASCIIKey="0" IsInputMethod="0"/>
 <Label Status="0" Bold="0" LaIndexID="XSairSairExitExitExitExitExit" CharSize="2566 126 126 126 126 126 126 12" LaFrnColor="0x0 -1"/></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="keystoke" PartName="KY_14">
-<General Desc="KY_0" Area="333 191 473 313" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xe8ceba -1" BmpIndex="-1" LaStartPt="45 18"/>
+<General Desc="KY_0" Area="333 191 473 313" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff -1" BmpIndex="-1" Align="3" LaStartPt="31 31"/>
 <Key IsCtrlKey="1" CtrlKey="1" ASCIIKey="0" IsInputMethod="0"/>
-<Label Status="0" Bold="0" LaIndexID="DelDelDelDelDelDelDelDel" CharSize="2586 126 126 126 126 126 126 12" LaFrnColor="0x0 -1"/></PartInfo>
+<Label Status="0" Bold="0" LaIndexID="DelDelDelDelDel" CharSize="2586 126 126 126 126 126 126 12" LaFrnColor="0x0 -1"/></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_13">
 <General Desc="KY_0" Area="333 311 473 433" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xe8ceba -1" BmpIndex="-1" Align="3" LaStartPt="49 32"/>
 <Key IsCtrlKey="1" CtrlKey="2" ASCIIKey="0" IsInputMethod="0"/>
@@ -38,7 +37,7 @@
 <Key IsCtrlKey="0" ASCIIKey="-" IsInputMethod="0"/>
 <Label Status="0" Bold="1" LaIndexID="+/-+/-+/-+/-+/-+/-+/-+/-" CharSize="2586 126 126 126 126 126 126 12" LaFrnColor="0x0 -1"/></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_11">
-<General Desc="KY_0" Area="333 553 473 675" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xe8ceba -1" BmpIndex="-1" LaStartPt="55 31"/>
+<General Desc="KY_0" Area="333 553 473 675" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff -1" BmpIndex="-1" LaStartPt="55 31"/>
 <Key IsCtrlKey="1" ASCIIKey="0" IsInputMethod="0"/>
 <Label Status="0" Bold="0" LaIndexID="===EntEntEntEntEnt" CharSize="2566 126 126 126 126 126 126 12" LaFrnColor="0x0 -1"/></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_8">
@@ -84,8 +83,14 @@
 <PartInfo PartType="keystoke" PartName="KY_3">
 <General Desc="KY_0" Area="10 311 117 433" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xe8ceba 16777215" BmpIndex="-1" LaStartPt="33 13"/>
 <Key IsCtrlKey="0" ASCIIKey="4" IsInputMethod="0"/>
-<Label Status="0" Bold="0" LaIndexID="44444444" CharSize="2556 126 126 126 126 126 126 12" LaFrnColor="0x0 -1"/></PartInfo></PartInfo>
+<Label Status="0" Bold="0" LaIndexID="44444444" CharSize="2556 126 126 126 126 126 126 12" LaFrnColor="0x0 -1"/></PartInfo>
 <PartInfo PartType="String" PartName="STR_0">
 <General Desc="STR_0" Area="10 102 467 182" WordAddr="HSW00045" Fast="0" stCount="15" IsInput="0" WriteAddr="HSW_W_000045" KbdScreen="-1" IsPopKeyBrod="0" FigureFile="" BorderColor="0xe8ceba 16777215" FrnColor="0x0 -1" BgColor="0xffffff -1" CharSize="255" IsHideNum="0" Transparent="0" IsShowPwd="0" IsIndirectR="0" IsIndirectW="0" IsInputDefault="0" IsDWord="0" IsHiLowRever="0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
-<MoveZoom DataFormatMZ="2"/></PartInfo></ScrInfo>
+<MoveZoom DataFormatMZ="2"/></PartInfo>
+<PartInfo PartType="Bitmap" PartName="BMP_0">
+<General Desc="BMP_0" StartPt="353 202" Width="100" Height="100" BmpIndex="120"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="Bitmap" PartName="BMP_1">
+<General Desc="BMP_0" StartPt="353 564" Width="100" Height="100" BmpIndex="117"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></ScrInfo>

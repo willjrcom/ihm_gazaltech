@@ -84,9 +84,9 @@
 		<PartPassword UsePassword="0" Default="0" Grade1="" Grade2="" Grade3="" Grade4="" Grade5="" Grade6="" Grade7="" Grade8="" Grade9="" Grade10="" Grade11="" Grade12="" GradeIndependent="0"/></SysSet>
 	<ScreenSet>
 <ScreenInfo ScrnNo="0" Child="0" ScrnName="Inicial" Height="800" Width="480" Filled="1" BkColor="0x329492" FnColor="0xd8e9ec" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="0.hsc" Opened="1"/>
-<ScreenInfo ScrnNo="1" Child="0" ScrnName="Config_1" Height="800" Width="480" Filled="1" BkColor="0x329492" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1.hsc" Opened="0"/>
+<ScreenInfo ScrnNo="1" Child="0" ScrnName="Config_1" Height="800" Width="480" Filled="1" BkColor="0x329492" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1.hsc" Opened="1"/>
 <ScreenInfo ScrnNo="2" Child="0" ScrnName="Config_velocidade" Height="800" Width="480" Filled="1" BkColor="0xd87502" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="2.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="3" Child="1" ScrnName="calibracao_velocidade" Height="666" Width="449" Filled="1" BkColor="0xd87502" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="3.hsc" Opened="0"/>
+<ScreenInfo ScrnNo="3" Child="1" ScrnName="calibracao_velocidade" Height="300" Width="480" Filled="1" BkColor="0xd87502" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="3.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="4" Child="0" ScrnName="Config_Temperatura" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="4.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="5" Child="0" ScrnName="Config_Temperatura2" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="5.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="6" Child="0" ScrnName="config_geral" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="6.hsc" Opened="0"/>
@@ -103,9 +103,9 @@
 <ScreenInfo ScrnNo="18" Child="0" ScrnName="receita 9" Height="800" Width="480" Filled="1" BkColor="0xffffff" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="18.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="19" Child="0" ScrnName="receita 10" Height="800" Width="480" Filled="1" BkColor="0xffffff" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="19.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="20" Child="0" ScrnName="senha" Height="800" Width="480" Filled="1" BkColor="0xffffff" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="20.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="21" Child="1" ScrnName="SP_EDIT" Height="600" Width="480" Filled="1" BkColor="0x800000" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="21.hsc" Opened="0"/>
+<ScreenInfo ScrnNo="21" Child="1" ScrnName="SP_EDIT" Height="500" Width="480" Filled="1" BkColor="0x800000" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="21.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="1000" Child="1" ScrnName="BuilNum" Height="800" Width="480" Filled="1" BkColor="0x800000" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1000.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="1001" Child="1" ScrnName="BuilKey" Height="616" Width="420" Filled="1" BkColor="0x800000" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1001.hsc" Opened="0"/>
+<ScreenInfo ScrnNo="1001" Child="1" ScrnName="BuilKey" Height="660" Width="480" Filled="1" BkColor="0x800000" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1001.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="1002" Child="0" ScrnName="Common Window" Height="800" Width="480" Filled="1" BkColor="0xffffff" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1002.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="1003" Child="1" ScrnName="Fast Selection" Height="746" Width="59" Filled="1" BkColor="0xffffff" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1003.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="1004" Child="1" ScrnName="UserPwdKb" Height="616" Width="420" Filled="1" BkColor="0x800000" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1004.hsc" Opened="0"/>
