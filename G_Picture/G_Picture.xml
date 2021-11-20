@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <G_Picture G_PictureVer="2.0">
-	<G_bmplib CurBmpTotal="93" AllBmpTotal="122" SaveAsJpg="0" G_bmplib.blb_CT="20211027  17:15:46" G_bmplib.blb_MT="20211018  10:16:56">
+	<G_bmplib CurBmpTotal="95" AllBmpTotal="124" SaveAsJpg="0" G_bmplib.blb_CT="20211027  17:15:46" G_bmplib.blb_MT="20211018  10:16:56">
 		<G_bmp szFilename="contract" nId="8" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" enumPicType="0" bTransparent="1" cTransColor="16777215"/>
 		<G_bmp szFilename="home " nId="10" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" bTransparent="1" cTransColor="0" enumPicType="0"/>
 		<G_bmp szFilename="NEXT" nId="11" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" bTransparent="1" cTransColor="0" enumPicType="0"/>
@@ -270,5 +270,9 @@
 		<G_bmp szFilename="check" nId="117" nTotalStatus="1" nWidth="479" nHeigth="479" nFileSize="230984" bTransparent="0" cTransColor="0" enumPicType="0"/>
 		<G_bmp szFilename="del" nId="120" nTotalStatus="1" nWidth="100" nHeigth="100" nFileSize="30040" bTransparent="0" cTransColor="0" enumPicType="0"/>
 		<G_bmp szFilename="del1" nId="121" nTotalStatus="1" nWidth="100" nHeigth="100" nFileSize="30040" bTransparent="1" cTransColor="0" enumPicType="0"/>
-		<G_bmp szFilename="times-solid" nId="122" nTotalStatus="1" nWidth="479" nHeigth="698" nFileSize="336104" bTransparent="0" cTransColor="0" enumPicType="0"/></G_bmplib>
+		<G_bmp szFilename="times-solid" nId="122" nTotalStatus="1" nWidth="479" nHeigth="698" nFileSize="336104" bTransparent="0" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="eco_icon" nId="123" nWidth="128" nHeigth="128" nFileSize="0" enumPicType="0" nTotalStatus="2" bTransparent="1" cTransColor="0">
+			<MulStatus szFilename="eco_icon.MID0" dwMID="0"/>
+			<MulStatus szFilename="eco_icon.MID1" dwMID="1"/></G_bmp>
+		<G_bmp szFilename="img8" nId="124" nTotalStatus="1" nWidth="479" nHeigth="426" nFileSize="613480" bTransparent="0" cTransColor="0" enumPicType="0"/></G_bmplib>
 </G_Picture>
