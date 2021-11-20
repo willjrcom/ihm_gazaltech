@@ -24,7 +24,7 @@
 <Label Status="0" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="6 126 126 126 126 126 126 126 12" LaFrnColor="0x0 0"/>
 <Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="6 126 126 126 126 126 126 126 12" LaFrnColor="0x0 0"/></PartInfo>
 <PartInfo PartType="WordShow" PartName="Multi-States Indicator1">
-<General Desc="WL_0" Area="10 102 470 685" WordAddr="plano_de_fundo" StatsNum="3" Fast="0" DataFormat="2" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff -1" BmpIndex="-1" LaStartPt="230 291" StatusCovType="0" AnimaReturn="0" ByAddr="0" Trigger="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" isNautomatic="0" IsCtrlStaTextByAddr="0" isReturn="0" isStateControl="0"/>
+<General Desc="WL_0" Area="10 102 470 588" WordAddr="plano_de_fundo" StatsNum="3" Fast="0" DataFormat="2" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff -1" BmpIndex="-1" LaStartPt="230 243" StatusCovType="0" AnimaReturn="0" ByAddr="0" Trigger="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" isNautomatic="0" IsCtrlStaTextByAddr="0" isReturn="0" isStateControl="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0"/>
 <Label Status="0" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0" UseGlint="0" GlintFgClr="0x0 0"/>
@@ -205,15 +205,4 @@
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="6 126 126 126 126 126 126 126 12" LaFrnColor="0x0 0"/>
-<Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="6 126 126 126 126 126 126 126 12" LaFrnColor="0x0 0"/></PartInfo></PartInfo>
-<PartInfo PartType="Line" PartName="LN_0">
-<General BorderColor="0x0 0" StartPt="30 575" EndPt="450 575" AutoAdsorption="20"/></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
-<PartInfo PartType="FunctionSwitch" PartName="FS_0">
-<General Desc="FS_3" Area="352 599 416 663" ScrSwitch="1" ScreenNo="4" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="111" LaStartPt="32 32" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
-<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
-<Label Status="0" Bold="0" CharSize="6 126 126 126 126 126 126 126 12" LaFrnColor="0xffffff -1"/></PartInfo>
-<PartInfo PartType="Text" PartName="TXT_1">
-<General TextContent="Configurações" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="16 326 126 126 126 126 126 126 12" Bold="0" StartPt="65 615"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo></ScrInfo>
+<Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="6 126 126 126 126 126 126 126 12" LaFrnColor="0x0 0"/></PartInfo></PartInfo></ScrInfo>

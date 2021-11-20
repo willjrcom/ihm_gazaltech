@@ -4,7 +4,6 @@
 		<TimerAction>
 			<Timer Interval="1">@controlpizza = @b_1:449.0
 </Timer></TimerAction></Script>
-<PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="WordShow" PartName="WL_2">
 <General Desc="WL_0" Area="10 191 470 474" WordAddr="plano_de_fundo" StatsNum="3" Fast="0" DataFormat="2" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff -1" BmpIndex="-1" LaStartPt="230 230" StatusCovType="0" AnimaReturn="0" ByAddr="0" Trigger="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" isNautomatic="0" IsCtrlStaTextByAddr="0" isReturn="0" isStateControl="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
@@ -12,7 +11,6 @@
 <Label Status="0" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0" UseGlint="0" GlintFgClr="0x0 0"/>
 <Label Status="1" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0" UseGlint="0" GlintFgClr="0x0 0"/>
 <Label Status="2" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0" UseGlint="0" GlintFgClr="0x0 0"/></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="Rect" PartName="Rectangle0">
 <General Area="20 213 460 313" BorderColor="0x0 0" Pattern="1" FrnColor="0xeaeaea -1" BgColor="0xc0c0c0 -1" ActiveColor="0"/>
@@ -40,7 +38,7 @@ modo ECO." LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSi
 <PartInfo PartType="Text" PartName="TXT_0">
 <General TextContent="Referência
 de velocidade." LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="16 326 126 126 126 126 126 126 12" Bold="0" StartPt="180 368"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo></PartInfo></PartInfo></PartInfo>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo></PartInfo>
 <PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="WordShow" PartName="WL_0">
 <General Desc="WL_0" Area="10 89 470 178" WordAddr="plano_de_fundo" StatsNum="3" Fast="0" DataFormat="2" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff -1" BmpIndex="-1" LaStartPt="230 44" StatusCovType="0" AnimaReturn="0" ByAddr="0" Trigger="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" isNautomatic="0" IsCtrlStaTextByAddr="0" isReturn="0" isStateControl="0"/>

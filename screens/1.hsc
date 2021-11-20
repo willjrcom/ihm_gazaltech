@@ -40,7 +40,7 @@
 <General Area="245 246 465 306" BorderColor="0x0 0" Pattern="1" FrnColor="0xeaeaea -1" BgColor="0xc0c0c0 -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_2">
-<General TextContent="seg" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12 246 126 126 126 126 126 126 12" Bold="0" StartPt="417 251"/>
+<General TextContent="Min" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12 246 126 126 126 126 126 126 12" Bold="0" StartPt="417 251"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_10">
 <General TextContent="Tempo ECO" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 166 126 126 126 126 126 126 12" Bold="0" StartPt="255 268"/>
@@ -96,7 +96,7 @@
 <General Area="245 81 465 141" BorderColor="0x0 0" Pattern="1" FrnColor="0xeaeaea -1" BgColor="0xc0c0c0 -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_6">
-<General TextContent="seg" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12 246 126 126 126 126 126 126 12" Bold="0" StartPt="419 85"/>
+<General TextContent="Min" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12 246 126 126 126 126 126 126 12" Bold="0" StartPt="419 85"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="NUM_2">
 <General Desc="NUM_4" Area="346 86 416 136" WordAddr="1:W6692" Fast="0" IsInput="0" WriteAddr="1:W6692" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0xffffff 0" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>

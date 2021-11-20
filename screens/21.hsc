@@ -33,18 +33,12 @@ ENDIF
 <PartInfo PartType="Text" PartName="TXT_3">
 <General TextContent="ºC" LaFrnColor="0xff -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="2396 126 126 126 126 126 126 12" Bold="0" StartPt="318 55"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="BitSwitch" PartName="BS_0">
-<General Desc="BS_0" Area="248 353 448 413" OperateAddr="grava" Fast="0" BitFunc="1" Monitor="1" MonitorAddr="grava" FigureFile="TFT-type style\TFT010.pvg" BorderColor="0x80ff00 -1" BmpIndex="-1" Align="3" LaStartPt="4 5" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
+<General Desc="BS_0" Area="140 353 340 413" OperateAddr="grava" Fast="0" BitFunc="1" Monitor="1" MonitorAddr="grava" FigureFile="TFT-type style\TFT010.pvg" BorderColor="0x80ff00 -1" BmpIndex="-1" Align="3" LaStartPt="4 5" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Pattern="4587604" FrnColor="0x80ff00 1" BgColor="0xffffff 0" Bold="0" LaIndexID="Confirmar" CharSize="29814141414141414" LaFrnColor="0x0 0"/>
 <Label Status="1" Pattern="1" FrnColor="0x8080ff 0" BgColor="0xffffff 0" Bold="0" LaIndexID="Aguarde" CharSize="29814141414141414" LaFrnColor="0x0 0"/></PartInfo>
-<PartInfo PartType="FunctionSwitch" PartName="FS_0">
-<General Desc="FS_0" Area="33 353 233 413" ScrSwitch="0" FuncFunc="8" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT010.pvg" BorderColor="0xff -1" Pattern="4587604" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="100 30" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
-<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
-<Label Status="0" Bold="0" LaIndexID="Fechar" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_1">
 <General TextContent="Nova temperatura" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="16 326 126 126 126 126 126 126 12" Bold="0" StartPt="104 11"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
@@ -59,7 +53,7 @@ ENDIF
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo>
 <PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="Text" PartName="TXT_4">
-<General TextContent="seg" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="2436 126 126 126 126 126 126 12" Bold="0" StartPt="335 279"/>
+<General TextContent="Min" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="2436 126 126 126 126 126 126 12" Bold="0" StartPt="335 279"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="NUM_0">
 <General Desc="NUM_0" Area="165 224 327 324" WordAddr="SP_speed_ativo" Fast="0" IsInput="1" WriteAddr="SP_speed_ativo" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="TFT-type style\dp_zc03.pvg" BorderColor="0xcccccc 16777215" FrnColor="0x0 -1" BgColor="0xffffff 0" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="1" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
