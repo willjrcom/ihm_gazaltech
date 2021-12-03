@@ -104,35 +104,27 @@ endif
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_0">
-<General TextContent="Alarme: queda 
-de temperatura" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="16 326 126 126 126 126 126 126 12" Bold="0" StartPt="45 132"/>
+<General TextContent="Alarme de queda 
+de temperatura" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="146 126 126 126 126 126 126 12" Bold="0" StartPt="28 129"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_1">
-<General TextContent="Configuração-Temperatura" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="2986 126 126 126 126 126 126 12" Bold="0" StartPt="7 21"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="Text" PartName="TXT_3">
-<General TextContent="Histerese do
-alarme" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="16 326 126 126 126 126 126 126 12" Bold="0" StartPt="45 246"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="Numeric" PartName="NUM_2">
-<General Desc="NUM_0" Area="336 232 451 325" WordAddr="1:4667" Fast="0" IsInput="1" WriteAddr="1:4667" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xcccccc 0" FrnColor="0x0 -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
-<DispFormat DispType="6" DigitCount="4 0" DataLimit="1065353216 1176255488" DataRange="1.000000 9999.000000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="180" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
-<Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+<General TextContent="Configuração do Alarme" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="2986 126 126 126 126 126 126 12" Bold="0" StartPt="7 21"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="BitSwitch" PartName="BS_0">
-<General Desc="BS_0" Area="45 507 307 571" OperateAddr="Reset_fabrica" Fast="0" BitFunc="1" Monitor="1" MonitorAddr="Reset_fabrica" FigureFile="TFT-type style\TFT010.pvg" BorderColor="0x1b1bcb -1" BmpIndex="-1" Align="3" LaStartPt="96 10" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" MinClickTime="2000" IsIndirectR="0" IsIndirectW="0"/>
+<General Desc="BS_0" Area="45 492 307 556" OperateAddr="Reset_fabrica" Fast="0" BitFunc="1" Monitor="1" MonitorAddr="Reset_fabrica" FigureFile="TFT-type style\TFT010.pvg" BorderColor="0x1b1bcb -1" BmpIndex="-1" Align="3" LaStartPt="96 10" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" MinClickTime="2000" IsIndirectR="0" IsIndirectW="0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Pattern="4587604" FrnColor="0xff 1" BgColor="0xffffff 0" Bold="0" LaIndexID="Reset" CharSize="1414141414141414" LaFrnColor="0x0 0"/>
 <Label Status="1" Pattern="1" FrnColor="0x40ff00 0" BgColor="0xffffff 0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_4">
 <General TextContent="Segurar
-por 5 seg." LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="2156 126 126 126 126 126 126 12" Bold="0" StartPt="321 506"/>
+por 5 seg." LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="2156 126 126 126 126 126 126 12" Bold="0" StartPt="321 491"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Line" PartName="LN_0">
 <General BorderColor="0x0 0" StartPt="30 222" EndPt="450 222" AutoAdsorption="20"/></PartInfo>
-<PartInfo PartType="Line" PartName="LN_1">
-<General BorderColor="0x0 0" StartPt="30 335" EndPt="450 335" AutoAdsorption="20"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_5">
-<General TextContent="CUIDADO: Reset de fabrica" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="16 326 126 126 126 126 126 126 12" Bold="0" StartPt="35 459"/>
+<General TextContent="Reset de fabrica" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="3046 126 126 126 126 126 126 12" Bold="0" StartPt="43 412"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="Text" PartName="TXT_2">
+<General TextContent="CUIDADO" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="3046 126 126 126 126 126 126 12" Bold="0" StartPt="129 342"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></ScrInfo>

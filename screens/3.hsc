@@ -43,5 +43,5 @@ Pode fechar a tela." CharSize="796 126 126 126 126 126 126 12" LaF
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_0">
-<General TextContent="Calibrar esteira" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="146 126 126 126 126 126 126 12" Bold="0" StartPt="101 27"/>
+<General TextContent="Calibrar esteira" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="146 126 126 126 126 126 126 12" Bold="0" StartPt="71 29"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></ScrInfo>

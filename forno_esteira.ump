@@ -92,7 +92,7 @@
 <ScreenInfo ScrnNo="1" Child="0" ScrnName="Config_1" Height="800" Width="480" Filled="1" BkColor="0x329492" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="2" Child="0" ScrnName="Config_velocidade" Height="800" Width="480" Filled="1" BkColor="0xd87502" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="2.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="3" Child="1" ScrnName="calibracao_velocidade" Height="300" Width="480" Filled="1" BkColor="0xd87502" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="3.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="4" Child="0" ScrnName="Config_Temperatura" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="4.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="4" Child="0" ScrnName="Config_Temperatura" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="4.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="5" Child="0" ScrnName="Config_Temperatura2" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="5.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="6" Child="0" ScrnName="config_geral" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="6.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="7" Child="0" ScrnName="pagina de receita 1-6" Height="800" Width="480" Filled="1" BkColor="0x329492" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="7.hsc" Opened="0"/>
@@ -133,7 +133,7 @@
 
 @W_1:415 = 2 ' modo controle stand-by
 @liga_desliga = True
-
+@turnon = True ' Liga temperatura
 
 @W_1:4686 = 0	' Spd.P = ASPr 	- repete o valor de velocidade antes de deligar
 @W_1:4688 = 1	' Spd.t = tinE 	- refencia de velocidade = tempo

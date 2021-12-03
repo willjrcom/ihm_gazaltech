@@ -58,7 +58,7 @@
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_4">
-<General TextContent="Configuração-Temperatura" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="2986 126 126 126 126 126 126 12" Bold="0" StartPt="7 21"/>
+<General TextContent="Configuração deTemperatura" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="3126 126 126 126 126 126 126 12" Bold="0" StartPt="1 22"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="NUM_4">
 <General Desc="NUM_0" Area="336 571 451 664" WordAddr="1:410374" Fast="0" IsInput="1" WriteAddr="1:410374" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xcccccc 0" FrnColor="0x0 -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
