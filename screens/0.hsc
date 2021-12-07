@@ -178,10 +178,6 @@ ENDIF
 <PartInfo PartType="TimeDisplay" PartName="TIME_0">
 <General Desc="TIME_0" Area="256 562 459 618" FigureFile="" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0xffffff 0" CharSize="310" Transparent="0"/>
 <MoveZoom DataFormatMZ="4" DataLimitMZ="1174011904 1176256512" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="NewTimer" PartName="Timer_2">
-<General Area="57 123 128 154" Timer_Describe="config" Timer_Unit="1" Timer_FuncSwitch="master" Timer_TimerRun="config" Timer_SetTimerEdit="tempocofig" Timer_BitAddrEdit="outconfig" Timer_SetTimerCanChange="0" Timer_Repead_Trigger="0" Timer_BitAddr="1" Timer_WordAddr="0" Timer_PassedTime="0" Timer_ResetPassedTime="0" Const="1"/></PartInfo>
-<PartInfo PartType="NewTimer" PartName="Timer_3">
-<General Area="58 91 127 122" Timer_Describe="transicao" Timer_Unit="1" Timer_FuncSwitch="master" Timer_TimerRun="iniciotransicao" Timer_SetTimerEdit="tempotransicao" Timer_BitAddrEdit="fimtransicao" Timer_SetTimerCanChange="0" Timer_Repead_Trigger="0" Timer_BitAddr="1" Timer_WordAddr="0" Timer_PassedTime="0" Timer_ResetPassedTime="0" Const="1"/></PartInfo>
 <PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="BitSwitch" PartName="BS_3">
 <General Desc="BS_3" Area="49 708 113 772" OperateAddr="SP_EDIT_flag" Fast="0" BitFunc="1" Monitor="1" MonitorAddr="SP_EDIT_flag" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="116" LaStartPt="32 32" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>

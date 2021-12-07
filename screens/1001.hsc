@@ -23,9 +23,9 @@
 <Label Status="0" FrnColor="0x0 0" BgColor="0x0 0" Bold="0" LaIndexID="CAPSCAPSCAPSCAPCAPCAPCAPCAP" CharSize="2708 168 168 168 168 168 168 16" LaFrnColor="0xffffff -1"/>
 <Label Status="1" FrnColor="0x0 0" BgColor="0x0 0" Bold="0" LaIndexID="CAPCAPCAPCAPCAPCAPCAPCAP" CharSize="148 168 168 168 168 168 168 16" LaFrnColor="0xffff99 -1"/></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_38">
-<General Area="401 0 478 70" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0x101010 -1" Align="3" LaStartPt="27 13"/>
+<General Area="404 2 468 66" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0x101010 -1" BmpIndex="130" Align="3" LaStartPt="27 13"/>
 <Key IsCtrlKey="1" CtrlKey="3" ASCIIKey="A" IsInputMethod="0"/>
-<Label Status="0" Bold="0" LaIndexID="XXXESCESCESCESCESC" CharSize="148 168 168 168 168 168 168 16" LaFrnColor="0xffffff -1"/></PartInfo>
+<Label Status="0" Bold="0" LaIndexID="ESCESCESCESCESC" CharSize="148 168 168 168 168 168 168 16" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="keystoke" PartName="KY_30">
 <General Area="432 153 479 253" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0x101010 -1" LaStartPt="18 10"/>

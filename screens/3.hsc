@@ -38,10 +38,10 @@ Pode fechar a tela." CharSize="796 126 126 126 126 126 126 12" LaF
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Pattern="4587604" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" LaIndexID="Reiniciar" CharSize="12 2414141414141414" LaFrnColor="0x0 0"/></PartInfo></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_0">
-<General Desc="FS_0" Area="387 13 448 78" ScrSwitch="0" FuncFunc="8" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" DispDirect="1" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="122" LaStartPt="30 32" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<General Desc="FS_0" Area="387 13 451 77" ScrSwitch="0" FuncFunc="8" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" DispDirect="1" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="130" LaStartPt="30 32" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
 <Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_0">
-<General TextContent="Calibrar esteira" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="146 126 126 126 126 126 126 12" Bold="0" StartPt="71 29"/>
+<General TextContent="Calibrar esteira" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="146 126 126 126 126 126 126 12" Bold="0" StartPt="97 29"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></ScrInfo>
