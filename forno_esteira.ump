@@ -89,23 +89,23 @@
 		<PartPassword UsePassword="0" Default="0" Grade1="" Grade2="" Grade3="" Grade4="" Grade5="" Grade6="" Grade7="" Grade8="" Grade9="" Grade10="" Grade11="" Grade12="" GradeIndependent="0"/></SysSet>
 	<ScreenSet>
 <ScreenInfo ScrnNo="0" Child="0" ScrnName="Inicial" Height="800" Width="480" Filled="1" BkColor="0x329492" FnColor="0xd8e9ec" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="0.hsc" Opened="1"/>
-<ScreenInfo ScrnNo="1" Child="0" ScrnName="Config_1" Height="800" Width="480" Filled="1" BkColor="0x329492" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="2" Child="0" ScrnName="Config_velocidade" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="2.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="3" Child="1" ScrnName="calibracao_velocidade" Height="300" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="3.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="4" Child="0" ScrnName="Config_Temperatura" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="4.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="5" Child="0" ScrnName="Config_Temperatura2" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="5.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="6" Child="0" ScrnName="config_geral" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="6.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="7" Child="0" ScrnName="pagina de receita 1-6" Height="800" Width="480" Filled="1" BkColor="0x329492" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="7.hsc" Opened="0"/>
+<ScreenInfo ScrnNo="1" Child="0" ScrnName="Config_1" Height="800" Width="480" Filled="1" BkColor="0x329492" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="2" Child="0" ScrnName="Config_velocidade" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="2.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="3" Child="1" ScrnName="calibracao_velocidade" Height="300" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="3.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="4" Child="0" ScrnName="Config_Temperatura" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="4.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="5" Child="0" ScrnName="Config_Temperatura2" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="5.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="6" Child="0" ScrnName="config_geral" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="6.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="7" Child="0" ScrnName="pagina de receita 1-6" Height="800" Width="480" Filled="1" BkColor="0x329492" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="7.hsc" Opened="1"/>
 <ScreenInfo ScrnNo="9" Child="1" ScrnName="alarme_gas" Height="800" Width="480" Filled="1" BkColor="0xff" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="22.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="10" Child="0" ScrnName="receita1" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="10.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="11" Child="0" ScrnName="receita2" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="11.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="12" Child="0" ScrnName="receita3" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="12.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="13" Child="0" ScrnName="receita4" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="13.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="14" Child="0" ScrnName="receita 5" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="14.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="15" Child="0" ScrnName="receita6" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="15.hsc" Opened="0"/>
+<ScreenInfo ScrnNo="10" Child="0" ScrnName="receita1" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="10.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="11" Child="0" ScrnName="receita2" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="11.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="12" Child="0" ScrnName="receita3" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="12.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="13" Child="0" ScrnName="receita4" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="13.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="14" Child="0" ScrnName="receita 5" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="14.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="15" Child="0" ScrnName="receita6" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="15.hsc" Opened="1"/>
 <ScreenInfo ScrnNo="20" Child="0" ScrnName="senha" Height="800" Width="480" Filled="1" BkColor="0xffffff" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="20.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="21" Child="1" ScrnName="SP_EDIT" Height="800" Width="480" Filled="1" BkColor="0x800000" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="21.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="22" Child="1" ScrnName="alarme_eco" Height="800" Width="480" Filled="1" BkColor="0x8000" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="23.hsc" Opened="0"/>
+<ScreenInfo ScrnNo="22" Child="1" ScrnName="alarme_eco" Height="800" Width="480" Filled="1" BkColor="0x8000" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="23.hsc" Opened="1"/>
 <ScreenInfo ScrnNo="1000" Child="1" ScrnName="BuilNum" Height="800" Width="480" Filled="1" BkColor="0x800000" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1000.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="1001" Child="1" ScrnName="BuilKey" Height="660" Width="480" Filled="1" BkColor="0x800000" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1001.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="1002" Child="0" ScrnName="Common Window" Height="800" Width="480" Filled="1" BkColor="0xffffff" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1002.hsc" Opened="0"/>
@@ -317,27 +317,37 @@ endif
 			<Trigger Action="3" BitAddr="Eco_command">'ao pressionar o botão eco verifica se o controlador nao esta em condições de alarme
 'caso nao esteja manda o plano de fundo para verde 
 if @plano_de_fundo &lt;&gt; 2 then 
-@plano_de_fundo = 1 
+	@plano_de_fundo = 1 
 endif
+
+@SP_MEM = @w_1:46
+@VELOC_MEM = @w_1:4692
+
+
+@w_1:4692 = @SP_speed_ECO
+@w_1:46 = @SP_Temperatura_ECO
 </Trigger>
 			<Trigger Action="4" BitAddr="Eco_command">'ao mandar o botão eco para zero verifica se não esta em condição de alarme 
 'caso não esteja manda o plano de fundo para o modo normal de operação 
 if @plano_de_fundo &lt;&gt; 2 then 
-@plano_de_fundo = 0
+	@plano_de_fundo = 0
 endif
+
+@w_1:46 = @SP_MEM
+@w_1:4692 = @VELOC_MEM
 </Trigger>
 			<Trigger Action="1" BitAddr="output_timer">'ESSA ROTINA SOMENTE É EXECUTADA QUANDO JÁ TIVER PASSADO TEMPO DE RETARDO DO TIMER QUE ESTÁ
 'NA TELA 1002:Common Window
 '***************************
 
-'@W_4705: histerese
-'@W_41: temperatura atual
+'@W_1:4705: histerese
+'@W_1:41: temperatura atual
 '@w_1:46 temperatura salva
 
 'VERIFICA SE É A PRIMEIRA VEZ DO ALARME
 IF @start_timer_gas=FALSE THEN 
 	'VERIFICA SE A TEMPERATURA ATUAL É MENOR QUE A DESEJADA MENOS A HISTERESE
-	IF @W_41 &lt; (@w_1:46 - @W_4705) THEN 
+	IF @W_1:41 &lt; (@w_1:46 - @W_1:4705) THEN 
 		'LIGA BIT PARA MOSTRAR TELA DE POP-UP COM MENSAGEM DE ALARME
 		@alarme_gas=TRUE
 		
@@ -345,13 +355,11 @@ IF @start_timer_gas=FALSE THEN
 		@start_timer_gas=TRUE 
 		@W_1:4657 = 1
 		@W_1:4657 = 0
-		@W_1:4657 = 1
-		@W_1:4657 = 0
 	ENDIF
 ENDIF
 
 'SE A TEMPERATURA VOLTOU A CONDIÇÃO NORMAL ENTÃO LIMPA BIT DE BLOQUEIO
-IF @start_timer_gas=TRUE AND @w_1:41 &gt; (@W_46 - @W_4705) THEN 
+IF @start_timer_gas=TRUE AND @w_1:41 &gt; (@W_1:46 - @W_1:4705) THEN 
 	@start_timer_gas=FALSE
 	@W_1:4657 = 0
 ENDIF
