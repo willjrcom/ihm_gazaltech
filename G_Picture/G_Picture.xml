@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <G_Picture G_PictureVer="2.0">
-	<G_bmplib SaveAsJpg="0" CurBmpTotal="102" AllBmpTotal="131" G_bmplib.blb_CT="20211027  17:15:46" G_bmplib.blb_MT="20211018  10:16:56">
+	<G_bmplib CurBmpTotal="102" AllBmpTotal="131" G_bmplib.blb_CT="20211027  17:15:46" G_bmplib.blb_MT="20211018  10:16:56" SaveAsJpg="0">
 		<G_bmp szFilename="contract" nId="8" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" enumPicType="0" bTransparent="1" cTransColor="16777215"/>
 		<G_bmp szFilename="home " nId="10" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" bTransparent="1" cTransColor="0" enumPicType="0"/>
 		<G_bmp szFilename="NEXT" nId="11" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" bTransparent="1" cTransColor="0" enumPicType="0"/>
@@ -244,13 +244,13 @@
 			<MulStatus szFilename="radio5.MID5" dwMID="5"/>
 			<MulStatus szFilename="radio5.MID6" dwMID="6"/></G_bmp>
 		<G_bmp szFilename="radio6" nId="98" nWidth="430" nHeigth="64" nFileSize="0" enumPicType="0" nTotalStatus="7" bTransparent="0" cTransColor="0">
-			<MulStatus szFilename="radio6.MID0" dwMID="0"/>
-			<MulStatus szFilename="radio6.MID1" dwMID="1"/>
-			<MulStatus szFilename="radio6.MID2" dwMID="2"/>
-			<MulStatus szFilename="radio6.MID3" dwMID="3"/>
-			<MulStatus szFilename="radio6.MID4" dwMID="4"/>
-			<MulStatus szFilename="radio6.MID5" dwMID="5"/>
-			<MulStatus szFilename="radio6.MID6" dwMID="6"/></G_bmp>
+<MulStatus szFilename="radio6.MID0" dwMID="0"/>
+<MulStatus szFilename="radio6.MID1" dwMID="1"/>
+<MulStatus szFilename="radio6.MID2" dwMID="2"/>
+<MulStatus szFilename="radio6.MID3" dwMID="3"/>
+<MulStatus szFilename="radio6.MID4" dwMID="4"/>
+<MulStatus szFilename="radio6.MID5" dwMID="5"/>
+<MulStatus szFilename="radio6.MID6" dwMID="6"/></G_bmp>
 		<G_bmp szFilename="edit-solid_1" nId="99" nTotalStatus="1" nWidth="480" nHeigth="426" nFileSize="205544" bTransparent="0" cTransColor="0" enumPicType="0"/>
 		<G_bmp szFilename="save-solid" nId="100" nTotalStatus="1" nWidth="479" nHeigth="548" nFileSize="264104" bTransparent="0" cTransColor="0" enumPicType="0"/>
 		<G_bmp szFilename="return - Copia" nId="102" nTotalStatus="1" nWidth="480" nHeigth="480" nFileSize="231464" bTransparent="0" cTransColor="0" enumPicType="0"/>

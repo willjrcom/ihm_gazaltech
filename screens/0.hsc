@@ -94,13 +94,13 @@ ENDIF
 <General Desc="BMP_0" StartPt="11 10" Width="458" Height="154" BmpIndex="86"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo>
 <PartInfo PartType="Rect" PartName="REC_4">
-<General Area="10 170 470 290" BorderColor="0x0 0" Pattern="1" FrnColor="0xffffff 0" BgColor="0x0 -1" ActiveColor="0"/>
+<General Area="10 170 470 290" BorderColor="0xffffff -1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_12">
 <General TextContent="Receita:" LaFrnColor="0xff0000 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="2986 126 126 126 126 126 126 12" Bold="0" StartPt="215 180"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_0">
-<General Desc="FS_0" Area="27 196 110 276" ScrSwitch="1" ScreenNo="7" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="112" LaStartPt="25 25" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<General Desc="FS_0" Area="19 196 102 276" ScrSwitch="1" ScreenNo="7" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="112" LaStartPt="25 25" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
 <Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo>
@@ -192,6 +192,6 @@ ENDIF
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo></PartInfo>
 <PartInfo PartType="String" PartName="STR_0">
-<General Desc="STR_0" Area="128 230 457 280" WordAddr="nome_tela_0" Fast="0" stCount="13" IsInput="0" WriteAddr="nome_tela_0" KbdScreen="1001" IsPopKeyBrod="0" FigureFile="" Remark="Receita nº 1" BorderColor="0xe8ceba 0" FrnColor="0x0 -1" BgColor="0xc0c0c0 -1" CharSize="304" Align="1" IsHideNum="0" Transparent="1" IsShowPwd="0" IsIndirectR="0" IsIndirectW="0" IsInputDefault="0" IsDWord="1" IsHiLowRever="0"/>
+<General Desc="STR_0" Area="102 224 465 280" WordAddr="nome_tela_0" Fast="0" stCount="13" IsInput="0" WriteAddr="nome_tela_0" KbdScreen="1001" IsPopKeyBrod="0" FigureFile="" Remark="Receita nº 1" BorderColor="0xe8ceba 0" FrnColor="0x0 -1" BgColor="0xffffff -1" CharSize="304" Align="1" IsHideNum="0" Transparent="1" IsShowPwd="0" IsIndirectR="0" IsIndirectW="0" IsInputDefault="0" IsDWord="1" IsHiLowRever="0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></ScrInfo>
