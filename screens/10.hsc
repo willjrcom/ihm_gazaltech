@@ -32,7 +32,7 @@
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="NUM_0">
 <General Desc="NUM_0" Area="30 320 220 384" WordAddr="sp1" Fast="0" IsInput="1" WriteAddr="sp1" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="TFT-type style\dp_zc00.pvg" BorderColor="0xcccccc 16777215" FrnColor="0x0 0" BgColor="0xc0c0c0 -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="1" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
-<DispFormat DispType="2" DigitCount="3 0" DataLimit="1125515264 1137180672" DataRange="150.000000 400.000000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="301" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
+<DispFormat DispType="2" DigitCount="3 0" DataLimit="1109393408 1137180672" DataRange="40.000000 400.000000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="301" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1148829696" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_3">
