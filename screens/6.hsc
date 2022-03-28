@@ -94,5 +94,5 @@
 <PartInfo PartType="Text" PartName="TXT_0">
 <General TextContent="Forno Gazal
 Desenvolvido por:
-William A. G. Júnior" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="12 246 126 126 126 126 126 126 12" Bold="0" StartPt="67 575"/>
+William A. G. Júnior      2022" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="12 246 126 126 126 126 126 126 12" Bold="0" StartPt="67 575"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo></ScrInfo>
