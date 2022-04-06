@@ -19,27 +19,28 @@ endif
 			<Trigger Action="4" BitAddr="Eco_command">' Envia memorizado para tela
  @w_1:46 = @W_HDW8300
  @w_1:4692 = @W_HDW8301
-'BMOV(@w_1:46, @SP_MEM, 4)
-'BMOV(@w_1:4692, @VELOC_MEM, 4)
 </Trigger>
 			<Trigger Action="3" BitAddr="outconfig">@W_hdw0 = 1
 @outconfig = 0
 </Trigger>
-			<Trigger Action="3" BitAddr="turnon">IF @liga_desliga = TRUE Then
-	@W_1:415 = 0 ' modo controle automatico
-	@W_1:4656 = 3	' o2F = AL 		- Função da saída out2 = Alarme de temperatura
-	@W_1:4658 = 1	' o2AC = ReU 	- liga alarme ação reversa
-	@W_1:4658 = 0	' o2AC = ReU 	- desliga alarme ação reversa
-ELSE
-	@W_1:415 = 2 ' modo stand-by
-	@W_1:4656 = 0	' o2F = None 		- Função da saída out2 = none
-	@W_1:4658 = 0	' o2AC = Dir 	- Alarme ação direta
-	@turnon = FALSE
-ENDIF
+			<Trigger Action="3" BitAddr="turnon">'IF @liga_desliga = TRUE Then
+@W_1:415 = 0 ' modo controle automatico
+@W_1:4656 = 3	' o2F = AL 		- Função da saída out2 = Alarme de temperatura
+
+' Alarme ação reversa
+@W_1:4658 = 1	' o2AC = ReU 
+@W_1:4658 = 0	' o2AC = ReU 
+
+'ELSE
+'	@W_1:415 = 2 ' modo stand-by
+'	@W_1:4656 = 0	' o2F = None 		- Função da saída out2 = none
+'	@W_1:4658 = 0	' o2AC = Dir 	- Alarme ação direta
+'	@turnon = FALSE
+'ENDIF
 </Trigger>
-			<Trigger Action="4" BitAddr="turnon">@W_1:415 = 2 ' modo controle stand-by
-@W_1:4656 = 0	' o2F = nonE
-@W_1:4658 = 0	' o2AC = Dir	- Alarme ação direta
+			<Trigger Action="4" BitAddr="turnon">'@W_1:415 = 2 ' modo controle stand-by
+'@W_1:4656 = 0	' o2F = nonE
+'@W_1:4658 = 0	' o2AC = Dir	- Alarme ação direta
 </Trigger>
 			<Trigger Action="3" BitAddr="liga_desliga">@b_1:449.0 = 1		'run/stop speed out = start
 @B_1:4550.0 = TRUE ' o3t = ON liga ventilacao e esteira
@@ -51,9 +52,7 @@ ENDIF
 @W_1:4656 = 0	' o2F = none	
 @W_1:4658 = 0	' o2AC = dir
 
-@turnon = false
-
-@B_1:4550.0 = 0 ' out3 = OFF
+@B_1:4550.0 = 0 ' out3 = OFF liga ventilacao e esteira
 </Trigger>
 		</TrigAction>
 		<TimerAction>
@@ -68,9 +67,6 @@ ENDIF
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="DirShow" PartName="DIW_1">
 <General Desc="DIW_1" Area="0 0 480 800" TriggAddr="Eco_command" ScreenNo="22" IsWindow="0" TriggerMode="0" IsTop="0" SetModuelWnw="0"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="DirShow" PartName="DIW_0">
-<General Desc="DIW_2" Area="0 0 480 800" TriggAddr="alarme_gas" ScreenNo="9" IsWindow="0" TriggerMode="0" IsTop="0" SetModuelWnw="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="Rect" PartName="REC_6">
@@ -171,34 +167,14 @@ ENDIF
 <General TextContent="ºC" LaFrnColor="0xd7 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="2986 126 126 126 126 126 126 12" Bold="0" StartPt="178 389"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo></PartInfo>
 <PartInfo PartType="GroupPart" PartName="Group part">
-<PartInfo PartType="Rect" PartName="REC_3">
-<General Area="9 493 234 683" BorderColor="0x0 0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" ActiveColor="0"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
-<PartInfo PartType="Bitmap" PartName="BMP_2">
-<General Desc="BMP_2" StartPt="34 506" Width="50" Height="50" BmpIndex="139"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="Text" PartName="TXT_5">
-<General TextContent="Tempo" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="2986 126 126 126 126 126 126 12" Bold="0" StartPt="86 509"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
-<PartInfo PartType="Numeric" PartName="NUM_2">
-<General Desc="NUM_0" Area="18 565 161 659" WordAddr="1:4692" Fast="0" IsInput="0" WriteAddr="1:4692" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xcccccc 16777215" FrnColor="0x0 -1" BgColor="0xffffff 0" BmpIndex="27" Transparent="0" IsHideNum="0" HighZeroPad="1" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
-<DispFormat DispType="2" DigitCount="1 2" DataLimit="0 1092605706" DataRange="0.000000 9.990000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="303" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
-<Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="Text" PartName="TXT_4">
-<General TextContent="Min" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="2986 126 126 126 126 126 126 12" Bold="0" StartPt="164 609"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="Rect" PartName="REC_1">
-<General Area="245 493 470 683" BorderColor="0x0 0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" ActiveColor="0"/>
+<General Area="10 493 235 683" BorderColor="0x0 0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="TimeDisplay" PartName="TIME_0">
-<General Desc="TIME_0" Area="256 560 459 616" FigureFile="" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0xffffff 0" CharSize="310" Transparent="0"/>
+<General Desc="TIME_0" Area="21 560 224 616" FigureFile="" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0xffffff 0" CharSize="310" Transparent="0"/>
 <MoveZoom DataFormatMZ="4" DataLimitMZ="1174011904 1176256512" MutipleMZ="1.000000"/></PartInfo></PartInfo>
 <PartInfo PartType="Numeric" PartName="Numeric Input/Display0">
-<General Desc="NUM_0" Area="326 34 476 134" WordAddr="1:4653" Fast="0" IsInput="0" WriteAddr="1:4653" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="compact style\dpjy_a01.pvg" BorderColor="0xcccccc 16777215" FrnColor="0x8000 -1" BgColor="0xffffff 0" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
+<General Desc="NUM_0" Area="322 8 472 108" WordAddr="1:4653" Fast="0" IsInput="0" WriteAddr="1:4653" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="compact style\dpjy_a01.pvg" BorderColor="0xcccccc 16777215" FrnColor="0x8000 -1" BgColor="0xffffff 0" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
 <DispFormat DispType="6" DigitCount="3 0" DataLimit="0 1148829696" DataRange="0.000000 999.000000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="299" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
@@ -208,4 +184,24 @@ ENDIF
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Bitmap" PartName="BMP_0">
 <General Desc="BMP_0" StartPt="11 10" Width="458" Height="154" BmpIndex="86"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo></ScrInfo>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo>
+<PartInfo PartType="GroupPart" PartName="Group part">
+<PartInfo PartType="Rect" PartName="REC_3">
+<General Area="247 493 472 683" BorderColor="0x0 0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" ActiveColor="0"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="GroupPart" PartName="Group part">
+<PartInfo PartType="Bitmap" PartName="BMP_2">
+<General Desc="BMP_2" StartPt="272 506" Width="50" Height="50" BmpIndex="139"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="Text" PartName="TXT_5">
+<General TextContent="Tempo" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="2986 126 126 126 126 126 126 12" Bold="0" StartPt="324 509"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo>
+<PartInfo PartType="GroupPart" PartName="Group part">
+<PartInfo PartType="Numeric" PartName="NUM_2">
+<General Desc="NUM_0" Area="256 565 399 659" WordAddr="1:4692" Fast="0" IsInput="0" WriteAddr="1:4692" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xcccccc 16777215" FrnColor="0x0 -1" BgColor="0xffffff 0" BmpIndex="27" Transparent="0" IsHideNum="0" HighZeroPad="1" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
+<DispFormat DispType="2" DigitCount="1 2" DataLimit="0 1092605706" DataRange="0.000000 9.990000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="303" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
+<Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="Text" PartName="TXT_4">
+<General TextContent="Min" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="2986 126 126 126 126 126 126 12" Bold="0" StartPt="402 609"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo></PartInfo></ScrInfo>

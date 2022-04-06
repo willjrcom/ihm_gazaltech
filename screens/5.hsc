@@ -42,12 +42,8 @@ endif
 @tempocofig= 5  'tempo para abrir o menu de configuração 
 @tempotransicao = 1 'tempo para inibir o bug em 1.0 segundo
 
-
-
 @W_1:453 = 0 ' modo FULL
 '@W_1:415 = 0 ' modo controle automatico
-
-
 
 @SP_Temperatura_ativo = @w_1:46
 @SP_speed_ativo = @W_1:W6692
@@ -56,17 +52,9 @@ endif
 @SP_speed_ECO = 300
 @des = 90
 
-
-
 @plano_de_fundo = 0
 
 '--- INVERSOR
-
-
-
-
-
-
 
 @Reset_fabrica = FALSE
 </Trigger></TrigAction></Script>
@@ -84,7 +72,7 @@ endif
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo>
 <PartInfo PartType="Rect" PartName="REC_0">
-<General Area="10 111 470 456" BorderColor="0x0 0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" ActiveColor="0"/>
+<General Area="10 111 470 592" BorderColor="0x0 0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Bitmap" PartName="BMP_0">
 <General Desc="BMP_0" StartPt="0 0" Width="480" Height="90" BmpIndex="40"/>
@@ -92,7 +80,6 @@ endif
 <PartInfo PartType="Text" PartName="TXT_1">
 <General TextContent="Mais opções" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="2986 126 126 126 126 126 126 12" Bold="0" StartPt="121 23"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="Text" PartName="TXT_2">
 <General TextContent="CUIDADO" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="3046 126 126 126 126 126 126 12" Bold="0" StartPt="123 142"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
@@ -108,7 +95,7 @@ endif
 <PartInfo PartType="Text" PartName="TXT_4">
 <General TextContent="Segurar
 por 5 seg." LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="2156 126 126 126 126 126 126 12" Bold="0" StartPt="315 252"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Line" PartName="LN_0">
 <General BorderColor="0x0 0" StartPt="30 351" EndPt="450 351" AutoAdsorption="20"/></PartInfo>
 <PartInfo PartType="GroupPart" PartName="Group part">
@@ -116,6 +103,19 @@ por 5 seg." LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharS
 <General TextContent="Alterar senha" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="16 326 126 126 126 126 126 126 12" Bold="0" StartPt="37 388"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="String" PartName="STR_0">
-<General Desc="STR_0" Area="277 385 443 424" WordAddr="hsw404" Fast="0" stCount="8" IsInput="1" WriteAddr="hsw404" KbdScreen="1004" IsPopKeyBrod="0" FigureFile="TFT-type style\dp_zc03.pvg" BorderColor="0xcccccc 0" FrnColor="0x0 -1" BgColor="0xffffff -1" CharSize="16 32" IsHideNum="0" Transparent="0" IsShowPwd="0" IsIndirectR="0" IsIndirectW="0" IsInputDefault="0" IsDWord="0" IsHiLowRever="0"/>
+<General Desc="STR_0" Area="277 385 443 424" WordAddr="hsw404" Fast="0" stCount="8" IsInput="1" WriteAddr="hsw404" KbdScreen="1004" IsPopKeyBrod="0" FigureFile="TFT-type style\dp_zc03.pvg" BorderColor="0xcccccc 0" FrnColor="0x0 -1" BgColor="0xffffff -1" CharSize="16 32" IsHideNum="0" Transparent="0" IsShowPwd="0" IsIndirectR="0" IsIndirectW="0" IsInputDefault="1" InputDefault="6384" IsDWord="0" IsHiLowRever="0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo></ScrInfo>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo>
+<PartInfo PartType="GroupPart" PartName="Group part">
+<PartInfo PartType="Text" PartName="Text0">
+<General TextContent="Desativar
+alarme do gás" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="16 326 126 126 126 126 126 126 12" Bold="0" StartPt="37 482"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="BitSwitch" PartName="BS_1">
+<General Desc="BS_0" Area="255 483 455 547" OperateAddr="output_timer" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="output_timer" FigureFile="TFT-type style\TFT010.pvg" BorderColor="0xff00 -1" BmpIndex="-1" Align="3" LaStartPt="63 10" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
+<Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
+<Label Status="0" Pattern="4587604" FrnColor="0xff 1" BgColor="0xffffff 0" Bold="0" LaIndexID="OFF" CharSize="1414141414141414" LaFrnColor="0x0 0"/>
+<Label Status="1" Pattern="1" FrnColor="0x40ff00 0" BgColor="0xffffff 0" Bold="0" LaIndexID="ON" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo></PartInfo>
+<PartInfo PartType="Line" PartName="LN_1">
+<General BorderColor="0x0 0" StartPt="30 454" EndPt="450 454" AutoAdsorption="20"/></PartInfo></ScrInfo>
