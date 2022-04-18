@@ -66,7 +66,7 @@ endif
 <General Desc="DIW_0" Area="0 0 480 800" TriggAddr="SP_EDIT_flag" ScreenNo="21" IsWindow="0" TriggerMode="0" IsTop="0" SetModuelWnw="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="DirShow" PartName="DIW_1">
-<General Desc="DIW_1" Area="0 0 480 800" TriggAddr="Eco_command" ScreenNo="22" IsWindow="0" TriggerMode="0" IsTop="0" SetModuelWnw="0"/>
+<General Desc="DIW_1" Area="0 0 480 800" TriggAddr="Eco_command" ScreenNo="33" IsWindow="0" TriggerMode="0" IsTop="0" SetModuelWnw="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="Rect" PartName="REC_6">
