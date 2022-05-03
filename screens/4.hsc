@@ -50,39 +50,29 @@ alarme" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize
 <DispFormat DispType="6" DigitCount="2 1" DataLimit="1065353216 1106247680" DataRange="1.000000 30.000000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="180" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="1" InputDefault="1" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
-<PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="Text" PartName="TXT_6">
 <General TextContent="Ajusta temperatura digital em função da real" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 166 126 126 126 126 126 126 12" Bold="0" StartPt="38 346"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="Text" PartName="Text2">
 <General TextContent="Calibrar temp." LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="16 326 126 126 126 126 126 126 12" Bold="0" StartPt="38 289"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="Numeric" PartName="Numeric Input/Display2">
-<General Desc="NUM_0" Area="329 259 444 352" WordAddr="1:410374" Fast="0" IsInput="1" WriteAddr="1:410374" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xcccccc 0" FrnColor="0x0 -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
-<DispFormat DispType="6" DigitCount="2 0" DataLimit="3267756032 1120272384" DataRange="-99.000000 99.000000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="177" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="1" InputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
-<Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="1" IsUseUserAuthority="0"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_2">
 <General TextContent="Valores: Entre -99 à 99" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 166 126 126 126 126 126 126 12" Bold="0" StartPt="36 322"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_7">
-<General TextContent="Aviso de queda de temperatura." LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 166 126 126 126 126 126 126 12" Bold="0" StartPt="41 500"/>
+<General TextContent="Aviso de queda de temperatura." LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 166 126 126 126 126 126 126 12" Bold="0" StartPt="41 487"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_3">
-<General TextContent="Valores: Entre 15 à 30" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 166 126 126 126 126 126 126 12" Bold="0" StartPt="38 483"/>
+<General TextContent="Valores: Entre 15 à 30" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 166 126 126 126 126 126 126 12" Bold="0" StartPt="38 466"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="Numeric" PartName="Numeric Input/Display1">
 <General Desc="NUM_0" Area="328 394 443 487" WordAddr="1:4666" Fast="0" IsInput="1" WriteAddr="1:4666" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
 <DispFormat DispType="6" DigitCount="4 0" DataLimit="0 1140457472" DataRange="0.000000 500.000000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="174" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="1" InputDefault="15" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="Text1">
-<General TextContent="Em teste" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="16 326 126 126 126 126 126 126 12" Bold="0" StartPt="41 407"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo></PartInfo>
+<General TextContent="Em teste" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="16 326 126 126 126 126 126 126 12" Bold="0" StartPt="41 419"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="Text" PartName="TXT_9">
 <General TextContent="Variação para religar chama alta." LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 166 126 126 126 126 126 126 12" Bold="0" StartPt="37 206"/>
@@ -98,4 +88,9 @@ alarme" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_1">
 <General TextContent="Valores: Entre 1 à 10" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 166 126 126 126 126 126 126 12" Bold="0" StartPt="37 184"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo></PartInfo></ScrInfo>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo></PartInfo>
+<PartInfo PartType="Numeric" PartName="NUM_1">
+<General Desc="NUM_0" Area="326 258 441 351" WordAddr="1:410374" Fast="0" IsInput="1" WriteAddr="1:410374" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
+<DispFormat DispType="6" DigitCount="2 0" DataLimit="3267756032 1120272384" DataRange="-99.000000 99.000000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="174" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="1" InputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
+<Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></ScrInfo>

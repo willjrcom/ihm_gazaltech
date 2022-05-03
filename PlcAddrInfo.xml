@@ -46,8 +46,11 @@
 			<WordAddr>
 				<Add Addr="HDW_W_008003" Len="1" Fast="0"/>
 				<Add Addr="HDW_W_008001" Len="1" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
-	<AddrInfo ScrnNo="4" HasNoPlcAddr="1">
-	</AddrInfo>
+	<AddrInfo ScrnNo="4" HasNoPlcAddr="0">
+		<PLCAddr>
+			<WordAddr>
+				<Add Addr="1:4_W_000666" Len="1" Fast="0"/>
+				<Add Addr="1:4_W_010374" Len="1" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
 	<AddrInfo ScrnNo="5" HasNoPlcAddr="0">
 		<PLCAddr>
 			<BitAddr>
