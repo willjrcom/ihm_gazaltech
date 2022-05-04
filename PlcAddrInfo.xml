@@ -62,13 +62,13 @@
 		<PLCAddr>
 			<WordAddr>
 				<Add Addr="1:4_W_000690" Len="1" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
-	<AddrInfo ScrnNo="7" HasNoPlcAddr="1">
-		<HMIAddr>
+	<AddrInfo ScrnNo="7" HasNoPlcAddr="0">
+		<PLCAddr>
 			<WordAddr>
-				<Add Addr="HDW_W_010383" Len="1" Fast="0"/>
-				<Add Addr="HDW_W_010384" Len="1" Fast="0"/>
-				<Add Addr="HDW_W_010385" Len="1" Fast="0"/>
-				<Add Addr="HDW_W_010386" Len="1" Fast="0"/></WordAddr></HMIAddr></AddrInfo>
+				<Add Addr="1:4_W_010383" Len="1" Fast="0"/>
+				<Add Addr="1:4_W_010384" Len="1" Fast="0"/>
+				<Add Addr="1:4_W_010385" Len="1" Fast="0"/>
+				<Add Addr="1:4_W_010386" Len="1" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
 	<AddrInfo ScrnNo="8" HasNoPlcAddr="0">
 		<HMIAddr>
 			<BitAddr>

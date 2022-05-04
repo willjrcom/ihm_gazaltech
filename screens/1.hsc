@@ -89,24 +89,28 @@
 <PartInfo PartType="Rect" PartName="REC_7">
 <General Area="10 8 470 148" BorderColor="0x0 0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="FunctionSwitch" PartName="FS_5">
-<General Desc="FS_3" Area="52 73 116 137" ScrSwitch="1" ScreenNo="4" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="141" LaStartPt="32 32" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
-<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="1" IsSetLowerLev="1" IsUseUserAuthority="0"/>
+<General Desc="FS_3" Area="30 73 94 137" ScrSwitch="1" ScreenNo="4" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="141" LaStartPt="32 32" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="1" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Bold="0" CharSize="6 126 126 126 126 126 126 126 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_4">
-<General Desc="FS_3" Area="208 73 272 137" ScrSwitch="1" ScreenNo="2" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="142" LaStartPt="32 32" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<General Desc="FS_3" Area="148 73 212 137" ScrSwitch="1" ScreenNo="2" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="142" LaStartPt="32 32" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
 <Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Bold="0" CharSize="6 126 126 126 126 126 126 126 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_6">
-<General Desc="FS_3" Area="364 73 428 137" ScrSwitch="1" ScreenNo="6" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="111" LaStartPt="32 32" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
-<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="1" IsSetLowerLev="1" IsUseUserAuthority="0"/>
+<General Desc="FS_3" Area="386 73 450 137" ScrSwitch="1" ScreenNo="6" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="111" LaStartPt="32 32" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="1" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
-<Label Status="0" Bold="0" CharSize="6 126 126 126 126 126 126 126 12" LaFrnColor="0xffffff -1"/></PartInfo></PartInfo>
+<Label Status="0" Bold="0" CharSize="6 126 126 126 126 126 126 126 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="Line" PartName="LN_4">
 <General BorderColor="0x0 0" StartPt="30 54" EndPt="450 54" AutoAdsorption="20"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_0">
 <General TextContent="Menu" LaFrnColor="0x0 -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="2336 126 126 126 126 126 126 12" Bold="0" StartPt="189 9"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></ScrInfo>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="FunctionSwitch" PartName="FS_0">
+<General Desc="FS_3" Area="267 73 331 137" ScrSwitch="1" ScreenNo="7" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="144" LaStartPt="22 64" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="1" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
+<Label Status="0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo></ScrInfo>
