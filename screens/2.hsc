@@ -5,7 +5,7 @@
 			<Timer Interval="1">@controlpizza = @b_1:449.0
 </Timer></TimerAction></Script>
 <PartInfo PartType="Rect" PartName="REC_1">
-<General Area="10 90 470 341" BorderColor="0x0 0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" ActiveColor="0"/>
+<General Area="10 90 470 369" BorderColor="0x0 0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="Numeric Input/Display0">
 <General Desc="NUM_0" Area="328 116 443 210" WordAddr="SP_Temperatura_ECO" Fast="0" IsInput="1" WriteAddr="SP_Temperatura_ECO" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0xffffff 0" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
@@ -30,6 +30,7 @@ modo economico" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" C
 <PartInfo PartType="Text" PartName="TXT_1">
 <General TextContent="Tempo" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" CharSize="16 326 126 126 126 126 126 126 12" Bold="0" StartPt="32 274"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></PartInfo>
+<PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="Rect" PartName="Rectangle1">
 <General Area="10 690 470 790" BorderColor="0x0 0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
@@ -39,10 +40,10 @@ modo economico" LaFrnColor="0x0 0" IsBackColor="0" BgColor="0xffffff 0" C
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_2">
-<General Desc="FS_3" Area="23 708 87 772" ScrSwitch="1" ScreenNo="1" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="128" LaStartPt="32 32" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<General Desc="FS_3" Area="41 708 105 772" ScrSwitch="1" ScreenNo="1" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="128" LaStartPt="32 32" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
 <Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
-<Label Status="0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo>
+<Label Status="0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo></PartInfo>
 <PartInfo PartType="Bitmap" PartName="BMP_0">
 <General Desc="BMP_0" StartPt="0 0" Width="479" Height="74" BmpIndex="40"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>

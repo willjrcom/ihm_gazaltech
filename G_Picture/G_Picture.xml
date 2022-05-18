@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <G_Picture G_PictureVer="2.0">
-	<G_bmplib SaveAsJpg="0" CurBmpTotal="109" AllBmpTotal="144" G_bmplib.blb_CT="20211027  17:15:46" G_bmplib.blb_MT="20211018  10:16:56">
+	<G_bmplib SaveAsJpg="0" CurBmpTotal="115" AllBmpTotal="150" G_bmplib.blb_CT="20220510  13:49:20" G_bmplib.blb_MT="20211018  10:16:56">
 		<G_bmp szFilename="contract" nId="8" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" enumPicType="0" bTransparent="1" cTransColor="16777215"/>
 		<G_bmp szFilename="home " nId="10" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" bTransparent="1" cTransColor="0" enumPicType="0"/>
 		<G_bmp szFilename="NEXT" nId="11" nTotalStatus="1" nWidth="50" nHeigth="50" nFileSize="7640" bTransparent="1" cTransColor="0" enumPicType="0"/>
@@ -292,5 +292,11 @@
 		<G_bmp szFilename="OFF_ON" nId="143" nTotalStatus="2" nWidth="0" nHeigth="0" nFileSize="0" bTransparent="0" cTransColor="0" enumPicType="0">
 			<MulStatus szFilename="" dwMID="0"/>
 			<MulStatus szFilename="" dwMID="1"/></G_bmp>
-		<G_bmp szFilename="ajust" nId="144" nTotalStatus="1" nWidth="96" nHeigth="96" nFileSize="27688" bTransparent="1" cTransColor="0" enumPicType="0"/></G_bmplib>
+		<G_bmp szFilename="ajust" nId="144" nTotalStatus="1" nWidth="96" nHeigth="96" nFileSize="27688" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="esteiraIcon" nId="145" nTotalStatus="1" nWidth="96" nHeigth="96" nFileSize="27688" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="resetIcon" nId="146" nTotalStatus="1" nWidth="65" nHeigth="65" nFileSize="12780" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="hourIcon" nId="147" nTotalStatus="1" nWidth="96" nHeigth="96" nFileSize="27688" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="resetIcon1" nId="148" nTotalStatus="1" nWidth="144" nHeigth="144" nFileSize="62248" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="hourIcon1" nId="149" nTotalStatus="1" nWidth="240" nHeigth="240" nFileSize="172840" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="resetIcon2" nId="150" nTotalStatus="1" nWidth="240" nHeigth="240" nFileSize="172840" bTransparent="1" cTransColor="0" enumPicType="0"/></G_bmplib>
 </G_Picture>

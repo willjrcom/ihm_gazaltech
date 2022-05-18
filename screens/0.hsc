@@ -54,7 +54,28 @@ endif
 
 @B_1:4550.0 = 0 ' out3 = OFF liga ventilacao e esteira
 </Trigger>
-		</TrigAction>
+			<Trigger Action="1" BitAddr="ECO_ON">' Armazena tela no temporario
+@ECO=TRUE
+ @W_HDW8300 = @w_1:46
+ @W_HDW8301 = @w_1:4692
+
+' Envia economico para tela
+ @w_1:46 = @SP_Temperatura_ECO
+ @w_1:4692 = @SP_speed_ECO
+
+IF  @w_1:46 = @SP_Temperatura_ECO AND @w_1:4692 = @SP_speed_ECO THEN
+@ECO_ON=FALSE
+ENDIF
+</Trigger>
+			<Trigger Action="1" BitAddr="ECO_OFF">' Envia memorizado para tela
+ @w_1:46 = @W_HDW8300
+ @w_1:4692 = @W_HDW8301
+
+IF @w_1:46 = @W_HDW8300 AND @w_1:4692 = @W_HDW8301 THEN
+@ECO_OFF=FALSE
+@ECO=FALSE
+ENDIF
+</Trigger></TrigAction>
 		<TimerAction>
 			<Timer Interval="2">@controlpizza = @b_1:449.0 ' start saida velocidade
 
@@ -66,7 +87,7 @@ endif
 <General Desc="DIW_0" Area="0 0 480 800" TriggAddr="SP_EDIT_flag" ScreenNo="21" IsWindow="0" TriggerMode="0" IsTop="0" SetModuelWnw="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="DirShow" PartName="DIW_1">
-<General Desc="DIW_1" Area="0 0 480 800" TriggAddr="Eco_command" ScreenNo="33" IsWindow="0" TriggerMode="0" IsTop="0" SetModuelWnw="0"/>
+<General Desc="DIW_1" Area="0 0 480 800" TriggAddr="ECO" ScreenNo="33" IsWindow="0" TriggerMode="0" IsTop="0" SetModuelWnw="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="Rect" PartName="REC_6">
@@ -107,24 +128,23 @@ endif
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0"/>
 <Label Status="0" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0" UseGlint="0" GlintFgClr="0x0 0"/></PartInfo>
-<PartInfo PartType="GroupPart" PartName="Group part">
+<PartInfo PartType="FunctionSwitch" PartName="FS_1">
+<General Desc="FS_1" Area="368 708 432 772" ScrSwitch="1" ScreenNo="1" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="111" LaStartPt="43 38" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
+<Label Status="0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo>
+<PartInfo PartType="BitSwitch" PartName="BS_0">
+<General Desc="BS_0" Area="208 708 272 772" OperateAddr="ECO_ON" Fast="0" BitFunc="1" Monitor="1" MonitorAddr="ECO_ON" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" BmpIndex="123" LaStartPt="32 32" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
+<Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
+<Label Status="0" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/>
+<Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo>
 <PartInfo PartType="BitSwitch" PartName="BS_3">
 <General Desc="BS_3" Area="49 708 113 772" OperateAddr="SP_EDIT_flag" Fast="0" BitFunc="1" Monitor="1" MonitorAddr="SP_EDIT_flag" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="116" LaStartPt="32 32" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/>
-<Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo>
-<PartInfo PartType="BitSwitch" PartName="BS_0">
-<General Desc="BS_0" Area="208 708 272 772" OperateAddr="Eco_command" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="Eco_command" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" BmpIndex="123" LaStartPt="32 32" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
-<Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
-<Label Status="0" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/>
-<Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo>
-<PartInfo PartType="FunctionSwitch" PartName="FS_1">
-<General Desc="FS_1" Area="368 708 432 772" ScrSwitch="1" ScreenNo="1" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="140" LaStartPt="43 38" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
-<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
-<Label Status="0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo></PartInfo></PartInfo>
+<Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="1414141414141414" LaFrnColor="0x0 0"/></PartInfo></PartInfo>
 <PartInfo PartType="GroupPart" PartName="Group part">
 <PartInfo PartType="Rect" PartName="REC_4">
 <General Area="10 170 470 290" BorderColor="0xffffff -1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff -1" ActiveColor="0"/>

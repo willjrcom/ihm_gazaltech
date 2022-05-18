@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrInfo ScreenNo="22" ScreenType="" ScreenSize="0">
+<ScrInfo ScreenNo="33" ScreenType="" ScreenSize="0">
 <PartInfo PartType="Rect" PartName="REC_0">
 <General Area="58 46 424 741" BorderColor="0x0 0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="BitSwitch" PartName="BS_0">
-<General Desc="BS_0" Area="136 650 346 724" OperateAddr="Eco_command" Fast="0" Monitor="1" MonitorAddr="Eco_command" FigureFile="TFT-type style\TFT010.pvg" BorderColor="0xc0c0c0 -1" BmpIndex="-1" Align="3" LaStartPt="22 14" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
+<General Desc="BS_0" Area="136 650 346 724" OperateAddr="ECO_OFF" Fast="0" BitFunc="1" Monitor="1" MonitorAddr="ECO_OFF" FigureFile="TFT-type style\TFT010.pvg" BorderColor="0xc0c0c0 -1" BmpIndex="-1" Align="3" LaStartPt="22 14" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Pattern="4587604" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" LaIndexID="DesativarDesativarDesativar" CharSize="1414141414141414" LaFrnColor="0x0 0"/>
