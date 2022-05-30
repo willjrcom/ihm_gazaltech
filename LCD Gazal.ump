@@ -92,8 +92,8 @@
 		<InstallmentSet InstallmentUse="0" InstallmentMaxPeriod="1" InstallmentSuperPwd="" InstallmentTrigUseClose="0" InstallmentTrigUseOpen="0" InstallmentTrigAddClose="" InstallmentTrigAddOpen="" InstallmentAlert="0" PassWordFormat="0" InstallmentUseScreen="0" InstallmentCurPeriod="1" IsDynamic="0"/>
 		<PartPassword UsePassword="1" Default="0" Grade1="2601" Grade2="6384" Grade3="2601" Grade4="2601" Grade5="2601" Grade6="" Grade7="" Grade8="" Grade9="" Grade10="" Grade11="" Grade12="" GradeIndependent="0"/></SysSet>
 	<ScreenSet>
-<ScreenInfo ScrnNo="0" Child="0" ScrnName="inicial" Height="800" Width="480" Filled="1" BkColor="0x329492" FnColor="0xd8e9ec" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="0.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="1" Child="0" ScrnName="menu" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="0" Child="0" ScrnName="inicial" Height="800" Width="480" Filled="1" BkColor="0x329492" FnColor="0xd8e9ec" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="0.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="1" Child="0" ScrnName="menu" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="2" Child="0" ScrnName="config_modo_eco" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="2.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="3" Child="0" ScrnName="config_data" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="17.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="4" Child="0" ScrnName="config_temperatura" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="4.hsc" Opened="0"/>
@@ -110,7 +110,7 @@
 <ScreenInfo ScrnNo="20" Child="0" ScrnName="senha" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="20.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="21" Child="1" ScrnName="SP_EDIT" Height="800" Width="480" Filled="1" BkColor="0x800000" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="21.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="30" Child="0" ScrnName="var_test" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="8.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="31" Child="1" ScrnName="calibracao_velocidade" Height="500" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="3.hsc" Opened="0"/>
+<ScreenInfo ScrnNo="31" Child="1" ScrnName="calibracao_velocidade" Height="600" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="3.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="32" Child="1" ScrnName="alarme_gas" Height="800" Width="480" Filled="1" BkColor="0xff" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="22.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="33" Child="1" ScrnName="alarme_eco" Height="800" Width="480" Filled="1" BkColor="0x8000" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="23.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="1000" Child="1" ScrnName="BuilNum" Height="800" Width="480" Filled="1" BkColor="0x800000" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1000.hsc" Opened="0"/>

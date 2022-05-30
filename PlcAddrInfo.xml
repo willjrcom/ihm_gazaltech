@@ -26,6 +26,47 @@
 				<Add Addr="HDW_W_010384" Len="1" Fast="0"/>
 				<Add Addr="HDW_W_010385" Len="1" Fast="0"/>
 				<Add Addr="HDW_W_010386" Len="1" Fast="0"/></WordAddr></HMIAddr></AddrInfo>
+	<AddrInfo ScrnNo="0" HasNoPlcAddr="0">
+		<PLCAddr>
+			<BitAddr>
+				<Add Addr="HDX_X_1015.00" Len="1" Fast="0"/>
+				<Add Addr="HDX_X_1000.03" Len="1" Fast="0"/>
+				<Add Addr="HDX_X_1000.01" Len="1" Fast="0"/></BitAddr>
+			<WordAddr>
+				<Add Addr="1:4_W_000690" Len="1" Fast="0"/>
+				<Add Addr="HDW_W_008146" Len="1" Fast="0"/>
+				<Add Addr="1:4_W_000653" Len="1" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
+	<AddrInfo ScrnNo="1" HasNoPlcAddr="1">
+	</AddrInfo>
+	<AddrInfo ScrnNo="2" HasNoPlcAddr="0">
+		<PLCAddr>
+			<WordAddr>
+				<Add Addr="HDW_W_008003" Len="1" Fast="0"/>
+				<Add Addr="HDW_W_008001" Len="1" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
+	<AddrInfo ScrnNo="3" HasNoPlcAddr="1">
+	</AddrInfo>
+	<AddrInfo ScrnNo="4" HasNoPlcAddr="0">
+		<PLCAddr>
+			<WordAddr>
+				<Add Addr="1:4_W_000705" Len="1" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
+	<AddrInfo ScrnNo="5" HasNoPlcAddr="0">
+		<PLCAddr>
+			<BitAddr>
+				<Add Addr="HDX_X_1013.00" Len="1" Fast="0"/>
+				<Add Addr="HDX_X_1022.00" Len="1" Fast="0"/></BitAddr>
+			<WordAddr>
+				<Add Addr="HSW_W_000404" Len="4" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
+	<AddrInfo ScrnNo="6" HasNoPlcAddr="0">
+		<PLCAddr>
+			<WordAddr>
+				<Add Addr="1:4_W_000690" Len="1" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
+	<AddrInfo ScrnNo="7" HasNoPlcAddr="0">
+		<PLCAddr>
+			<WordAddr>
+				<Add Addr="1:4_W_010373" Len="1" Fast="0"/>
+				<Add Addr="1:4_W_010374" Len="1" Fast="0"/>
+				<Add Addr="1:4_W_010375" Len="1" Fast="0"/>
+				<Add Addr="1:4_W_010376" Len="1" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
 	<AddrInfo ScrnNo="8" HasNoPlcAddr="0">
 		<HMIAddr>
 			<BitAddr>
@@ -191,53 +232,12 @@
 			<WordAddr>
 				<Add Addr="HSW_W_010060" Len="1" Fast="0"/>
 				<Add Addr="HSW_W_010002" Len="4" Fast="0"/></WordAddr></HMIAddr></AddrInfo>
-	<AddrInfo ScrnNo="1012" HasNoPlcAddr="1">
-		<HMIAddr>
-			<BitAddr>
-				<Add Addr="HSX_X_10000.01" Len="1"/></BitAddr>
-			<WordAddr>
-				<Add Addr="HSW_W_010002" Len="4" Fast="0"/>
-				<Add Addr="HSW_W_010061" Len="8" Fast="0"/>
-				<Add Addr="HSW_W_010006" Len="4" Fast="0"/>
-				<Add Addr="HSW_W_010010" Len="4" Fast="0"/></WordAddr></HMIAddr></AddrInfo>
-	<AddrInfo ScrnNo="0" HasNoPlcAddr="0">
-		<PLCAddr>
-			<BitAddr>
-				<Add Addr="HDX_X_1015.00" Len="1" Fast="0"/>
-				<Add Addr="HDX_X_1000.03" Len="1" Fast="0"/>
-				<Add Addr="HDX_X_1000.01" Len="1" Fast="0"/></BitAddr>
-			<WordAddr>
-				<Add Addr="1:4_W_000690" Len="1" Fast="0"/>
-				<Add Addr="HDW_W_008146" Len="1" Fast="0"/>
-				<Add Addr="1:4_W_000653" Len="1" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
-	<AddrInfo ScrnNo="2" HasNoPlcAddr="0">
-		<PLCAddr>
-			<WordAddr>
-				<Add Addr="HDW_W_008003" Len="1" Fast="0"/>
-				<Add Addr="HDW_W_008001" Len="1" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
-	<AddrInfo ScrnNo="6" HasNoPlcAddr="0">
-		<PLCAddr>
-			<WordAddr>
-				<Add Addr="1:4_W_000690" Len="1" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
-	<AddrInfo ScrnNo="5" HasNoPlcAddr="0">
-		<PLCAddr>
-			<BitAddr>
-				<Add Addr="HDX_X_1013.00" Len="1" Fast="0"/>
-				<Add Addr="HDX_X_1022.00" Len="1" Fast="0"/></BitAddr>
-			<WordAddr>
-				<Add Addr="HSW_W_000404" Len="4" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
-	<AddrInfo ScrnNo="4" HasNoPlcAddr="0">
-		<PLCAddr>
-			<WordAddr>
-				<Add Addr="1:4_W_000705" Len="1" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
-	<AddrInfo ScrnNo="7" HasNoPlcAddr="0">
-		<PLCAddr>
-			<WordAddr>
-				<Add Addr="1:4_W_010373" Len="1" Fast="0"/>
-				<Add Addr="1:4_W_010374" Len="1" Fast="0"/>
-				<Add Addr="1:4_W_010375" Len="1" Fast="0"/>
-				<Add Addr="1:4_W_010376" Len="1" Fast="0"/></WordAddr></PLCAddr></AddrInfo>
-	<AddrInfo ScrnNo="1" HasNoPlcAddr="1">
-	</AddrInfo>
-<AddrInfo ScrnNo="3" HasNoPlcAddr="1">
-</AddrInfo></project>
+<AddrInfo ScrnNo="1012" HasNoPlcAddr="1">
+<HMIAddr>
+<BitAddr>
+<Add Addr="HSX_X_10000.01" Len="1"/></BitAddr>
+<WordAddr>
+<Add Addr="HSW_W_010002" Len="4" Fast="0"/>
+<Add Addr="HSW_W_010061" Len="8" Fast="0"/>
+<Add Addr="HSW_W_010006" Len="4" Fast="0"/>
+<Add Addr="HSW_W_010010" Len="4" Fast="0"/></WordAddr></HMIAddr></AddrInfo></project>
