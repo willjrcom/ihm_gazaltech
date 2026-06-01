@@ -3,12 +3,15 @@ from __future__ import annotations
 
 import argparse
 import base64
+import binascii
 import html
 import json
 import mimetypes
 import re
 import socketserver
+import struct
 import sys
+import zlib
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from http import HTTPStatus
@@ -32,6 +35,14 @@ class Screen:
     part_count: int
     html: str
     addresses: list[str]
+
+
+@dataclass(frozen=True)
+class PictureAsset:
+    path: Path
+    transparent: bool
+    transparent_color: int
+    status_paths: dict[str, Path]
 
 
 def decode_project_xml(path: Path) -> ET.Element:
@@ -127,29 +138,102 @@ def font_size(value: str | None, box_height: int | None = None) -> int:
     return 16
 
 
-def load_image_map() -> dict[str, Path]:
+def load_image_map() -> dict[str, PictureAsset]:
     root = ET.parse(PICTURE_XML).getroot()
-    images: dict[str, Path] = {}
+    images: dict[str, PictureAsset] = {}
     for item in root.findall(".//G_bmp"):
         image_id = item.get("nId")
         if not image_id:
             continue
+        transparent = item.get("bTransparent") == "1"
+        try:
+            transparent_color = int(item.get("cTransColor") or "0") & 0xFFFFFF
+        except ValueError:
+            transparent_color = 0
+        status_paths: dict[str, Path] = {}
+        for status in item.findall("MulStatus"):
+            status_name = status.get("szFilename") or ""
+            status_id = status.get("dwMID") or ""
+            for candidate_name in (status_name, status_name.strip()):
+                if not candidate_name:
+                    continue
+                candidate = PICTURE_DIR / candidate_name
+                if candidate.is_file():
+                    status_paths[status_id] = candidate
+                    break
+
         filenames = [item.get("szFilename") or ""]
         filenames.extend(status.get("szFilename") or "" for status in item.findall("MulStatus"))
+        primary_path: Path | None = None
         for filename in filenames:
             for candidate_name in (filename, filename.strip()):
                 if not candidate_name:
                     continue
                 candidate = PICTURE_DIR / candidate_name
                 if candidate.is_file():
-                    images[image_id] = candidate
+                    primary_path = candidate
                     break
-            if image_id in images:
+            if primary_path is not None:
                 break
+
+        if primary_path is not None:
+            images[image_id] = PictureAsset(primary_path, transparent, transparent_color, status_paths)
     return images
 
 
 IMAGE_MAP = load_image_map()
+
+
+def png_chunk(kind: bytes, data: bytes) -> bytes:
+    return struct.pack(">I", len(data)) + kind + data + struct.pack(">I", binascii.crc32(kind + data) & 0xFFFFFFFF)
+
+
+def bmp_with_transparency_to_png(body: bytes, transparent_color: int) -> bytes:
+    if body[:2] != b"BM":
+        return body
+    pixel_offset = struct.unpack_from("<I", body, 10)[0]
+    dib_size = struct.unpack_from("<I", body, 14)[0]
+    if dib_size < 40:
+        return body
+    width = struct.unpack_from("<i", body, 18)[0]
+    height_raw = struct.unpack_from("<i", body, 22)[0]
+    planes = struct.unpack_from("<H", body, 26)[0]
+    bits_per_pixel = struct.unpack_from("<H", body, 28)[0]
+    compression = struct.unpack_from("<I", body, 30)[0]
+    if planes != 1 or bits_per_pixel != 24 or compression != 0 or width <= 0 or height_raw == 0:
+        return body
+
+    top_down = height_raw < 0
+    height = abs(height_raw)
+    row_stride = ((width * 3 + 3) // 4) * 4
+    trans_r = transparent_color & 0xFF
+    trans_g = (transparent_color >> 8) & 0xFF
+    trans_b = (transparent_color >> 16) & 0xFF
+    rows: list[bytes] = []
+
+    for y in range(height):
+        source_y = y if top_down else height - 1 - y
+        row_start = pixel_offset + source_y * row_stride
+        row = bytearray()
+        row.append(0)
+        for x in range(width):
+            offset = row_start + x * 3
+            blue = body[offset]
+            green = body[offset + 1]
+            red = body[offset + 2]
+            alpha = 0 if (red, green, blue) == (trans_r, trans_g, trans_b) else 255
+            row.extend((red, green, blue, alpha))
+        rows.append(bytes(row))
+
+    png_body = b"".join(
+        [
+            b"\x89PNG\r\n\x1a\n",
+            png_chunk(b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 6, 0, 0, 0)),
+            png_chunk(b"IDAT", zlib.compress(b"".join(rows), 9)),
+            png_chunk(b"IEND", b""),
+        ]
+    )
+    return png_body
 
 
 def style_from_box(x: int, y: int, width: int, height: int, extra: str = "") -> str:
@@ -270,10 +354,13 @@ def render_screen(root: ET.Element, screen_file: str, screen_number_map: dict[st
                     did_emit_control = False
                     if image_id in IMAGE_MAP:
                         emit(
-                            '<img class="bitmap control-image" '
+                            '<img class="bitmap control-image' + (" word-show-image" if part_type == "WordShow" else "") + '" '
                             + attrs(
                                 src=f"/asset/{image_id}",
                                 style=style_from_box(x, y, width, height, f"z-index:{z_index};"),
+                                data_addr=general.get("WordAddr") if part_type == "WordShow" else None,
+                                data_const=general.get("Const") if part_type == "WordShow" else None,
+                                data_image_id=image_id if part_type == "WordShow" else None,
                                 alt="",
                             )
                             + ">"
@@ -329,7 +416,7 @@ def render_screen(root: ET.Element, screen_file: str, screen_number_map: dict[st
                             + f">{html.escape(label_text)}</button>"
                         )
                         did_emit_control = True
-                    elif part_type == "FunctionSwitch":
+                    elif part_type == "FunctionSwitch" and general.get("Transparent") != "1":
                         emit(
                             '<div class="control-placeholder" '
                             + attrs(style=style_from_box(x, y, width, height, f"z-index:{z_index};"))
@@ -392,6 +479,7 @@ def render_screen(root: ET.Element, screen_file: str, screen_number_map: dict[st
                     field_type = "String" if part_type == "DownList" else part_type
                     initial = "000" if part_type == "Numeric" else clean_text(general.get("Remark")) or write_addr or "Texto"
                     class_name = "field numeric-field" if part_type == "Numeric" else "field string-field"
+                    is_transparent = general.get("Transparent") == "1"
                     emit(
                         f'<button class="{class_name}" '
                         + attrs(
@@ -401,9 +489,9 @@ def render_screen(root: ET.Element, screen_file: str, screen_number_map: dict[st
                                 width,
                                 height,
                                 (
-                                    f"border:1px solid {color(general.get('BorderColor'), '#ccd0d5')};"
+                                    f"border:1px solid {'transparent' if is_transparent else color(general.get('BorderColor'), '#ccd0d5')};"
                                     f"color:{color(general.get('FrnColor'), '#111')};"
-                                    f"background:{color(general.get('BgColor'), '#fff')};"
+                                    f"background:{'transparent' if is_transparent else color(general.get('BgColor'), '#fff')};"
                                     f"font-size:{font_size(general.get('CharSize'), height)}px;"
                                     f"z-index:{z_index};"
                                 ),
@@ -459,9 +547,19 @@ def render_screen(root: ET.Element, screen_file: str, screen_number_map: dict[st
 
                 target_file = None
                 title = ""
+                action = None
                 if part_type == "FunctionSwitch":
-                    target_file = screen_number_map.get(general.get("ScreenNo") or "")
-                    title = f"Ir para tela {general.get('ScreenNo')}"
+                    if general.get("FuncFunc") == "2":
+                        target_file = screen_number_map.get(general.get("ScreenNo2") or "")
+                        title = f"Abrir popup {general.get('ScreenNo2')}"
+                        if target_file:
+                            action = f"openPopup({json.dumps(target_file)})"
+                    elif general.get("FuncFunc") == "8":
+                        title = "Fechar popup"
+                        action = "closePopup()"
+                    else:
+                        target_file = screen_number_map.get(general.get("ScreenNo") or "")
+                        title = f"Ir para tela {general.get('ScreenNo')}"
                 elif part_type == "BitSwitch":
                     addr = general.get("OperateAddr") or general.get("MonitorAddr") or ""
                     target_file = bit_targets.get(addr)
@@ -472,7 +570,9 @@ def render_screen(root: ET.Element, screen_file: str, screen_number_map: dict[st
 
                 if part_type in {"FunctionSwitch", "BitSwitch", "WordSwitch"} and general.get("Area"):
                     x, y, width, height = area(general.get("Area"))
-                    if target_file:
+                    if action:
+                        pass
+                    elif target_file:
                         action = f"goToScreen({json.dumps(target_file)})"
                     elif part_type == "WordSwitch":
                         action = "wordSwitch(" + ",".join(
@@ -711,6 +811,20 @@ def render_app() -> bytes:
       transform-origin: top left;
       box-shadow: 0 18px 48px rgba(0,0,0,.45);
     }}
+    .popup-layer {{
+      position: absolute;
+      inset: 0;
+      width: 480px;
+      height: 800px;
+      pointer-events: none;
+      z-index: 3000;
+    }}
+    .popup-layer.active {{
+      pointer-events: auto;
+    }}
+    .popup-layer .hotspot {{
+      z-index: 5000 !important;
+    }}
     .shape, .line, .text, .field, .bitmap, .control-placeholder, .word-show, .switch-button, .key-button, .hotspot {{
       position: absolute;
       box-sizing: border-box;
@@ -718,6 +832,10 @@ def render_app() -> bytes:
     .bitmap {{
       object-fit: fill;
       pointer-events: none;
+    }}
+    .word-show-image.selected-word-show {{
+      outline: 2px solid #0ea5e9;
+      outline-offset: -2px;
     }}
     .text {{
       font-weight: 700;
@@ -881,9 +999,11 @@ def render_app() -> bytes:
     const SCREENS = {payload};
     const FIRST_SCREEN = {json.dumps(first)};
     const registers = Object.create(null);
+    let activePopup = null;
 
     function initialValue(addr, type) {{
       if (!addr) return type === 'String' ? '' : '0';
+      if (addr === 'recipe' && registers[addr] === undefined) registers[addr] = '1';
       if (registers[addr] === undefined) registers[addr] = type === 'String' ? addr : '0';
       return registers[addr];
     }}
@@ -895,8 +1015,20 @@ def render_app() -> bytes:
 
     function goToScreen(file) {{
       if (!SCREENS[file]) return;
+      activePopup = null;
       location.hash = encodeURIComponent(file);
       renderScreen(file);
+    }}
+
+    function openPopup(file) {{
+      if (!SCREENS[file]) return;
+      activePopup = file;
+      renderPopup();
+    }}
+
+    function closePopup() {{
+      activePopup = null;
+      renderPopup();
     }}
 
     function editValue(event, addr, type) {{
@@ -923,6 +1055,10 @@ def render_app() -> bytes:
       let next = func === '1' ? current + step : Number(constant || '0') || 0;
       if (Number.isFinite(max) && max > 0) next = Math.min(next, max);
       registers[addr] = String(next);
+      if (addr === 'HDW100') {{
+        const recipeByMask = {{ '1': '1', '2': '2', '4': '3', '8': '4', '16': '5', '32': '6' }};
+        if (recipeByMask[String(next)]) registers.recipe = recipeByMask[String(next)];
+      }}
       renderScreen(currentScreenFromHash());
     }}
 
@@ -932,6 +1068,8 @@ def render_app() -> bytes:
     }}
 
     window.goToScreen = goToScreen;
+    window.openPopup = openPopup;
+    window.closePopup = closePopup;
     window.toggleBit = toggleBit;
     window.wordSwitch = wordSwitch;
     window.resetRegisters = resetRegisters;
@@ -976,6 +1114,14 @@ def render_app() -> bytes:
         const value = initialValue(addr, 'Numeric');
         wordShow.textContent = labels[value] || labels[String(Number(value) || 0)] || labels['0'] || wordShow.textContent;
       }}
+      for (const wordShow of shell.querySelectorAll('.word-show-image')) {{
+        const addr = wordShow.dataset.addr || '';
+        const imageId = wordShow.dataset.imageId || '';
+        if (!addr || !imageId) continue;
+        const value = String(Number(initialValue(addr, 'Numeric')) || 0);
+        wordShow.src = `/asset/${{encodeURIComponent(imageId)}}?status=${{encodeURIComponent(value)}}`;
+        wordShow.classList.toggle('selected-word-show', wordShow.dataset.const === value);
+      }}
     }}
 
     function renderInspector(file) {{
@@ -998,12 +1144,27 @@ def render_app() -> bytes:
       document.getElementById('activeTitle').textContent = `${{screen.file}} - ${{screen.title}}`;
       document.getElementById('activeMeta').textContent = `ScreenNo ${{screen.number}} / ${{screen.partCount}} partes`;
       const shell = document.getElementById('screenShell');
-      shell.innerHTML = screen.html;
+      shell.innerHTML = screen.html + '<div class="popup-layer" id="popupLayer"></div>';
       bindFields(shell);
       bindWordShows(shell);
+      renderPopup();
       renderScreenList(screen.file);
       renderInspector(screen.file);
       fitScreen();
+    }}
+
+    function renderPopup() {{
+      const layer = document.getElementById('popupLayer');
+      if (!layer) return;
+      if (!activePopup || !SCREENS[activePopup]) {{
+        layer.classList.remove('active');
+        layer.innerHTML = '';
+        return;
+      }}
+      layer.classList.add('active');
+      layer.innerHTML = SCREENS[activePopup].html;
+      bindFields(layer);
+      bindWordShows(layer);
     }}
 
     function fitScreen() {{
@@ -1049,12 +1210,19 @@ class PreviewHandler(BaseHTTPRequestHandler):
 
         if parsed.path.startswith("/asset/"):
             image_id = unquote(parsed.path.removeprefix("/asset/"))
-            path = IMAGE_MAP.get(image_id)
-            if not path or not path.is_file():
+            asset = IMAGE_MAP.get(image_id)
+            if not asset or not asset.path.is_file():
                 self.send_error(HTTPStatus.NOT_FOUND)
                 return
-            body = path.read_bytes()
-            content_type = mimetypes.guess_type(path.name)[0] or "image/bmp"
+            params = parse_qs(parsed.query)
+            status = (params.get("status") or [""])[0]
+            image_path = asset.status_paths.get(status, asset.path)
+            body = image_path.read_bytes()
+            if asset.transparent:
+                body = bmp_with_transparency_to_png(body, asset.transparent_color)
+                content_type = "image/png"
+            else:
+                content_type = mimetypes.guess_type(image_path.name)[0] or "image/bmp"
             self.send_response(HTTPStatus.OK)
             self.send_header("Content-Type", content_type)
             self.send_header("Cache-Control", "no-store")

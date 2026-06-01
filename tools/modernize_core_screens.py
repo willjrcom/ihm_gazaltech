@@ -129,6 +129,19 @@ def style_string(part: str, area: str, char_size: str = "233") -> str:
     )
 
 
+def style_recipe_name(part: str, area: str, char_size: str = "233") -> str:
+    part = style_string(part, area, char_size)
+    return set_attrs(
+        part,
+        "General",
+        {
+            "BorderColor": f"{CARD} 0",
+            "BgColor": f"{CARD} -1",
+            "Transparent": "1",
+        },
+    )
+
+
 def style_downlist(part: str, area: str, char_size: str = "233") -> str:
     return set_attrs(
         part,
@@ -188,6 +201,24 @@ def style_bit_icon(part: str, area: str, bmp_index: str, start: str = "24 24") -
             "BorderColor": f"{CARD} 0",
             "BmpIndex": bmp_index,
             "LaStartPt": start,
+        },
+    )
+    part = set_attrs(part, "Label", {"CharSize": "6 12", "LaFrnColor": f"{CARD} -1"}, status="0")
+    return set_attrs(part, "Label", {"CharSize": "6 12", "LaFrnColor": f"{CARD} -1"}, status="1")
+
+
+def style_bit_touch(part: str, area: str) -> str:
+    part = set_attrs(
+        part,
+        "General",
+        {
+            "Area": area,
+            "FigureFile": "",
+            "BorderColor": f"{CARD} 0",
+            "FrnColor": f"{CARD} -1",
+            "BgColor": f"{CARD} -1",
+            "BmpIndex": "-1",
+            "Transparent": "1",
         },
     )
     part = set_attrs(part, "Label", {"CharSize": "6 12", "LaFrnColor": f"{CARD} -1"}, status="0")
@@ -344,7 +375,7 @@ def enter_key(keys: list[str]) -> str:
 
 
 def style_hidden(part: str) -> str:
-    return set_attrs(
+    part = set_attrs(
         part,
         "General",
         {
@@ -352,9 +383,25 @@ def style_hidden(part: str) -> str:
             "BorderColor": f"{BG} 0",
             "FrnColor": f"{BG} 0",
             "BgColor": f"{BG} 0",
+            "FigureFile": "",
+            "BmpIndex": "-1",
             "Transparent": "1",
         },
     )
+    for status in ("0", "1", "2", "3", "4", "5", "6"):
+        part = set_attrs(
+            part,
+            "Label",
+            {
+                "LaIndexID": "",
+                "FrnColor": f"{BG} 0",
+                "BgColor": f"{BG} 0",
+                "LaFrnColor": f"{BG} 0",
+                "CharSize": "6 12",
+            },
+            status=status,
+        )
+    return part
 
 
 def move_general(part: str, area: str) -> str:
@@ -385,13 +432,69 @@ def text(name: str, content: str, point: str, size: str = "233", color: str = TE
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>'''
 
 
-def header(title: str, subtitle: str, accent: str) -> list[str]:
+def function_switch(
+    name: str,
+    area: str,
+    *,
+    screen_no: str | None = None,
+    popup_no: str | None = None,
+    func_func: str | None = None,
+    bmp_index: str = "-1",
+    start: str = "0 0",
+    transparent: bool = False,
+    part_password: bool = False,
+    lower_level: bool = False,
+) -> str:
+    scr_switch = "1" if screen_no is not None else "0"
+    target_screen = screen_no or "-1"
+    target_popup = popup_no or "-1"
+    func = func_func or ("2" if popup_no is not None else "")
+    func_attr = f' FuncFunc="{func}"' if func else ""
+    popup_type = "1" if popup_no is not None else "0"
+    popup_close_parent = "1" if popup_no is not None else "0"
+    figure = "TFT-type style\\TFT001.pvg" if bmp_index != "-1" else ""
+    transparent_value = "1" if transparent else "0"
+    password_value = "1" if part_password else "0"
+    level_value = "1" if lower_level else "0"
+    level_attr = ' PartPasswordLev="1"' if lower_level or part_password else ""
+    label_color = f"{CARD} -1"
+    return f'''<PartInfo PartType="FunctionSwitch" PartName="{name}">
+<General Desc="{name}" Area="{area}" ScrSwitch="{scr_switch}"{func_attr} ScreenNo="{target_screen}" ScreenNo2="{target_popup}" PointPos="0 0" PopupScreenType="{popup_type}" PopupCloseWithParent="{popup_close_parent}" FigureFile="{figure}" BorderColor="{CARD} 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="{bmp_index}" LaStartPt="{start}" Transparent="{transparent_value}" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="{password_value}" IsSetLowerLev="{level_value}"{level_attr} IsUseUserAuthority="0"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
+<Label Status="0" Bold="0" CharSize="6 12" LaFrnColor="{label_color}"/></PartInfo>'''
+
+
+def menu_button(area: str = "24 28 80 84", name: str = "FS_MENU_OPEN") -> str:
+    return function_switch(name, area, popup_no="1003", bmp_index="140", start="12 12")
+
+
+def close_popup_button(area: str = "204 20 260 76", name: str = "FS_MENU_CLOSE") -> str:
+    return function_switch(name, area, func_func="8", bmp_index="128", start="12 12")
+
+
+def transparent_nav(name: str, area: str, screen_no: str, *, part_password: bool = False, lower_level: bool = False) -> str:
+    return function_switch(
+        name,
+        area,
+        screen_no=screen_no,
+        transparent=True,
+        part_password=part_password,
+        lower_level=lower_level,
+    )
+
+
+def header(title: str, subtitle: str, accent: str, left: str | None = None, right: str | None = None) -> list[str]:
+    text_x = "92" if left else "28"
+    accent_end = "204" if left else "140"
     return [
         rect("BG_0", "0 0 480 800", BG),
         rect("HEADER_BG", "0 0 480 112", DARK),
-        text("TITLE_0", title, "28 22", "304", "0xffffff", "1", DARK),
-        text("SUBTITLE_0", subtitle, "28 60", "233", SUBTLE, "0", DARK),
-        rect("HEADER_ACCENT", "28 92 140 97", accent),
+        text("TITLE_0", title, f"{text_x} 22", "304", "0xffffff", "1", DARK),
+        text("SUBTITLE_0", subtitle, f"{text_x} 60", "233", SUBTLE, "0", DARK),
+        rect("HEADER_ACCENT", f"{text_x} 92 {accent_end} 97", accent),
+        *([left] if left else []),
+        *([right] if right else []),
     ]
 
 
@@ -399,6 +502,36 @@ def footer(*parts: str) -> list[str]:
     return [
         rect("FOOTER_BG", "24 688 456 776", CARD, BORDER),
         *parts,
+    ]
+
+
+def drawer_item(
+    index: int,
+    label: str,
+    subtitle: str,
+    screen_no_value: str,
+    icon: str,
+    accent: str,
+    *,
+    lower_level: bool = False,
+    part_password: bool = False,
+) -> list[str]:
+    top = 104 + index * 62
+    bottom = top + 56
+    slug = re.sub(r"[^A-Z0-9]+", "_", label.upper()).strip("_")
+    return [
+        rect(f"DRAWER_ITEM_BG_{index}", f"12 {top} 268 {bottom}", CARD, BORDER),
+        rect(f"DRAWER_ITEM_ACCENT_{index}", f"12 {top} 18 {bottom}", accent),
+        bitmap(f"DRAWER_ITEM_ICON_{index}", f"28 {top + 12}", "32", "32", icon),
+        text(f"DRAWER_ITEM_TEXT_{index}", label, f"72 {top + 9}", "14", TEXT, "1"),
+        text(f"DRAWER_ITEM_SUB_{index}", subtitle, f"72 {top + 33}", "8 16", MUTED),
+        transparent_nav(
+            f"FS_DRAWER_{slug}",
+            f"12 {top} 268 {bottom}",
+            screen_no_value,
+            lower_level=lower_level,
+            part_password=part_password,
+        ),
     ]
 
 
@@ -411,6 +544,46 @@ def write_screen(name: str, screen_no: str, blocks: list[str], script: str = "",
 ''',
         encoding="utf-8",
     )
+
+
+def modernize_screen_1003() -> None:
+    items = [
+        ("Home", "Tela principal", "0", "125", GREEN, False, False),
+        ("Economico", "Modo eco", "2", "142", GREEN, False, False),
+        ("Temperatura", "Delta chama", "4", "141", RED, False, False),
+        ("Esteira", "Calibracao", "6", "145", SKY, False, False),
+        ("Receitas", "Perfis", "8", "30", AMBER, False, False),
+        ("Data e Hora", "Relogio", "3", "149", INDIGO, True, False),
+        ("Sistema", "Reset", "5", "150", GRAY, True, True),
+        ("Offset", "Calibracao", "7", "144", GRAY, True, False),
+        ("Diagnostico", "Variaveis", "30", "32", SKY, True, False),
+        ("Login", "Usuario", "1011", "32", INDIGO, True, False),
+        ("Manutencao", "Validade", "1009", "146", AMBER, True, True),
+    ]
+    blocks: list[str] = [
+        rect("DRAWER_BG", "0 0 280 800", "0xe9eef6", BORDER),
+        rect("DRAWER_PANEL", "0 0 280 800", CARD, BORDER),
+        rect("DRAWER_HEADER", "0 0 280 96", DARK),
+        text("DRAWER_TITLE", "Menu", "20 20", "304", "0xffffff", "1", DARK),
+        text("DRAWER_SUBTITLE", "Navegacao", "20 58", "12 24", SUBTLE, "0", DARK),
+        rect("DRAWER_ACCENT", "20 82 120 88", GREEN),
+        close_popup_button(),
+    ]
+    for index, item in enumerate(items):
+        label, subtitle, target, icon, accent, lower_level, part_password = item
+        blocks.extend(
+            drawer_item(
+                index,
+                label,
+                subtitle,
+                target,
+                icon,
+                accent,
+                lower_level=lower_level,
+                part_password=part_password,
+            )
+        )
+    write_screen("1003.hsc", "1003", blocks, screen_size="1")
 
 
 def modernize_screen_0() -> None:
@@ -437,7 +610,7 @@ def modernize_screen_0() -> None:
     )
     edit = style_bit_icon(part_by_name(src, "BS_3"), "52 704 116 768", "127", "24 24")
     eco = style_bit_icon(part_by_name(src, "BS_0"), "208 704 272 768", "123", "32 32")
-    menu = style_function_icon(part_by_name(src, "FS_1"), "364 704 428 768", "140", "32 32")
+    footer_recipe = function_switch("FS_FOOT_RECIPE", "364 704 428 768", screen_no="8", bmp_index="30", start="8 8")
     diagnostic = style_numeric(part_by_name(src, "Numeric Input/Display0"), "470 4 476 10", "6 12")
     diagnostic = set_attrs(
         diagnostic,
@@ -458,9 +631,10 @@ def modernize_screen_0() -> None:
             popup_eco,
             rect("BG_0", "0 0 480 800", BG),
             rect("HEADER_BG", "0 0 480 116", DARK),
-            text("TITLE_0", "Forno Gazal", "28 22", "304", "0xffffff", "1", DARK),
-            text("SUBTITLE_0", "Painel principal", "28 60", "233", SUBTLE, "0", DARK),
-            rect("HEADER_ACCENT", "28 94 166 100", GREEN),
+            menu_button(),
+            text("TITLE_0", "Forno Gazal", "92 22", "304", "0xffffff", "1", DARK),
+            text("SUBTITLE_0", "Painel principal", "92 60", "233", SUBTLE, "0", DARK),
+            rect("HEADER_ACCENT", "92 94 204 100", GREEN),
             rect("HEADER_CLOCK", "292 20 456 88", "0x10213a", "0x22324c"),
             text("TXT_CLOCK_HEAD", "Horario", "316 28", "8 16", SUBTLE, "0", "0x10213a"),
             clock,
@@ -500,8 +674,8 @@ def modernize_screen_0() -> None:
             text("TXT_FOOT_EDIT", "Editar", "58 766", "8 16", MUTED),
             eco,
             text("TXT_FOOT_ECO", "Eco", "226 766", "8 16", MUTED),
-            menu,
-            text("TXT_FOOT_MENU", "Menu", "380 766", "8 16", MUTED),
+            footer_recipe,
+            text("TXT_FOOT_RECIPE", "Receitas", "368 766", "8 16", MUTED),
             part_by_name(src, "Timer_0"),
             part_by_name(src, "Timer_1"),
             diagnostic,
@@ -514,13 +688,11 @@ def modernize_screen_2() -> None:
     src = read_screen("2.hsc")
     temp = style_numeric(part_by_name(src, "Numeric Input/Display0"), "286 166 410 246", "304")
     speed = style_numeric(part_by_name(src, "NUM_0"), "286 386 410 466", "304")
-    home = style_function_icon(part_by_name(src, "FS_0"), "208 704 272 768", "125", "32 32")
-    back = style_function_icon(part_by_name(src, "FS_2"), "48 704 112 768", "128", "24 24")
     write_screen(
         "2.hsc",
         "2",
         [
-            *header("Modo Economico", "Parametros de temperatura e tempo", GREEN),
+            *header("Modo Economico", "Parametros de temperatura e tempo", GREEN, left=menu_button()),
             rect("CARD_TEMP", "24 132 456 300", CARD, BORDER),
             rect("ACCENT_TEMP", "24 132 30 300", GREEN),
             text("TXT_TEMP", "Temperatura eco", "48 154", "233", TEXT, "1"),
@@ -536,7 +708,6 @@ def modernize_screen_2() -> None:
             rect("INFO_CARD", "24 540 456 640", CARD, BORDER),
             text("TXT_INFO", "Modo eco", "48 562", "233", TEXT, "1"),
             text("TXT_INFO_SUB", "Temperatura e tempo usados no modo economico.", "48 598", "8 16", MUTED),
-            *footer(back, home),
         ],
         script_block(src),
     )
@@ -544,13 +715,13 @@ def modernize_screen_2() -> None:
 
 def modernize_screen_3() -> None:
     src = read_screen("3.hsc")
-    close = style_function_icon(part_by_name(src, "FS_0"), "392 20 448 76", "128", "28 28")
+    close = style_function_icon(part_by_name(src, "FS_0"), "400 28 456 84", "128", "16 16")
     message = part_by_name(src, "WL_0")
     message = set_attrs(
         message,
         "General",
         {
-            "Area": "58 170 422 418",
+            "Area": "48 186 432 394",
             "FigureFile": "",
             "BorderColor": f"{CARD} 0",
             "FrnColor": f"{TEXT} -1",
@@ -599,19 +770,19 @@ def modernize_screen_3() -> None:
         "31",
         [
             rect("BG_0", "0 0 480 600", BG),
-            rect("PANEL", "10 8 470 590", CARD, BORDER),
-            rect("HEADER_BG", "10 8 470 96", DARK),
-            text("TITLE_0", "Calibrar Esteira", "34 28", "304", "0xffffff", "1", DARK),
-            text("SUBTITLE_0", "Assistente de calibracao", "34 64", "12 24", SUBTLE, "0", DARK),
-            rect("HEADER_ACCENT", "34 84 164 90", SKY),
+            rect("HEADER_BG", "0 0 480 112", DARK),
+            text("TITLE_0", "Calibrar Esteira", "92 22", "304", "0xffffff", "1", DARK),
+            text("SUBTITLE_0", "Assistente de calibracao", "92 60", "12 24", SUBTLE, "0", DARK),
+            rect("HEADER_ACCENT", "92 92 222 98", SKY),
+            menu_button(),
             close,
-            rect("CARD_STEP", "34 116 446 434", CARD, BORDER),
-            rect("ACCENT_STEP", "34 116 40 434", SKY),
-            text("TXT_STEP", "Etapas do assistente", "58 136", "233", TEXT, "1"),
+            rect("CARD_STEP", "24 132 456 420", CARD, BORDER),
+            rect("ACCENT_STEP", "24 132 30 420", SKY),
+            text("TXT_STEP", "Etapas do assistente", "48 154", "233", TEXT, "1"),
             message,
-            rect("FOOTER_INFO", "34 448 446 564", CARD, BORDER),
-            restart,
-            advance,
+            rect("FOOTER_INFO", "24 444 456 564", CARD, BORDER),
+            move_general(restart, "58 470 214 540"),
+            move_general(advance, "266 470 422 540"),
         ],
     )
 
@@ -619,13 +790,11 @@ def modernize_screen_3() -> None:
 def modernize_screen_4() -> None:
     src = read_screen("4.hsc")
     delta = style_numeric(part_by_name(src, "NUM_0"), "302 206 436 286", "304")
-    home = style_function_icon(part_by_name(src, "FS_0"), "208 704 272 768", "125", "32 32")
-    back = style_function_icon(part_by_name(src, "FS_1"), "48 704 112 768", "128", "24 24")
     write_screen(
         "4.hsc",
         "4",
         [
-            *header("Temperatura", "Delta para religar a chama alta", RED),
+            *header("Temperatura", "Delta para religar a chama alta", RED, left=menu_button()),
             rect("CARD_DELTA", "24 140 456 340", CARD, BORDER),
             rect("ACCENT_DELTA", "24 140 30 340", RED),
             text("TXT_DELTA", "Delta temperatura", "48 166", "233", TEXT, "1"),
@@ -635,15 +804,12 @@ def modernize_screen_4() -> None:
             rect("INFO_CARD", "24 376 456 512", CARD, BORDER),
             text("TXT_INFO", "Ajuste de chama", "48 402", "233", TEXT, "1"),
             text("TXT_INFO_SUB", "Delta menor antecipa a recuperacao.", "48 438", "8 16", MUTED),
-            *footer(back, home),
         ],
     )
 
 
 def modernize_screen_5() -> None:
     src = read_screen("5.hsc")
-    back = style_function_icon(part_by_name(src, "FS_1"), "48 704 112 768", "128", "24 24")
-    home = style_function_icon(part_by_name(src, "Function Switch1"), "208 704 272 768", "125", "32 32")
     reset = style_bit_button(part_by_name(src, "BS_0"), "264 226 432 286", RED, "RESET", "RESET")
     password = style_string(part_by_name(src, "STR_0"), "260 384 432 430", "233")
     alarm = style_bit_button(part_by_name(src, "BS_1"), "264 516 432 576", GREEN, "ON/OFF", "ON/OFF")
@@ -651,7 +817,7 @@ def modernize_screen_5() -> None:
         "5.hsc",
         "5",
         [
-            *header("Sistema", "Reset e seguranca", GRAY),
+            *header("Sistema", "Reset e seguranca", GRAY, left=menu_button()),
             rect("CARD_RESET", "24 128 456 320", CARD, BORDER),
             rect("ACCENT_RESET", "24 128 30 320", RED),
             text("TXT_CAUTION", "CUIDADO", "48 154", "304", RED, "1"),
@@ -667,7 +833,6 @@ def modernize_screen_5() -> None:
             text("TXT_ALARM", "Alarme do gas", "48 516", "233", TEXT, "1"),
             text("TXT_ALARM_SUB", "Liga/desliga saida.", "48 552", "8 16", MUTED),
             alarm,
-            *footer(back, home),
         ],
         script_block(src),
     )
@@ -675,8 +840,6 @@ def modernize_screen_5() -> None:
 
 def modernize_screen_6() -> None:
     src = read_screen("6.hsc")
-    back = style_function_icon(part_by_name(src, "Function Switch2"), "48 704 112 768", "128", "24 24")
-    home = style_function_icon(part_by_name(src, "Function Switch3"), "208 704 272 768", "125", "32 32")
     start = part_by_name(src, "FS_2")
     start = set_attrs(
         start,
@@ -699,7 +862,7 @@ def modernize_screen_6() -> None:
         "6.hsc",
         "6",
         [
-            *header("Calibrar Esteira", "Referencia de velocidade", SKY),
+            *header("Calibrar Esteira", "Referencia de velocidade", SKY, left=menu_button()),
             rect("CARD_START", "24 132 456 250", CARD, BORDER),
             rect("ACCENT_START", "24 132 30 250", SKY),
             text("TXT_START", "Assistente de calibracao", "220 156", "233", TEXT, "1"),
@@ -711,7 +874,6 @@ def modernize_screen_6() -> None:
             text("TXT_SPEED_HINT", "Valores entre 0.30 e 9.56", "48 354", "12 24", MUTED),
             speed,
             text("TXT_SPEED_UNIT", "min", "418 360", "12 24", MUTED),
-            *footer(back, home),
         ],
         script_block(src),
     )
@@ -719,37 +881,40 @@ def modernize_screen_6() -> None:
 
 def modernize_screen_7() -> None:
     src = read_screen("7.hsc")
-    home = style_function_icon(part_by_name(src, "Function Switch0"), "208 704 272 768", "125", "32 32")
-    save = style_bit_icon(part_by_name(src, "BS_1"), "368 704 432 768", "126", "24 24")
-    timers = [part_by_name(src, "Timer_0"), move_general(part_by_name(src, "BS_2"), "0 0 1 1")]
+    save = style_bit_touch(part_by_name(src, "BS_1"), "24 586 456 746")
+    timers = [
+        move_general(part_by_name(src, "Timer_0"), "0 0 1 1"),
+        move_general(part_by_name(src, "BS_2"), "0 0 1 1"),
+    ]
     rows: list[str] = []
     row_specs = [
-        ("WL_3", "STR_3", "WS_1", "BS_0", 1, "126 190", "80 129 374 187", "25 126 455 190", "390 134 438 182"),
-        ("WL_2", "STR_2", "WS_3", "BS_3", 2, "194 258", "80 197 374 255", "27 194 457 258", "390 202 438 250"),
-        ("WL_1", "STR_1", "WS_2", "BS_4", 3, "262 326", "80 265 374 323", "27 262 457 326", "390 270 438 318"),
-        ("WL_0", "STR_0", "WS_4", "BS_5", 4, "330 394", "80 333 374 391", "27 330 457 394", "390 338 438 386"),
-        ("WL_4", "STR_4", "WS_5", "BS_6", 5, "398 462", "80 401 374 459", "27 398 457 462", "390 406 438 454"),
-        ("WL_5", "STR_5", "WS_6", "BS_7", 6, "466 530", "80 469 374 527", "27 466 457 530", "390 474 438 522"),
+        ("WL_3", "STR_3", "WS_1", "BS_0", "126 190", "80 129 374 187", "27 126 378 190", "390 134 438 182"),
+        ("WL_2", "STR_2", "WS_3", "BS_3", "194 258", "80 197 374 255", "27 194 378 258", "390 202 438 250"),
+        ("WL_1", "STR_1", "WS_2", "BS_4", "262 326", "80 265 374 323", "27 262 378 326", "390 270 438 318"),
+        ("WL_0", "STR_0", "WS_4", "BS_5", "330 394", "80 333 374 391", "27 330 378 394", "390 338 438 386"),
+        ("WL_4", "STR_4", "WS_5", "BS_6", "398 462", "80 401 374 459", "27 398 378 462", "390 406 438 454"),
+        ("WL_5", "STR_5", "WS_6", "BS_7", "466 530", "80 469 374 527", "27 466 378 530", "390 474 438 522"),
     ]
-    for word_show, string, word_switch, edit, _row, word_area, str_area, switch_area, edit_area in row_specs:
+    for word_show, string, word_switch, edit, word_area, str_area, switch_area, edit_area in row_specs:
         wl = move_general(part_by_name(src, word_show), f"27 {word_area.split()[0]} 457 {word_area.split()[1]}")
-        st = style_string(part_by_name(src, string), str_area, "233")
+        st = style_recipe_name(part_by_name(src, string), str_area, "233")
         ws = move_general(part_by_name(src, word_switch), switch_area)
         ed = style_bit_icon(part_by_name(src, edit), edit_area, "127", "24 24")
         rows.extend([wl, st, ws, ed])
     write_screen(
         "7.hsc",
-        "7",
+        "8",
         [
-            *header("Receitas", "Selecionar e editar perfis", AMBER),
-            rect("LIST_BG", "24 120 456 556", CARD, BORDER),
+            *header("Receitas", "Selecionar receita ativa", AMBER, left=menu_button()),
+            rect("LIST_BG", "24 120 456 546", CARD, BORDER),
             *rows,
-            rect("SAVE_INFO", "24 596 456 674", CARD, BORDER),
-            rect("ACCENT_SAVE", "24 596 30 674", GREEN),
-            text("TXT_SAVE", "Salvar alteracoes", "48 614", "233", TEXT, "1"),
-            text("TXT_SAVE_SUB", "Botao verde grava os nomes.", "48 648", "8 16", MUTED),
+            rect("SAVE_INFO", "24 586 456 746", CARD, BORDER),
+            rect("ACCENT_SAVE", "24 586 30 746", GREEN),
+            text("TXT_SAVE", "Salvar receita", "48 620", "233", TEXT, "1"),
+            text("TXT_SAVE_SUB", "Aplica o perfil selecionado.", "48 654", "8 16", MUTED),
+            bitmap("BMP_SAVE_ACTION", "374 634", "64", "64", "126"),
+            save,
             *timers,
-            *footer(home, save),
         ],
         script_block(src),
     )
@@ -757,17 +922,15 @@ def modernize_screen_7() -> None:
 
 def modernize_screen_8() -> None:
     src = read_screen("8.hsc")
-    home = style_function_icon(part_by_name(src, "Function Switch0"), "208 704 272 768", "125", "32 32")
-    back = style_function_icon(part_by_name(src, "Function Switch1"), "48 704 112 768", "128", "24 24")
     alarm = style_numeric(part_by_name(src, "Numeric Input/Display0"), "302 180 426 260", "304")
     alarm = set_attr(alarm, "General", "FrnColor", "0x15803d -1")
     target = style_numeric(part_by_name(src, "Numeric Input/Display1"), "302 404 426 484", "304")
     target = set_attr(target, "General", "FrnColor", "0x15803d -1")
     write_screen(
         "8.hsc",
-        "8",
+        "30",
         [
-            *header("Variaveis Teste", "Diagnostico de sinais", SKY),
+            *header("Variaveis Teste", "Diagnostico de sinais", SKY, left=menu_button()),
             rect("CARD_ALARM", "24 132 456 308", CARD, BORDER),
             rect("ACCENT_ALARM", "24 132 30 308", SKY),
             text("TXT_ALARM", "Alarme gas", "48 162", "233", TEXT, "1"),
@@ -781,26 +944,23 @@ def modernize_screen_8() -> None:
             rect("INFO_CARD", "24 570 456 652", CARD, BORDER),
             text("TXT_INFO", "Tela de diagnostico", "48 590", "233", TEXT, "1"),
             text("TXT_INFO_SUB", "Somente leitura dos sinais internos.", "48 626", "8 16", MUTED),
-            *footer(back, home),
         ],
     )
 
 
 def modernize_screen_20() -> None:
     src = read_screen("20.hsc")
-    home = style_function_icon(part_by_name(src, "FS_0"), "208 704 272 768", "125", "32 32")
     password = style_string(part_by_name(src, "STR_0"), "76 318 404 394", "304")
     write_screen(
         "20.hsc",
         "20",
         [
-            *header("Senha", "Codigo de acesso", GRAY),
+            *header("Senha", "Codigo de acesso", GRAY, left=menu_button()),
             rect("CARD_PASSWORD", "24 176 456 464", CARD, BORDER),
             rect("ACCENT_PASSWORD", "24 176 30 464", GRAY),
             text("TXT_PASSWORD", "Sua senha", "48 208", "233", TEXT, "1"),
             text("TXT_PASSWORD_SUB", "Informe o codigo solicitado.", "48 244", "8 16", MUTED),
             password,
-            *footer(home),
         ],
     )
 
@@ -811,20 +971,15 @@ def modernize_screen_21() -> None:
     temp = set_attr(temp, "General", "FrnColor", "0x0000ff -1")
     speed = style_numeric(part_by_name(src, "NUM_0"), "282 336 416 416", "304")
     minimum = style_numeric(part_by_name(src, "NUM_2"), "300 492 388 544", "233")
-    save = style_bit_button(part_by_name(src, "BS_0"), "278 608 432 672", GREEN, "Confirmar", "Aguarde")
-    close = style_bit_icon(part_by_name(src, "Bit Switch0"), "392 24 448 80", "128", "28 28")
+    save = style_bit_icon(part_by_name(src, "BS_0"), "400 28 456 84", "126", "12 12")
+    close = style_hidden(part_by_name(src, "Bit Switch0"))
     background = move_general(part_by_name(src, "WL_0"), "0 0 1 1")
     write_screen(
         "21.hsc",
         "21",
         [
             background,
-            rect("BG_0", "0 0 480 800", BG),
-            rect("HEADER_BG", "0 0 480 112", DARK),
-            text("TITLE_0", "Editar Setpoint", "28 22", "304", "0xffffff", "1", DARK),
-            text("SUBTITLE_0", "Temperatura e tempo ativos", "28 60", "233", SUBTLE, "0", DARK),
-            rect("HEADER_ACCENT", "28 92 150 97", GREEN),
-            close,
+            *header("Editar Setpoint", "Temperatura e tempo ativos", GREEN, left=menu_button(), right=save),
             rect("CARD_TEMP", "24 132 456 280", CARD, BORDER),
             rect("ACCENT_TEMP", "24 132 30 280", RED),
             text("TXT_TEMP", "Nova temperatura", "48 154", "233", TEXT, "1"),
@@ -841,10 +996,7 @@ def modernize_screen_21() -> None:
             rect("ACCENT_MIN", "24 492 30 564", GRAY),
             text("TXT_MIN", "Minimo", "48 514", "233", TEXT, "1"),
             minimum,
-            rect("ACTION_CARD", "24 588 456 700", CARD, BORDER),
-            text("TXT_ACTION", "Gravar ajuste", "48 616", "233", TEXT, "1"),
-            text("TXT_ACTION_SUB", "Confirma os valores ativos.", "48 650", "8 16", MUTED),
-            save,
+            close,
         ],
         script_block(src),
     )
@@ -852,29 +1004,35 @@ def modernize_screen_21() -> None:
 
 def modernize_screen_22() -> None:
     src = read_screen("22.hsc")
-    temperature = style_numeric(part_by_name(src, "Numeric Input/Display0"), "156 276 318 364", "304")
+    temperature = style_numeric(part_by_name(src, "Numeric Input/Display0"), "160 262 320 350", "304")
     temperature = set_attr(temperature, "General", "FrnColor", "0x0000ff -1")
-    close = style_bit_button(part_by_name(src, "BS_0"), "158 626 322 690", RED, "Fechar", "Fechar")
+    acknowledge = style_bit_button(part_by_name(src, "BS_0"), "292 626 432 704", RED, "Reconhecer", "Reconhecer")
     write_screen(
         "22.hsc",
         "9",
         [
             rect("BG_0", "0 0 480 800", BG),
             rect("HEADER_BG", "0 0 480 112", RED),
-            text("TITLE_0", "Alerta", "28 22", "304", "0xffffff", "1", RED),
-            text("SUBTITLE_0", "Queda de temperatura", "28 60", "233", "0xffffff", "0", RED),
-            rect("HEADER_ACCENT", "28 92 150 97", "0xffffff"),
-            bitmap("ICO_ALERT", "360 26", "56", "56", "124"),
-            rect("CARD_TEMP", "24 164 456 428", CARD, BORDER),
-            rect("ACCENT_TEMP", "24 164 30 428", RED),
-            text("TXT_TEMP", "Temperatura atual", "48 194", "233", TEXT, "1"),
+            menu_button(),
+            text("TITLE_0", "Alerta", "92 22", "304", "0xffffff", "1", RED),
+            text("SUBTITLE_0", "Queda de temperatura", "92 60", "233", "0xffffff", "0", RED),
+            rect("HEADER_ACCENT", "92 92 214 97", "0xffffff"),
+            bitmap("ICO_ALERT", "348 18", "72", "72", "78"),
+            rect("CARD_TEMP", "24 150 456 398", CARD, BORDER),
+            rect("ACCENT_TEMP", "24 150 30 398", RED),
+            text("TXT_TEMP", "Temperatura atual", "48 184", "233", TEXT, "1"),
+            text("TXT_TEMP_SUB", "Leitura atual do forno.", "48 220", "8 16", MUTED),
             temperature,
-            text("TXT_TEMP_UNIT", "C", "326 306", "233", MUTED),
-            rect("CARD_MSG", "24 468 456 574", CARD, BORDER),
-            rect("ACCENT_MSG", "24 468 30 574", GREEN),
-            text("TXT_MSG", "Verifique o gas", "48 496", "233", TEXT, "1"),
-            text("TXT_MSG_SUB", "Reconheca o alarme para fechar.", "48 532", "8 16", MUTED),
-            close,
+            text("TXT_TEMP_UNIT", "C", "330 292", "233", MUTED),
+            rect("CARD_MSG", "24 430 456 548", CARD, BORDER),
+            rect("ACCENT_MSG", "24 430 30 548", AMBER),
+            text("TXT_MSG", "Verifique o gas", "48 462", "233", TEXT, "1"),
+            text("TXT_MSG_SUB", "Corrija a causa antes de reconhecer.", "48 498", "8 16", MUTED),
+            rect("CARD_ACK", "24 590 456 746", CARD, BORDER),
+            rect("ACCENT_ACK", "24 590 30 746", RED),
+            text("TXT_ACK", "Reconhecer alarme", "48 616", "233", TEXT, "1"),
+            text("TXT_ACK_SUB", "Confirme apos verificar.", "48 652", "8 16", MUTED),
+            acknowledge,
         ],
     )
 
@@ -885,16 +1043,12 @@ def modernize_screen_23() -> None:
     current = set_attr(current, "General", "FrnColor", "0x0000ff -1")
     desired = style_numeric(part_by_name(src, "Numeric Input/Display1"), "282 430 416 510", "304")
     desired = set_attr(desired, "General", "FrnColor", "0x15803d -1")
-    disable = style_bit_button(part_by_name(src, "BS_0"), "154 650 326 714", GREEN, "Desativar", "Desativar")
+    disable = style_bit_icon(part_by_name(src, "BS_0"), "400 28 456 84", "123", "0 0")
     write_screen(
         "23.hsc",
         "33",
         [
-            rect("BG_0", "0 0 480 800", BG),
-            rect("HEADER_BG", "0 0 480 112", DARK),
-            text("TITLE_0", "Modo Economico", "28 22", "304", "0xffffff", "1", DARK),
-            text("SUBTITLE_0", "Eco ativado", "28 60", "233", SUBTLE, "0", DARK),
-            rect("HEADER_ACCENT", "28 92 150 97", GREEN),
+            *header("Modo Economico", "Eco ativado", GREEN, left=menu_button(), right=disable),
             rect("CARD_CURRENT", "24 146 456 330", CARD, BORDER),
             rect("ACCENT_CURRENT", "24 146 30 330", SKY),
             bitmap("ICO_CURRENT", "48 202", "46", "46", "123"),
@@ -909,8 +1063,6 @@ def modernize_screen_23() -> None:
             text("TXT_DESIRED_SUB", "Setpoint ativo.", "110 446", "8 16", MUTED),
             desired,
             text("TXT_DESIRED_UNIT", "C", "424 460", "233", MUTED),
-            rect("ACTION_CARD", "24 622 456 742", CARD, BORDER),
-            disable,
         ],
     )
 
@@ -966,7 +1118,7 @@ def modernize_screen_1000() -> None:
     blocks.extend(
         [
             style_key_icon(key_by_ctrl(keys, "1"), "360 228 444 302", "121"),
-            style_key_icon(key_by_ctrl(keys, "2"), "360 318 444 392", "130"),
+            style_hidden(key_by_ctrl(keys, "2")),
             style_hidden(key_by_ascii(keys, "-")),
             style_key_icon(enter_key(keys), "360 498 444 572", "126"),
             style_key_icon(key_by_ctrl(keys, "3"), "368 30 444 86", "128"),
@@ -989,7 +1141,7 @@ def text_keyboard_blocks(src: str, title: str, subtitle: str, input_name: str) -
         rect("DISPLAY_CARD", "12 106 468 188", CARD, BORDER),
         display,
         style_key_icon(key_by_ctrl(keys, "3"), "368 30 444 86", "128"),
-        rect("KEY_PANEL", "8 198 472 678", "0xe9eef6", BORDER),
+        rect("KEY_PANEL", "8 198 472 694", "0xe9eef6", BORDER),
     ]
 
     def add_row(chars: str, y: int, x: int, width: int, gap: int) -> None:
@@ -1011,17 +1163,17 @@ def text_keyboard_blocks(src: str, title: str, subtitle: str, input_name: str) -
                 style_key_icon(key_by_ctrl(keys, "1"), "24 506 116 562", "121"),
                 style_key_icon(space, "128 506 352 562", "129"),
                 style_key_icon(enter_key(keys), "364 506 456 562", "126"),
-                style_key(key_by_ctrl(keys, "2"), "80 600 400 652", "Limpar tudo"),
-                bitmap("ICO_CLEAR_ALL", "104 612", "28", "28", "130"),
+                style_key(key_by_ctrl(keys, "2"), "80 612 400 664", "Limpar tudo"),
+                bitmap("ICO_CLEAR_ALL", "104 624", "28", "28", "130"),
             ]
         )
     else:
         blocks.extend(
             [
-                style_key_icon(key_by_ctrl(keys, "1"), "24 510 116 570", "121"),
-                style_key(key_by_ctrl(keys, "2"), "128 510 240 570", "Limpar"),
-                bitmap("ICO_CLEAR_ALL", "138 526", "28", "28", "130"),
-                style_key_icon(enter_key(keys), "252 510 344 570", "126"),
+                style_key_icon(key_by_ctrl(keys, "1"), "24 506 116 562", "121"),
+                style_key_icon(enter_key(keys), "364 506 456 562", "126"),
+                style_key(key_by_ctrl(keys, "2"), "80 612 400 664", "Limpar tudo"),
+                bitmap("ICO_CLEAR_ALL", "104 624", "28", "28", "130"),
             ]
         )
     return blocks
@@ -1043,7 +1195,7 @@ def modernize_screen_1002() -> None:
         "1002.hsc",
         "1002",
         [
-            *header("Timer Interno", "Controle do alarme de gas", GRAY),
+            *header("Timer Interno", "Controle do alarme de gas", GRAY, left=menu_button()),
             rect("CARD_TIMER", "24 180 456 380", CARD, BORDER),
             rect("ACCENT_TIMER", "24 180 30 380", GRAY),
             text("TXT_TIMER", "Tela tecnica", "48 220", "304", TEXT, "1"),
@@ -1065,7 +1217,7 @@ def modernize_screen_1004() -> None:
 
 def modernize_screen_1006() -> None:
     src = read_screen("1006.hsc")
-    ok = style_function_icon(part_by_name(src, "FS_0"), "208 704 272 768", "126", "8 8")
+    ok = style_function_icon(part_by_name(src, "FS_0"), "400 28 456 84", "126", "12 12")
     rows = [
         ("NUM_0", "Ano", 126),
         ("NUM_1", "Mes", 204),
@@ -1075,7 +1227,7 @@ def modernize_screen_1006() -> None:
         ("NUM_4", "Minuto", 516),
         ("NUM_5", "Segundo", 594),
     ]
-    blocks = [*header("Data e Hora", "Ajuste interno do painel", INDIGO)]
+    blocks = [*header("Data e Hora", "Ajuste interno do painel", INDIGO, left=menu_button(), right=ok)]
     for index, (part_name, label, top) in enumerate(rows):
         bottom = top + 62
         field = style_numeric(part_by_name(src, part_name), f"286 {top + 10} 424 {bottom - 10}", "233")
@@ -1087,7 +1239,7 @@ def modernize_screen_1006() -> None:
                 field,
             ]
         )
-    blocks.extend([style_hidden(part_by_name(src, "WS_0")), ok])
+    blocks.append(style_hidden(part_by_name(src, "WS_0")))
     write_screen("1006.hsc", "0", blocks)
 
 
@@ -1095,8 +1247,8 @@ def modernize_screen_1007() -> None:
     src = read_screen("1007.hsc")
     up = style_numeric(part_by_name(src, "Numeric Input/Display1"), "248 154 420 216", "233")
     down = style_numeric(part_by_name(src, "Numeric Input/Display0"), "248 254 420 316", "233")
-    cancel = style_word_icon(part_by_name(src, "Word Switch0"), "90 682 154 746", "128")
-    enter = style_word_icon(part_by_name(src, "Word Switch1"), "326 682 390 746", "126")
+    cancel = style_hidden(part_by_name(src, "Word Switch0"))
+    enter = style_word_icon(part_by_name(src, "Word Switch1"), "400 28 456 84", "126")
     line_switches = [
         ("Bit Switch0", "Linha 1", "142 410 222 462", "48 426"),
         ("Bit Switch2", "Linha 3", "340 410 420 462", "246 426"),
@@ -1104,7 +1256,7 @@ def modernize_screen_1007() -> None:
         ("Bit Switch3", "Linha 4", "340 514 420 566", "246 530"),
     ]
     blocks = [
-        *header("Faixa de Dados", "Periodo das tendencias", INDIGO),
+        *header("Faixa de Dados", "Periodo das tendencias", INDIGO, left=menu_button(), right=enter),
         rect("CARD_RANGE", "24 132 456 340", CARD, BORDER),
         rect("ACCENT_RANGE", "24 132 30 340", INDIGO),
         text("TXT_UP", "Inicio", "48 158", "233", TEXT, "1"),
@@ -1117,6 +1269,7 @@ def modernize_screen_1007() -> None:
         rect("ACCENT_LINES", "24 374 30 592", SKY),
         text("TXT_LINES", "Linhas do grafico", "48 392", "233", TEXT, "1"),
     ]
+    blocks.append(cancel)
     for index, (part_name, label, area, point) in enumerate(line_switches):
         color = SKY if index % 2 == 0 else GREEN
         blocks.extend(
@@ -1125,13 +1278,6 @@ def modernize_screen_1007() -> None:
                 style_bit_button(part_by_name(src, part_name), area, color, "OFF", "ON"),
             ]
         )
-    blocks.extend(
-        [
-            rect("ACTION_CARD", "24 650 456 768", CARD, BORDER),
-            cancel,
-            enter,
-        ]
-    )
     write_screen("1007.hsc", "1", blocks, script_block(src), screen_size="1")
 
 
@@ -1140,13 +1286,13 @@ def modernize_screen_1008() -> None:
     keys = key_parts(src)
     display = style_string(part_by_name(src, "STR_0"), "24 116 456 178", "304")
     display = set_attr(display, "General", "Align", "3")
-    caps = style_bit_button(part_by_name(src, "BS_0"), "24 584 116 640", INDIGO, "ABC", "ABC")
+    caps = style_hidden(part_by_name(src, "BS_0"))
 
     blocks = [
         *header("Teclado Alfanumerico", "Digite letras e numeros", INDIGO),
         rect("DISPLAY_CARD", "12 106 468 188", CARD, BORDER),
         display,
-        rect("KEY_PANEL", "8 198 472 674", "0xe9eef6", BORDER),
+        rect("KEY_PANEL", "8 198 472 694", "0xe9eef6", BORDER),
     ]
 
     def add_row(chars: str, y: int, x: int, width: int, gap: int) -> None:
@@ -1165,8 +1311,8 @@ def modernize_screen_1008() -> None:
             style_key_icon(key_by_ascii(keys, " "), "128 506 352 562", "129"),
             style_key_icon(enter_key(keys), "364 506 456 562", "126"),
             caps,
-            style_key(key_by_ctrl(keys, "2"), "128 584 456 640", "Limpar tudo"),
-            bitmap("ICO_CLEAR_ALL", "152 596", "28", "28", "130"),
+            style_key(key_by_ctrl(keys, "2"), "80 612 400 664", "Limpar tudo"),
+            bitmap("ICO_CLEAR_ALL", "104 624", "28", "28", "130"),
         ]
     )
     write_screen("1008.hsc", "0", blocks, script_block(src))
@@ -1176,23 +1322,23 @@ def modernize_screen_1009() -> None:
     src = read_screen("1009.hsc")
     total = style_numeric(part_by_name(src, "NUM_1"), "290 150 420 202", "233")
     start = style_numeric(part_by_name(src, "NUM_5"), "290 220 420 272", "233")
-    current = style_numeric(part_by_name(src, "NUM_0"), "290 290 420 342", "233")
+    current = style_numeric(part_by_name(src, "NUM_0"), "214 290 310 342", "233")
     admin_password = style_string(part_by_name(src, "STR_0"), "220 402 420 452", "233")
     password = style_string(part_by_name(src, "STR_1"), "220 466 420 516", "233")
     year = style_numeric(part_by_name(src, "NUM_2"), "58 594 154 642", "233")
     month = style_numeric(part_by_name(src, "NUM_4"), "192 594 288 642", "233")
     day = style_numeric(part_by_name(src, "NUM_6"), "326 594 422 642", "233")
-    previous_period = style_word_icon(part_by_name(src, "WS_0"), "42 704 98 760", "128")
-    next_period = style_word_icon(part_by_name(src, "WS_1"), "122 704 178 760", "103")
-    save = style_word_icon(part_by_name(src, "WS_2"), "202 704 258 760", "126")
-    cancel = style_word_icon(part_by_name(src, "WS_3"), "282 704 338 760", "130")
-    exit_button = style_word_icon(part_by_name(src, "WS_4"), "362 704 418 760", "128")
+    previous_period = style_word_button_label(part_by_name(src, "WS_0"), "326 290 374 342", GRAY, "Ant")
+    next_period = style_word_button_label(part_by_name(src, "WS_1"), "382 290 430 342", AMBER, "Prox")
+    save = style_word_icon(part_by_name(src, "WS_2"), "400 28 456 84", "126")
+    cancel = style_hidden(part_by_name(src, "WS_3"))
+    exit_button = style_hidden(part_by_name(src, "WS_4"))
 
     write_screen(
         "1009.hsc",
         "0",
         [
-            *header("Periodo Manutencao", "Configuracao de validade", AMBER),
+            *header("Periodo Manutencao", "Configuracao de validade", AMBER, left=menu_button(), right=save),
             rect("CARD_PERIOD", "24 132 456 360", CARD, BORDER),
             rect("ACCENT_PERIOD", "24 132 30 360", AMBER),
             text("TXT_TOTAL", "Total de periodos", "48 160", "233", TEXT, "1"),
@@ -1201,6 +1347,8 @@ def modernize_screen_1009() -> None:
             start,
             text("TXT_CURRENT", "Periodo atual", "48 300", "233", TEXT, "1"),
             current,
+            previous_period,
+            next_period,
             rect("CARD_PASS", "24 384 456 532", CARD, BORDER),
             rect("ACCENT_PASS", "24 384 30 532", GRAY),
             text("TXT_ADMIN_PASS", "Senha superior", "48 414", "233", TEXT, "1"),
@@ -1216,10 +1364,6 @@ def modernize_screen_1009() -> None:
             year,
             month,
             day,
-            rect("FOOTER_BG", "24 684 456 776", CARD, BORDER),
-            previous_period,
-            next_period,
-            save,
             cancel,
             exit_button,
         ],
@@ -1231,13 +1375,13 @@ def modernize_screen_1010() -> None:
     src = read_screen("1010.hsc")
     current = style_numeric(part_by_name(src, "NUM_0"), "286 168 420 230", "304")
     password = style_string(part_by_name(src, "STR_0"), "164 366 420 428", "304")
-    enter = style_word_icon(part_by_name(src, "WS_0"), "208 624 272 688", "126")
+    enter = style_word_icon(part_by_name(src, "WS_0"), "400 28 456 84", "126")
 
     write_screen(
         "1010.hsc",
         "1",
         [
-            *header("Periodo Atual", "Validacao de manutencao", AMBER),
+            *header("Periodo Atual", "Validacao de manutencao", AMBER, left=menu_button(), right=enter),
             rect("CARD_PERIOD", "24 140 456 270", CARD, BORDER),
             rect("ACCENT_PERIOD", "24 140 30 270", AMBER),
             text("TXT_PERIOD", "Periodo atual", "48 174", "233", TEXT, "1"),
@@ -1249,8 +1393,6 @@ def modernize_screen_1010() -> None:
             rect("INFO_CARD", "24 510 456 594", CARD, BORDER),
             text("TXT_INFO", "Acesso tecnico", "48 532", "233", TEXT, "1"),
             text("TXT_INFO_SUB", "Informe a senha para abrir as configuracoes.", "48 566", "8 16", MUTED),
-            rect("ACTION_CARD", "24 608 456 718", CARD, BORDER),
-            enter,
         ],
         script_block(src),
         screen_size="1",
@@ -1261,14 +1403,14 @@ def modernize_screen_1011() -> None:
     src = read_screen("1011.hsc")
     user_list = style_downlist(part_by_name(src, "DL_1"), "190 212 420 274", "233")
     password = style_string(part_by_name(src, "STR_0"), "190 368 420 430", "304")
-    cancel = style_function_icon(part_by_name(src, "FS_1"), "104 626 168 690", "128", "24 24")
-    ok = style_bit_icon(part_by_name(src, "BS_1"), "312 626 376 690", "126", "24 24")
+    cancel = style_hidden(part_by_name(src, "FS_1"))
+    ok = style_bit_icon(part_by_name(src, "BS_1"), "400 28 456 84", "126", "12 12")
 
     write_screen(
         "1011.hsc",
         "0",
         [
-            *header("Login", "Acesso de usuario", INDIGO),
+            *header("Login", "Acesso de usuario", INDIGO, left=menu_button(), right=ok),
             rect("CARD_USER", "24 166 456 308", CARD, BORDER),
             rect("ACCENT_USER", "24 166 30 308", INDIGO),
             text("TXT_USER", "Usuario", "48 230", "233", TEXT, "1"),
@@ -1277,9 +1419,7 @@ def modernize_screen_1011() -> None:
             rect("ACCENT_PASSWORD", "24 338 30 470", GRAY),
             text("TXT_PASSWORD", "Senha", "48 386", "233", TEXT, "1"),
             password,
-            rect("ACTION_CARD", "24 596 456 724", CARD, BORDER),
             cancel,
-            ok,
         ],
     )
 
@@ -1290,14 +1430,14 @@ def modernize_screen_1012() -> None:
     current_password = style_string(part_by_name(src, "STR_0"), "210 256 420 308", "233")
     new_password = style_string(part_by_name(src, "STR_2"), "210 360 420 412", "233")
     confirm_password = style_string(part_by_name(src, "STR_3"), "210 464 420 516", "233")
-    cancel = style_function_icon(part_by_name(src, "FS_0"), "104 648 168 712", "128", "24 24")
-    ok = style_bit_icon(part_by_name(src, "BS_1"), "312 648 376 712", "126", "24 24")
+    cancel = style_hidden(part_by_name(src, "FS_0"))
+    ok = style_bit_icon(part_by_name(src, "BS_1"), "400 28 456 84", "126", "12 12")
 
     write_screen(
         "1012.hsc",
         "0",
         [
-            *header("Alterar Senha", "Atualize o acesso do usuario", INDIGO),
+            *header("Alterar Senha", "Atualize o acesso do usuario", INDIGO, left=menu_button(), right=ok),
             rect("CARD_USER", "24 128 456 224", CARD, BORDER),
             rect("ACCENT_USER", "24 128 30 224", INDIGO),
             text("TXT_USER", "Usuario", "48 166", "233", TEXT, "1"),
@@ -1314,17 +1454,13 @@ def modernize_screen_1012() -> None:
             rect("ACCENT_CONFIRM_PASS", "24 440 30 536", GREEN),
             text("TXT_CONFIRM_PASS", "Confirmar", "48 478", "233", TEXT, "1"),
             confirm_password,
-            rect("ACTION_CARD", "24 616 456 744", CARD, BORDER),
             cancel,
-            ok,
         ],
     )
 
 
 def modernize_screen_17() -> None:
     src = read_screen("17.hsc")
-    home = style_function_icon(part_by_name(src, "Function Switch0"), "208 704 272 768", "125", "32 32")
-    back = style_function_icon(part_by_name(src, "Function Switch1"), "48 704 112 768", "128", "24 24")
     day = style_numeric(part_by_name(src, "Numeric Input/Display0"), "184 176 238 238", "262")
     month = style_numeric(part_by_name(src, "Numeric Input/Display1"), "270 176 324 238", "262")
     year = style_numeric(part_by_name(src, "Numeric Input/Display2"), "356 176 434 238", "262")
@@ -1334,7 +1470,7 @@ def modernize_screen_17() -> None:
         "17.hsc",
         "3",
         [
-            *header("Data e Hora", "Ajuste do relogio interno", INDIGO),
+            *header("Data e Hora", "Ajuste do relogio interno", INDIGO, left=menu_button()),
             rect("CARD_DATE", "24 138 456 282", CARD, BORDER),
             rect("ACCENT_DATE", "24 138 30 282", INDIGO),
             text("TXT_DATE", "Data", "48 180", "233", TEXT, "1"),
@@ -1352,14 +1488,12 @@ def modernize_screen_17() -> None:
             rect("INFO_CARD", "24 506 456 606", CARD, BORDER),
             text("TXT_INFO", "Formato", "48 528", "233", TEXT, "1"),
             text("TXT_INFO_SUB", "Ajuste data e hora do relogio interno.", "48 564", "8 16", MUTED),
-            *footer(back, home),
         ],
     )
 
 
 def modernize_recipe_editor(file_name: str, recipe_no: int) -> None:
     src = read_screen(file_name)
-    back = style_function_icon(first_part_by_type(src, "FunctionSwitch"), "48 704 112 768", "128", "24 24")
     name = style_string(part_by_name(src, "STR_0"), "48 174 432 238", "233")
     temperature = style_numeric(part_by_name(src, "NUM_0"), "284 336 418 416", "304")
     time_value = style_numeric(part_by_name(src, "NUM_1"), "284 504 418 584", "304")
@@ -1367,7 +1501,7 @@ def modernize_recipe_editor(file_name: str, recipe_no: int) -> None:
         file_name,
         screen_no(src),
         [
-            *header(f"Receita {recipe_no}", "Nome, temperatura e tempo", AMBER),
+            *header(f"Receita {recipe_no}", "Nome, temperatura e tempo", AMBER, left=menu_button()),
             rect("CARD_NAME", "24 132 456 266", CARD, BORDER),
             rect("ACCENT_NAME", "24 132 30 266", AMBER),
             text("TXT_NAME", "Nome", "48 150", "233", TEXT, "1"),
@@ -1384,22 +1518,19 @@ def modernize_recipe_editor(file_name: str, recipe_no: int) -> None:
             text("TXT_TIME_HINT", "Valores entre 1.00 e 9.99", "48 538", "12 24", MUTED),
             time_value,
             text("TXT_TIME_UNIT", "min", "420 536", "12 24", MUTED),
-            *footer(back),
         ],
     )
 
 
 def modernize_screen_16() -> None:
     src = read_screen("16.hsc")
-    home = style_function_icon(part_by_name(src, "Function Switch2"), "208 704 272 768", "125", "32 32")
-    back = style_function_icon(part_by_name(src, "Function Switch0"), "48 704 112 768", "128", "24 24")
     fields = [
         ("NUM_0", "Low Point", "0 a 40", "124 232", "286 148 436 212"),
         ("Numeric Input/Display0", "Low Offset", "-50 a 50", "258 366", "286 282 436 346"),
         ("Numeric Input/Display1", "High Point", "200 a 400", "392 500", "286 416 436 480"),
         ("Numeric Input/Display2", "High Offset", "-500 a 500", "526 634", "286 550 436 614"),
     ]
-    blocks = [*header("Ajustes Offset", "Calibracao de pontos", GRAY)]
+    blocks = [*header("Ajustes Offset", "Calibracao de pontos", GRAY, left=menu_button())]
     for index, (part_name, label, hint, y_area, input_area) in enumerate(fields):
         top, bottom = y_area.split()
         accent = SKY if index < 2 else RED
@@ -1412,10 +1543,11 @@ def modernize_screen_16() -> None:
                 style_numeric(part_by_name(src, part_name), input_area, "304"),
             ]
         )
-    write_screen("16.hsc", screen_no(src), [*blocks, *footer(back, home)])
+    write_screen("16.hsc", screen_no(src), blocks)
 
 
 def main() -> None:
+    modernize_screen_1003()
     modernize_screen_0()
     modernize_screen_2()
     modernize_screen_3()

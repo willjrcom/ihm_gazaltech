@@ -14,14 +14,24 @@
 <General Area="0 0 480 112" BorderColor="0xf172a 0" Pattern="1" FrnColor="0xf172a -1" BgColor="0xf172a -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TITLE_0">
-<General TextContent="Faixa de Dados" LaFrnColor="0xffffff -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="304" Bold="1" StartPt="28 22"/>
+<General TextContent="Faixa de Dados" LaFrnColor="0xffffff -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="304" Bold="1" StartPt="92 22"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="SUBTITLE_0">
-<General TextContent="Periodo das tendencias" LaFrnColor="0xcbd5e1 -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="233" Bold="0" StartPt="28 60"/>
+<General TextContent="Periodo das tendencias" LaFrnColor="0xcbd5e1 -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="233" Bold="0" StartPt="92 60"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Rect" PartName="HEADER_ACCENT">
-<General Area="28 92 140 97" BorderColor="0x6366f1 0" Pattern="1" FrnColor="0x6366f1 -1" BgColor="0x6366f1 -1" ActiveColor="0"/>
+<General Area="92 92 204 97" BorderColor="0x6366f1 0" Pattern="1" FrnColor="0x6366f1 -1" BgColor="0x6366f1 -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="FunctionSwitch" PartName="FS_MENU_OPEN">
+<General Desc="FS_MENU_OPEN" Area="24 28 80 84" ScrSwitch="0" FuncFunc="2" ScreenNo="-1" ScreenNo2="1003" PointPos="0 0" PopupScreenType="1" PopupCloseWithParent="1" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="140" LaStartPt="12 12" Transparent="0" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
+<Label Status="0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
+<PartInfo PartType="WordSwitch" PartName="Word Switch1">
+		<General Desc="WS_0" WordAddr="HSW000208" WriteAddr="HSW000208" DataFormat="2" Const="1" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xd7dee8 0" BmpIndex="126" LaStartPt="0 0" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0" Area="400 28 456 84" FrnColor="0xffffff -1" BgColor="0xffffff -1" Align="3"/>
+		<Extension IsCheck="0" UseShowHide="0" HideType="0" IsHideAllTime="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+		<MoveZoom DataFormatMZ="2"/>
+		<Label Status="0" Pattern="1" FrnColor="0x22c55e 0" BgColor="0x22c55e 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="Rect" PartName="CARD_RANGE">
 <General Area="24 132 456 340" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xffffff -1" BgColor="0xffffff -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
@@ -59,6 +69,11 @@
 <PartInfo PartType="Text" PartName="TXT_LINES">
 <General TextContent="Linhas do grafico" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="233" Bold="1" StartPt="48 392"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="WordSwitch" PartName="Word Switch0">
+		<General Desc="WS_0" WordAddr="HSW000209" WriteAddr="HSW000209" DataFormat="2" Const="1" FigureFile="" BorderColor="0xf4f7fb 0" BmpIndex="-1" LaStartPt="0 0" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0" Area="0 0 1 1" FrnColor="0xf4f7fb 0" BgColor="0xf4f7fb 0" Align="3" Transparent="1"/>
+		<Extension IsCheck="0" UseShowHide="0" HideType="0" IsHideAllTime="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+		<MoveZoom DataFormatMZ="2"/>
+		<Label Status="0" Pattern="1" FrnColor="0xf4f7fb 0" BgColor="0xf4f7fb 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xf4f7fb 0"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_LINE_0">
 <General TextContent="Linha 1" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="48 426"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
@@ -94,17 +109,4 @@
 		<Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 		<MoveZoom DataFormatMZ="2"/>
 		<Label Status="0" Pattern="1" FrnColor="0x22c55e 1" BgColor="0x22c55e 0" Bold="0" LaIndexID="OFF" CharSize="14" LaFrnColor="0xffffff -1"/>
-		<Label Status="1" FrnColor="0x22c55e 0" BgColor="0x22c55e 0" Bold="0" LaIndexID="ON" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1"/></PartInfo>
-<PartInfo PartType="Rect" PartName="ACTION_CARD">
-<General Area="24 650 456 768" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xffffff -1" BgColor="0xffffff -1" ActiveColor="0"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="WordSwitch" PartName="Word Switch0">
-		<General Desc="WS_0" WordAddr="HSW000209" WriteAddr="HSW000209" DataFormat="2" Const="1" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xd7dee8 0" BmpIndex="128" LaStartPt="0 0" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0" Area="90 682 154 746" FrnColor="0xffffff -1" BgColor="0xffffff -1" Align="3"/>
-		<Extension IsCheck="0" UseShowHide="0" HideType="0" IsHideAllTime="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
-		<MoveZoom DataFormatMZ="2"/>
-		<Label Status="0" Pattern="1" FrnColor="0x94a3b8 0" BgColor="0x94a3b8 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
-<PartInfo PartType="WordSwitch" PartName="Word Switch1">
-		<General Desc="WS_0" WordAddr="HSW000208" WriteAddr="HSW000208" DataFormat="2" Const="1" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xd7dee8 0" BmpIndex="126" LaStartPt="0 0" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0" Area="326 682 390 746" FrnColor="0xffffff -1" BgColor="0xffffff -1" Align="3"/>
-		<Extension IsCheck="0" UseShowHide="0" HideType="0" IsHideAllTime="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
-		<MoveZoom DataFormatMZ="2"/>
-		<Label Status="0" Pattern="1" FrnColor="0x22c55e 0" BgColor="0x22c55e 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo></ScrInfo>
+		<Label Status="1" FrnColor="0x22c55e 0" BgColor="0x22c55e 0" Bold="0" LaIndexID="ON" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1"/></PartInfo></ScrInfo>

@@ -27,7 +27,7 @@
 <Key IsCtrlKey="1" CtrlKey="3" ASCIIKey="A" IsInputMethod="0"/>
 <Label Status="0" Bold="0" LaIndexID="" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0"/></PartInfo>
 <PartInfo PartType="Rect" PartName="KEY_PANEL">
-<General Area="8 198 472 678" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xe9eef6 -1" BgColor="0xe9eef6 -1" ActiveColor="0"/>
+<General Area="8 198 472 694" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xe9eef6 -1" BgColor="0xe9eef6 -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_29">
 <General Area="14 212 54 268" FigureFile="" BorderColor="0xd7dee8 0" LaStartPt="0 0" FrnColor="0xffffff -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" Align="3"/>
@@ -174,17 +174,17 @@
 <Key IsCtrlKey="0" ASCIIKey="M" IsInputMethod="0"/>
 <Label Status="0" Bold="0" LaIndexID="M" CharSize="14" LaFrnColor="0xf172a -1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0"/></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_22">
-<General Area="24 510 116 570" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xd7dee8 0" Align="3" LaStartPt="0 0" FrnColor="0xffffff -1" BgColor="0xffffff -1" BmpIndex="121" Transparent="0"/>
+<General Area="24 506 116 562" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xd7dee8 0" Align="3" LaStartPt="0 0" FrnColor="0xffffff -1" BgColor="0xffffff -1" BmpIndex="121" Transparent="0"/>
 <Key IsCtrlKey="1" CtrlKey="1" ASCIIKey="A" IsInputMethod="0"/>
 <Label Status="0" Bold="0" LaIndexID="" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0"/></PartInfo>
-<PartInfo PartType="keystoke" PartName="KY_21">
-<General Area="128 510 240 570" FigureFile="" BorderColor="0xd7dee8 0" Align="3" LaStartPt="0 0" FrnColor="0xffffff -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0"/>
-<Key IsCtrlKey="1" CtrlKey="2" ASCIIKey="A" IsInputMethod="0"/>
-<Label Status="0" Bold="0" LaIndexID="Limpar" CharSize="14" LaFrnColor="0xf172a -1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0"/></PartInfo>
-<PartInfo PartType="Bitmap" PartName="ICO_CLEAR_ALL">
-<General StartPt="138 526" Width="28" Height="28" BmpIndex="130"/>
-<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_20">
-<General Area="252 510 344 570" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xd7dee8 0" Align="3" LaStartPt="0 0" FrnColor="0xffffff -1" BgColor="0xffffff -1" BmpIndex="126" Transparent="0"/>
+<General Area="364 506 456 562" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xd7dee8 0" Align="3" LaStartPt="0 0" FrnColor="0xffffff -1" BgColor="0xffffff -1" BmpIndex="126" Transparent="0"/>
 <Key IsCtrlKey="1" ASCIIKey="A" IsInputMethod="0"/>
-<Label Status="0" Bold="0" LaIndexID="" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0"/></PartInfo></ScrInfo>
+<Label Status="0" Bold="0" LaIndexID="" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0"/></PartInfo>
+<PartInfo PartType="keystoke" PartName="KY_21">
+<General Area="80 612 400 664" FigureFile="" BorderColor="0xd7dee8 0" Align="3" LaStartPt="0 0" FrnColor="0xffffff -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0"/>
+<Key IsCtrlKey="1" CtrlKey="2" ASCIIKey="A" IsInputMethod="0"/>
+<Label Status="0" Bold="0" LaIndexID="Limpar tudo" CharSize="14" LaFrnColor="0xf172a -1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0"/></PartInfo>
+<PartInfo PartType="Bitmap" PartName="ICO_CLEAR_ALL">
+<General StartPt="104 624" Width="28" Height="28" BmpIndex="130"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></ScrInfo>

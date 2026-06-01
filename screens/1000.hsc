@@ -74,13 +74,13 @@
 <Key IsCtrlKey="1" CtrlKey="1" ASCIIKey="0" IsInputMethod="0"/>
 <Label Status="0" Bold="0" LaIndexID="" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0"/></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_13">
-<General Desc="KY_0" Area="360 318 444 392" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xd7dee8 0" BmpIndex="130" Align="3" LaStartPt="0 0" FrnColor="0xffffff -1" BgColor="0xffffff -1" Transparent="0"/>
+<General Desc="KY_0" Area="0 0 1 1" FigureFile="" BorderColor="0xf4f7fb 0" BmpIndex="-1" Align="3" LaStartPt="0 0" FrnColor="0xf4f7fb 0" BgColor="0xf4f7fb 0" Transparent="1"/>
 <Key IsCtrlKey="1" CtrlKey="2" ASCIIKey="0" IsInputMethod="0"/>
-<Label Status="0" Bold="0" LaIndexID="" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0"/></PartInfo>
+<Label Status="0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xf4f7fb 0" Pattern="1" FrnColor="0xf4f7fb 0" BgColor="0xf4f7fb 0"/></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_15">
 <General Desc="KY_0" Area="0 0 1 1" FigureFile="" BorderColor="0xf4f7fb 0" BmpIndex="-1" LaStartPt="0 0" FrnColor="0xf4f7fb 0" BgColor="0xf4f7fb 0" Transparent="1" Align="3"/>
 <Key IsCtrlKey="0" ASCIIKey="-" IsInputMethod="0"/>
-<Label Status="0" Bold="1" LaIndexID="+/-" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1" FrnColor="0xf59e0b 0" BgColor="0xf59e0b 0"/></PartInfo>
+<Label Status="0" Bold="1" LaIndexID="" CharSize="6 12" LaFrnColor="0xf4f7fb 0" Pattern="1" FrnColor="0xf4f7fb 0" BgColor="0xf4f7fb 0"/></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_11">
 <General Desc="KY_0" Area="360 498 444 572" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xd7dee8 0" BmpIndex="126" LaStartPt="0 0" FrnColor="0xffffff -1" BgColor="0xffffff -1" Transparent="0" Align="3"/>
 <Key IsCtrlKey="1" ASCIIKey="0" IsInputMethod="0"/>

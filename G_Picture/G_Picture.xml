@@ -184,7 +184,7 @@
 			<MulStatus szFilename="teste.MID3" dwMID="3"/></G_bmp>
 		<G_bmp szFilename="edit" nId="75" nTotalStatus="1" nWidth="100" nHeigth="100" nFileSize="30040" enumPicType="0" bTransparent="0" cTransColor="0"/>
 		<G_bmp szFilename="save14" nId="76" nTotalStatus="1" nWidth="100" nHeigth="100" nFileSize="30040" enumPicType="0" bTransparent="0" cTransColor="0"/>
-		<G_bmp szFilename="warning" nId="78" nTotalStatus="1" nWidth="80" nHeigth="80" nFileSize="19240" enumPicType="0" bTransparent="1" cTransColor="16777215"/>
+		<G_bmp szFilename="warning" nId="78" nTotalStatus="1" nWidth="80" nHeigth="80" nFileSize="19240" enumPicType="0" bTransparent="1" cTransColor="0"/>
 		<G_bmp szFilename="liga" nId="79" nTotalStatus="2" nWidth="100" nHeigth="100" nFileSize="0" enumPicType="0" bTransparent="1" cTransColor="11592943">
 			<MulStatus szFilename="liga.MID0" dwMID="0"/>
 			<MulStatus szFilename="liga.MID1" dwMID="1"/></G_bmp>

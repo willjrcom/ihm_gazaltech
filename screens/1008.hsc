@@ -23,7 +23,7 @@
 		<Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 		<MoveZoom DataFormatMZ="2"/></PartInfo>
 <PartInfo PartType="Rect" PartName="KEY_PANEL">
-<General Area="8 198 472 674" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xe9eef6 -1" BgColor="0xe9eef6 -1" ActiveColor="0"/>
+<General Area="8 198 472 694" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xe9eef6 -1" BgColor="0xe9eef6 -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_9">
 		<General FigureFile="" BorderColor="0xd7dee8 0" BmpIndex="-1" LaStartPt="0 0" Area="14 212 54 266" FrnColor="0xffffff -1" BgColor="0xffffff -1" Transparent="0" Align="3"/>
@@ -186,15 +186,15 @@
 		<Key IsCtrlKey="1" ASCIIKey="A" IsInputMethod="0"/>
 		<Label Status="0" Bold="0" LaIndexID="" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0"/></PartInfo>
 <PartInfo PartType="BitSwitch" PartName="BS_0">
-		<General Desc="BS_0" OperateAddr="HSX216.0" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="HSX216.0" FigureFile="TFT-type style\TFT010.pvg" BorderColor="0x6366f1 -1" BmpIndex="-1" LaStartPt="36 13" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" Area="24 584 116 640" FrnColor="0x6366f1 -1" BgColor="0x6366f1 -1" Align="3"/>
+		<General Desc="BS_0" OperateAddr="HSX216.0" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="HSX216.0" FigureFile="" BorderColor="0xf4f7fb 0" BmpIndex="-1" LaStartPt="36 13" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" Area="0 0 1 1" FrnColor="0xf4f7fb 0" BgColor="0xf4f7fb 0" Align="3" Transparent="1"/>
 		<Extension IsCheck="0" AckTime="20" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 		<MoveZoom DataFormatMZ="2"/>
-		<Label Status="0" FrnColor="0x6366f1 1" BgColor="0x6366f1 0" Bold="0" LaIndexID="ABC" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1"/>
-		<Label Status="1" FrnColor="0x22c55e 0" BgColor="0x22c55e 0" Bold="0" LaIndexID="ABC" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1"/></PartInfo>
+		<Label Status="0" FrnColor="0xf4f7fb 0" BgColor="0xf4f7fb 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xf4f7fb 0" Pattern="1"/>
+		<Label Status="1" FrnColor="0xf4f7fb 0" BgColor="0xf4f7fb 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xf4f7fb 0" Pattern="1"/></PartInfo>
 <PartInfo PartType="keystoke" PartName="KY_23">
-		<General FigureFile="" BorderColor="0xd7dee8 0" BmpIndex="-1" LaStartPt="0 0" Area="128 584 456 640" FrnColor="0xffffff -1" BgColor="0xffffff -1" Transparent="0" Align="3"/>
+		<General FigureFile="" BorderColor="0xd7dee8 0" BmpIndex="-1" LaStartPt="0 0" Area="80 612 400 664" FrnColor="0xffffff -1" BgColor="0xffffff -1" Transparent="0" Align="3"/>
 		<Key IsCtrlKey="1" CtrlKey="2" ASCIIKey="A" IsInputMethod="0"/>
 		<Label Status="0" Bold="0" LaIndexID="Limpar tudo" CharSize="14" LaFrnColor="0xf172a -1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0"/></PartInfo>
 <PartInfo PartType="Bitmap" PartName="ICO_CLEAR_ALL">
-<General StartPt="152 596" Width="28" Height="28" BmpIndex="130"/>
+<General StartPt="104 624" Width="28" Height="28" BmpIndex="130"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo></ScrInfo>

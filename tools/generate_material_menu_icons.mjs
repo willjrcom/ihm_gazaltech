@@ -19,14 +19,15 @@ const specs = [
   { file: "recipe", icon: "menu_book", width: 60, height: 60, accent: "#f59e0b", ppm: 4724, size: 37 },
   { file: "hourIcon1", icon: "schedule", width: 240, height: 240, accent: "#6366f1", ppm: 3780, size: 152 },
   { file: "resetIcon2", icon: "restart_alt", width: 240, height: 240, accent: "#94a3b8", ppm: 3780, size: 152 },
-  { file: "img9", icon: "home", width: 64, height: 64, accent: "#0ea5e9", ppm: 3780, size: 42 },
-  { file: "menu", icon: "menu", width: 64, height: 64, accent: "#0ea5e9", ppm: 3780, size: 42 },
-  { file: "return1", icon: "arrow_back", width: 48, height: 48, accent: "#64748b", ppm: 3780, size: 29 },
-  { file: "save1", icon: "save", width: 48, height: 48, accent: "#22c55e", ppm: 3780, size: 28 },
-  { file: "edit2", icon: "edit", width: 48, height: 48, accent: "#f59e0b", ppm: 3780, size: 28 },
-  { file: "ir", icon: "space_bar", width: 48, height: 48, accent: "#64748b", ppm: 3780, size: 30 },
-  { file: "del1", icon: "backspace", width: 100, height: 100, accent: "#94a3b8", ppm: 3780, size: 58 },
-  { file: "excluir1", icon: "delete", width: 48, height: 48, accent: "#ef4444", ppm: 3780, size: 28 },
+  { file: "img9", icon: "home", width: 64, height: 64, accent: "#0ea5e9", ppm: 3780, size: 46, mode: "glyph" },
+  { file: "menu", icon: "menu", width: 64, height: 64, accent: "#0ea5e9", ppm: 3780, size: 46, mode: "glyph" },
+  { file: "return1", icon: "arrow_back", width: 48, height: 48, accent: "#cbd5e1", ppm: 3780, size: 34, mode: "glyph" },
+  { file: "save1", icon: "save", width: 48, height: 48, accent: "#22c55e", ppm: 3780, size: 34, mode: "glyph" },
+  { file: "edit2", icon: "edit", width: 48, height: 48, accent: "#f59e0b", ppm: 3780, size: 34, mode: "glyph" },
+  { file: "ir", icon: "space_bar", width: 48, height: 48, accent: "#64748b", ppm: 3780, size: 34, mode: "glyph" },
+  { file: "del1", icon: "backspace", width: 100, height: 100, accent: "#94a3b8", ppm: 3780, size: 70, mode: "glyph" },
+  { file: "excluir1", icon: "delete", width: 48, height: 48, accent: "#ef4444", ppm: 3780, size: 34, mode: "glyph" },
+  { file: "warning", icon: "warning", width: 80, height: 80, accent: "#ffffff", ppm: 3780, size: 58, mode: "glyph" },
   { file: "eco_icon.MID0", icon: "energy_savings_leaf", width: 128, height: 128, accent: "#94a3b8", ppm: 3780, size: 76 },
   { file: "eco_icon.MID1", icon: "energy_savings_leaf", width: 128, height: 128, accent: "#22c55e", ppm: 3780, size: 76 },
   { file: "timer1", icon: "timer", width: 96, height: 96, accent: "#6366f1", ppm: 3780, size: 60 },
@@ -49,15 +50,28 @@ function ensureDependencies() {
   });
 }
 
-function materialIconBody(iconRoot, name) {
+function materialIconBody(iconRoot, name, fill = "#fff") {
   const source = fs.readFileSync(path.join(iconRoot, `${name}.svg`), "utf8");
   return source
     .replace(/^[\s\S]*?<svg[^>]*>/, "")
     .replace(/<\/svg>\s*$/, "")
-    .replace(/<path/g, '<path fill="#fff"');
+    .replace(/<path/g, `<path fill="${fill}"`);
 }
 
 function composeSvg(spec, iconRoot) {
+  if (spec.mode === "glyph") {
+    const scale = spec.size / 960;
+    const tx = (spec.width - spec.size) / 2;
+    const ty = (spec.height - spec.size) / 2 + spec.size;
+
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="${spec.width}" height="${spec.height}" viewBox="0 0 ${spec.width} ${spec.height}">
+  <rect width="100%" height="100%" fill="#000"/>
+  <g transform="translate(${tx} ${ty}) scale(${scale})">
+    ${materialIconBody(iconRoot, spec.icon, spec.accent)}
+  </g>
+</svg>`;
+  }
+
   const pad = Math.max(5, Math.round(Math.min(spec.width, spec.height) * 0.085));
   const radius = Math.round(Math.min(spec.width, spec.height) * 0.2);
   const scale = spec.size / 960;
