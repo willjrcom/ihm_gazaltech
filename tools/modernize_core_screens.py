@@ -590,8 +590,7 @@ def modernize_screen_0() -> None:
     src = read_screen("0.hsc")
     popup_edit = part_by_name(src, "DIW_2")
     popup_eco = part_by_name(src, "DIW_1")
-    recipe = style_function_icon(part_by_name(src, "FS_0"), "384 158 444 218", "30", "30 30")
-    recipe_name = style_string(part_by_name(src, "STR_0"), "48 180 360 226", "233")
+    recipe_name = style_string(part_by_name(src, "STR_0"), "48 180 432 226", "233")
     current_temp = style_numeric(part_by_name(src, "NUM_0"), "44 342 180 426", "304")
     current_temp = set_attr(current_temp, "General", "FrnColor", f"{RED} -1")
     desired_temp = style_numeric(part_by_name(src, "NUM_1"), "272 342 408 426", "304")
@@ -642,8 +641,6 @@ def modernize_screen_0() -> None:
             rect("ACCENT_RECIPE", "24 128 30 242", AMBER),
             text("TXT_RECIPE", "Receita ativa", "48 150", "233", TEXT, "1"),
             recipe_name,
-            recipe,
-            text("TXT_RECIPE_BTN", "Receitas", "382 222", "8 16", MUTED),
             rect("CARD_CURRENT", "24 258 228 450", CARD, BORDER),
             rect("ACCENT_CURRENT", "24 258 30 450", RED),
             bitmap("ICO_CURRENT", "48 278", "46", "46", "141"),
@@ -846,17 +843,17 @@ def modernize_screen_6() -> None:
         "General",
         {
             "Area": "48 154 198 216",
-            "FigureFile": "TFT-type style\\TFT010.pvg",
-            "BorderColor": f"{SKY} -1",
+            "FigureFile": "TFT-type style\\TFT001.pvg",
+            "BorderColor": f"{BORDER} 0",
             "Pattern": "1",
-            "FrnColor": f"{SKY} -1",
-            "BgColor": f"{SKY} -1",
-            "BmpIndex": "-1",
-            "LaStartPt": "42 18",
+            "FrnColor": f"{CARD} -1",
+            "BgColor": f"{CARD} -1",
+            "BmpIndex": "127",
+            "LaStartPt": "51 7",
             "Align": "3",
         },
     )
-    start = set_attrs(start, "Label", {"LaIndexID": "Iniciar", "CharSize": "12 24", "LaFrnColor": "0xffffff -1"}, status="0")
+    start = set_attrs(start, "Label", {"LaIndexID": "", "CharSize": "6 12", "LaFrnColor": f"{CARD} -1"}, status="0")
     speed = style_numeric(part_by_name(src, "Numeric Input/Display0"), "286 330 410 410", "304")
     write_screen(
         "6.hsc",
@@ -970,7 +967,7 @@ def modernize_screen_21() -> None:
     temp = style_numeric(part_by_name(src, "NUM_1"), "282 156 416 236", "304")
     temp = set_attr(temp, "General", "FrnColor", "0x0000ff -1")
     speed = style_numeric(part_by_name(src, "NUM_0"), "282 336 416 416", "304")
-    minimum = style_numeric(part_by_name(src, "NUM_2"), "300 492 388 544", "233")
+    minimum = style_numeric(part_by_name(src, "NUM_2"), "282 524 390 586", "262")
     save = style_bit_icon(part_by_name(src, "BS_0"), "400 28 456 84", "126", "12 12")
     close = style_hidden(part_by_name(src, "Bit Switch0"))
     background = move_general(part_by_name(src, "WL_0"), "0 0 1 1")
@@ -992,10 +989,12 @@ def modernize_screen_21() -> None:
             text("TXT_SPEED_SUB", "Velocidade da esteira.", "48 370", "8 16", MUTED),
             speed,
             text("TXT_SPEED_UNIT", "min", "420 366", "12 24", MUTED),
-            rect("CARD_MIN", "24 492 456 564", CARD, BORDER),
-            rect("ACCENT_MIN", "24 492 30 564", GRAY),
-            text("TXT_MIN", "Minimo", "48 514", "233", TEXT, "1"),
+            rect("CARD_MIN", "24 492 456 620", CARD, BORDER),
+            rect("ACCENT_MIN", "24 492 30 620", GRAY),
+            text("TXT_MIN", "Minimo da esteira", "48 516", "233", TEXT, "1"),
+            text("TXT_MIN_SUB", "Referencia atual para ajuste.", "48 552", "8 16", MUTED),
             minimum,
+            text("TXT_MIN_UNIT", "min", "398 552", "12 24", MUTED, "1"),
             close,
         ],
         script_block(src),
@@ -1043,12 +1042,25 @@ def modernize_screen_23() -> None:
     current = set_attr(current, "General", "FrnColor", "0x0000ff -1")
     desired = style_numeric(part_by_name(src, "Numeric Input/Display1"), "282 430 416 510", "304")
     desired = set_attr(desired, "General", "FrnColor", "0x15803d -1")
-    disable = style_bit_icon(part_by_name(src, "BS_0"), "400 28 456 84", "123", "0 0")
+    disable = style_bit_touch(part_by_name(src, "BS_0"), "400 28 456 84")
+    for status in ("0", "1"):
+        disable = set_attrs(
+            disable,
+            "Label",
+            {
+                "LaIndexID": "",
+                "FrnColor": f"{DARK} 0",
+                "BgColor": f"{DARK} 0",
+                "LaFrnColor": f"{DARK} -1",
+            },
+            status=status,
+        )
+    header_icon = f'{bitmap("ICO_ECO_HEADER", "405 33", "46", "46", "142")}\n{disable}'
     write_screen(
         "23.hsc",
         "33",
         [
-            *header("Modo Economico", "Eco ativado", GREEN, left=menu_button(), right=disable),
+            *header("Modo Economico", "Eco ativado", GREEN, left=menu_button(), right=header_icon),
             rect("CARD_CURRENT", "24 146 456 330", CARD, BORDER),
             rect("ACCENT_CURRENT", "24 146 30 330", SKY),
             bitmap("ICO_CURRENT", "48 202", "46", "46", "123"),
@@ -1070,9 +1082,9 @@ def modernize_screen_23() -> None:
 def modernize_screen_1000() -> None:
     src = read_screen("1000.hsc")
     keys = key_parts(src)
-    display = style_string(part_by_name(src, "STR_0"), "36 124 444 194", "304")
+    display = style_string(part_by_name(src, "STR_0"), "36 138 444 208", "304")
     display = set_attr(display, "General", "Align", "3")
-    min_value = style_string(part_by_name(src, "STR_2"), "112 714 220 742", "14")
+    min_value = style_string(part_by_name(src, "STR_2"), "112 250 220 278", "14")
     min_value = set_attrs(
         min_value,
         "General",
@@ -1083,7 +1095,7 @@ def modernize_screen_1000() -> None:
             "BgColor": f"{CARD} -1",
         },
     )
-    max_value = style_string(part_by_name(src, "STR_1"), "322 714 430 742", "14")
+    max_value = style_string(part_by_name(src, "STR_1"), "322 250 430 278", "14")
     max_value = set_attrs(
         max_value,
         "General",
@@ -1096,37 +1108,37 @@ def modernize_screen_1000() -> None:
     )
 
     number_keys = [
-        ("7", "36 228 126 302"),
-        ("8", "144 228 234 302"),
-        ("9", "252 228 342 302"),
-        ("4", "36 318 126 392"),
-        ("5", "144 318 234 392"),
-        ("6", "252 318 342 392"),
-        ("1", "36 408 126 482"),
-        ("2", "144 408 234 482"),
-        ("3", "252 408 342 482"),
-        ("0", "36 498 234 572"),
-        (".", "252 498 342 572"),
+        ("7", "36 318 126 392"),
+        ("8", "144 318 234 392"),
+        ("9", "252 318 342 392"),
+        ("4", "36 408 126 482"),
+        ("5", "144 408 234 482"),
+        ("6", "252 408 342 482"),
+        ("1", "36 498 126 572"),
+        ("2", "144 498 234 572"),
+        ("3", "252 498 342 572"),
+        ("0", "36 588 234 662"),
+        (".", "252 588 342 662"),
     ]
     blocks = [
         *header("Teclado Numerico", "Digite o valor do parametro", SKY),
-        rect("DISPLAY_CARD", "24 112 456 210", CARD, BORDER),
+        rect("DISPLAY_CARD", "24 124 456 222", CARD, BORDER),
         display,
+        rect("RANGE_CARD", "24 238 456 294", CARD, BORDER),
+        text("TXT_MIN", "Min", "70 256", "8 16", MUTED, "1"),
+        min_value,
+        text("TXT_MAX", "Max", "280 256", "8 16", MUTED, "1"),
+        max_value,
     ]
     for label, area in number_keys:
         blocks.append(style_key(key_by_ascii(keys, label), area, label))
     blocks.extend(
         [
-            style_key_icon(key_by_ctrl(keys, "1"), "360 228 444 302", "121"),
             style_hidden(key_by_ctrl(keys, "2")),
             style_hidden(key_by_ascii(keys, "-")),
-            style_key_icon(enter_key(keys), "360 498 444 572", "126"),
+            style_key_icon(key_by_ctrl(keys, "1"), "360 318 444 392", "121"),
+            style_key_icon(enter_key(keys), "360 588 444 662", "126"),
             style_key_icon(key_by_ctrl(keys, "3"), "368 30 444 86", "128"),
-            rect("RANGE_CARD", "24 700 456 760", CARD, BORDER),
-            text("TXT_MIN", "Min", "70 718", "8 16", MUTED, "1"),
-            min_value,
-            text("TXT_MAX", "Max", "280 718", "8 16", MUTED, "1"),
-            max_value,
         ]
     )
     write_screen("1000.hsc", "1000", blocks, script_block(src), screen_size="1")
@@ -1134,14 +1146,14 @@ def modernize_screen_1000() -> None:
 
 def text_keyboard_blocks(src: str, title: str, subtitle: str, input_name: str) -> list[str]:
     keys = key_parts(src)
-    display = style_string(part_by_name(src, input_name), "24 116 456 178", "304")
+    display = style_string(part_by_name(src, input_name), "24 134 456 196", "304")
     display = set_attr(display, "General", "Align", "3")
     blocks = [
         *header(title, subtitle, INDIGO),
-        rect("DISPLAY_CARD", "12 106 468 188", CARD, BORDER),
+        rect("DISPLAY_CARD", "12 124 468 206", CARD, BORDER),
         display,
         style_key_icon(key_by_ctrl(keys, "3"), "368 30 444 86", "128"),
-        rect("KEY_PANEL", "8 198 472 694", "0xe9eef6", BORDER),
+        rect("KEY_PANEL", "8 222 472 718", "0xe9eef6", BORDER),
     ]
 
     def add_row(chars: str, y: int, x: int, width: int, gap: int) -> None:
@@ -1149,10 +1161,10 @@ def text_keyboard_blocks(src: str, title: str, subtitle: str, input_name: str) -
             left = x + index * (width + gap)
             blocks.append(style_key(key_by_ascii(keys, char), f"{left} {y} {left + width} {y + 56}", char))
 
-    add_row("1234567890", 212, 14, 40, 6)
-    add_row("QWERTYUIOP", 282, 14, 40, 6)
-    add_row("ASDFGHJKL", 352, 24, 42, 7)
-    add_row("ZXCVBNM", 422, 58, 44, 9)
+    add_row("1234567890", 236, 14, 40, 6)
+    add_row("QWERTYUIOP", 306, 14, 40, 6)
+    add_row("ASDFGHJKL", 376, 24, 42, 7)
+    add_row("ZXCVBNM", 446, 58, 44, 9)
     try:
         space = key_by_ascii(keys, " ")
     except ValueError:
@@ -1160,20 +1172,20 @@ def text_keyboard_blocks(src: str, title: str, subtitle: str, input_name: str) -
     if space:
         blocks.extend(
             [
-                style_key_icon(key_by_ctrl(keys, "1"), "24 506 116 562", "121"),
-                style_key_icon(space, "128 506 352 562", "129"),
-                style_key_icon(enter_key(keys), "364 506 456 562", "126"),
-                style_key(key_by_ctrl(keys, "2"), "80 612 400 664", "Limpar tudo"),
-                bitmap("ICO_CLEAR_ALL", "104 624", "28", "28", "130"),
+                style_key_icon(key_by_ctrl(keys, "1"), "24 530 116 586", "121"),
+                style_key_icon(space, "128 530 352 586", "129"),
+                style_key_icon(enter_key(keys), "364 530 456 586", "126"),
+                style_key(key_by_ctrl(keys, "2"), "80 646 400 698", "Limpar tudo"),
+                bitmap("ICO_CLEAR_ALL", "104 658", "28", "28", "130"),
             ]
         )
     else:
         blocks.extend(
             [
-                style_key_icon(key_by_ctrl(keys, "1"), "24 506 116 562", "121"),
-                style_key_icon(enter_key(keys), "364 506 456 562", "126"),
-                style_key(key_by_ctrl(keys, "2"), "80 612 400 664", "Limpar tudo"),
-                bitmap("ICO_CLEAR_ALL", "104 624", "28", "28", "130"),
+                style_key_icon(key_by_ctrl(keys, "1"), "24 530 116 586", "121"),
+                style_key_icon(enter_key(keys), "364 530 456 586", "126"),
+                style_key(key_by_ctrl(keys, "2"), "80 646 400 698", "Limpar tudo"),
+                bitmap("ICO_CLEAR_ALL", "104 658", "28", "28", "130"),
             ]
         )
     return blocks
@@ -1245,29 +1257,29 @@ def modernize_screen_1006() -> None:
 
 def modernize_screen_1007() -> None:
     src = read_screen("1007.hsc")
-    up = style_numeric(part_by_name(src, "Numeric Input/Display1"), "248 154 420 216", "233")
-    down = style_numeric(part_by_name(src, "Numeric Input/Display0"), "248 254 420 316", "233")
+    up = style_numeric(part_by_name(src, "Numeric Input/Display1"), "248 170 420 232", "233")
+    down = style_numeric(part_by_name(src, "Numeric Input/Display0"), "248 270 420 332", "233")
     cancel = style_hidden(part_by_name(src, "Word Switch0"))
     enter = style_word_icon(part_by_name(src, "Word Switch1"), "400 28 456 84", "126")
     line_switches = [
-        ("Bit Switch0", "Linha 1", "142 410 222 462", "48 426"),
-        ("Bit Switch2", "Linha 3", "340 410 420 462", "246 426"),
-        ("Bit Switch1", "Linha 2", "142 514 222 566", "48 530"),
-        ("Bit Switch3", "Linha 4", "340 514 420 566", "246 530"),
+        ("Bit Switch0", "Linha 1", "142 426 222 478", "48 442"),
+        ("Bit Switch2", "Linha 3", "340 426 420 478", "246 442"),
+        ("Bit Switch1", "Linha 2", "142 530 222 582", "48 546"),
+        ("Bit Switch3", "Linha 4", "340 530 420 582", "246 546"),
     ]
     blocks = [
         *header("Faixa de Dados", "Periodo das tendencias", INDIGO, left=menu_button(), right=enter),
-        rect("CARD_RANGE", "24 132 456 340", CARD, BORDER),
-        rect("ACCENT_RANGE", "24 132 30 340", INDIGO),
-        text("TXT_UP", "Inicio", "48 158", "233", TEXT, "1"),
-        text("TXT_UP_SUB", "Valor superior", "48 192", "8 16", MUTED),
+        rect("CARD_RANGE", "24 148 456 356", CARD, BORDER),
+        rect("ACCENT_RANGE", "24 148 30 356", INDIGO),
+        text("TXT_UP", "Inicio", "48 174", "233", TEXT, "1"),
+        text("TXT_UP_SUB", "Valor superior", "48 208", "8 16", MUTED),
         up,
-        text("TXT_DOWN", "Fim", "48 258", "233", TEXT, "1"),
-        text("TXT_DOWN_SUB", "Valor inferior", "48 292", "8 16", MUTED),
+        text("TXT_DOWN", "Fim", "48 274", "233", TEXT, "1"),
+        text("TXT_DOWN_SUB", "Valor inferior", "48 308", "8 16", MUTED),
         down,
-        rect("CARD_LINES", "24 374 456 592", CARD, BORDER),
-        rect("ACCENT_LINES", "24 374 30 592", SKY),
-        text("TXT_LINES", "Linhas do grafico", "48 392", "233", TEXT, "1"),
+        rect("CARD_LINES", "24 390 456 608", CARD, BORDER),
+        rect("ACCENT_LINES", "24 390 30 608", SKY),
+        text("TXT_LINES", "Linhas do grafico", "48 408", "233", TEXT, "1"),
     ]
     blocks.append(cancel)
     for index, (part_name, label, area, point) in enumerate(line_switches):
@@ -1284,15 +1296,15 @@ def modernize_screen_1007() -> None:
 def modernize_screen_1008() -> None:
     src = read_screen("1008.hsc")
     keys = key_parts(src)
-    display = style_string(part_by_name(src, "STR_0"), "24 116 456 178", "304")
+    display = style_string(part_by_name(src, "STR_0"), "24 134 456 196", "304")
     display = set_attr(display, "General", "Align", "3")
     caps = style_hidden(part_by_name(src, "BS_0"))
 
     blocks = [
         *header("Teclado Alfanumerico", "Digite letras e numeros", INDIGO),
-        rect("DISPLAY_CARD", "12 106 468 188", CARD, BORDER),
+        rect("DISPLAY_CARD", "12 124 468 206", CARD, BORDER),
         display,
-        rect("KEY_PANEL", "8 198 472 694", "0xe9eef6", BORDER),
+        rect("KEY_PANEL", "8 222 472 718", "0xe9eef6", BORDER),
     ]
 
     def add_row(chars: str, y: int, x: int, width: int, gap: int) -> None:
@@ -1300,19 +1312,19 @@ def modernize_screen_1008() -> None:
             left = x + index * (width + gap)
             blocks.append(style_key(key_by_ascii(keys, char), f"{left} {y} {left + width} {y + 54}", char))
 
-    add_row("1234567890", 212, 14, 40, 6)
-    add_row("QWERTYUIOP", 278, 14, 40, 6)
-    add_row("ASDFGHJKL", 344, 24, 42, 7)
-    add_row("ZXCVBNM", 410, 58, 44, 9)
+    add_row("1234567890", 236, 14, 40, 6)
+    add_row("QWERTYUIOP", 302, 14, 40, 6)
+    add_row("ASDFGHJKL", 368, 24, 42, 7)
+    add_row("ZXCVBNM", 434, 58, 44, 9)
     blocks.extend(
         [
             style_key_icon(key_by_ctrl(keys, "3"), "368 30 444 86", "128"),
-            style_key_icon(key_by_ctrl(keys, "1"), "24 506 116 562", "121"),
-            style_key_icon(key_by_ascii(keys, " "), "128 506 352 562", "129"),
-            style_key_icon(enter_key(keys), "364 506 456 562", "126"),
+            style_key_icon(key_by_ctrl(keys, "1"), "24 530 116 586", "121"),
+            style_key_icon(key_by_ascii(keys, " "), "128 530 352 586", "129"),
+            style_key_icon(enter_key(keys), "364 530 456 586", "126"),
             caps,
-            style_key(key_by_ctrl(keys, "2"), "80 612 400 664", "Limpar tudo"),
-            bitmap("ICO_CLEAR_ALL", "104 624", "28", "28", "130"),
+            style_key(key_by_ctrl(keys, "2"), "80 646 400 698", "Limpar tudo"),
+            bitmap("ICO_CLEAR_ALL", "104 658", "28", "28", "130"),
         ]
     )
     write_screen("1008.hsc", "0", blocks, script_block(src))

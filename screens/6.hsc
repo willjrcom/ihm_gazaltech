@@ -36,10 +36,10 @@
 <General TextContent="Abra o popup de ajuste." LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="220 192"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_2">
-<General Desc="FS_3" Area="48 154 198 216" ScrSwitch="0" FuncFunc="2" ScreenNo2="31" PointPos="10 40" PopupScreenType="1" PopupCloseWithParent="1" FigureFile="TFT-type style\TFT010.pvg" BorderColor="0x0ea5e9 -1" Pattern="1" FrnColor="0x0ea5e9 -1" BgColor="0x0ea5e9 -1" BmpIndex="-1" Align="3" LaStartPt="42 18" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<General Desc="FS_3" Area="48 154 198 216" ScrSwitch="0" FuncFunc="2" ScreenNo2="31" PointPos="10 40" PopupScreenType="1" PopupCloseWithParent="1" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xffffff -1" BgColor="0xffffff -1" BmpIndex="127" Align="3" LaStartPt="51 7" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
 <Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
-<Label Status="0" Bold="0" LaIndexID="Iniciar" CharSize="12 24" LaFrnColor="0xffffff -1"/></PartInfo>
+<Label Status="0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="Rect" PartName="CARD_SPEED">
 <General Area="24 292 456 460" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xffffff -1" BgColor="0xffffff -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>

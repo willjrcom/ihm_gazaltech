@@ -20,12 +20,15 @@
 <Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
+<PartInfo PartType="Bitmap" PartName="ICO_ECO_HEADER">
+<General StartPt="405 33" Width="46" Height="46" BmpIndex="142"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="BitSwitch" PartName="BS_0">
-<General Desc="BS_0" Area="400 28 456 84" OperateAddr="ECO_OFF" Fast="0" BitFunc="1" Monitor="1" MonitorAddr="ECO_OFF" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="123" Align="3" LaStartPt="0 0" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" FrnColor="0x22c55e -1" BgColor="0x22c55e -1"/>
+<General Desc="BS_0" Area="400 28 456 84" OperateAddr="ECO_OFF" Fast="0" BitFunc="1" Monitor="1" MonitorAddr="ECO_OFF" FigureFile="" BorderColor="0xffffff 0" BmpIndex="-1" Align="3" LaStartPt="0 0" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" FrnColor="0xffffff -1" BgColor="0xffffff -1" Transparent="1"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
-<Label Status="0" Pattern="1" FrnColor="0x22c55e 1" BgColor="0x22c55e 0" Bold="0" LaIndexID="Desativar" CharSize="6 12" LaFrnColor="0xffffff -1"/>
-<Label Status="1" Pattern="1" FrnColor="0x22c55e 0" BgColor="0x22c55e 0" Bold="0" LaIndexID="Desativar" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
+<Label Status="0" Pattern="1" FrnColor="0xf172a 0" BgColor="0xf172a 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xf172a -1"/>
+<Label Status="1" Pattern="1" FrnColor="0xf172a 0" BgColor="0xf172a 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xf172a -1"/></PartInfo>
 <PartInfo PartType="Rect" PartName="CARD_CURRENT">
 <General Area="24 146 456 330" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xffffff -1" BgColor="0xffffff -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>

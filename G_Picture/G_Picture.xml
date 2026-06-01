@@ -13,7 +13,7 @@
 			<MulStatus szFilename="fundoeco.MID1" dwMID="1"/></G_bmp>
 		<G_bmp szFilename="Icons1_ICWD2_0.bmp" nId="24" nTotalStatus="1" nWidth="100" nHeigth="100" nFileSize="30040" bTransparent="0" cTransColor="0" enumPicType="0"/>
 		<G_bmp szFilename="transparente" nId="27" nTotalStatus="1" nWidth="320" nHeigth="169" nFileSize="162280" enumPicType="0" bTransparent="1" cTransColor="11592943"/>
-		<G_bmp szFilename="recipe" nId="30" nTotalStatus="1" nWidth="60" nHeigth="60" nFileSize="10840" enumPicType="0" bTransparent="1" cTransColor="11592943"/>
+		<G_bmp szFilename="recipe" nId="30" nTotalStatus="1" nWidth="60" nHeigth="60" nFileSize="10840" enumPicType="0" bTransparent="1" cTransColor="0"/>
 		<G_bmp szFilename="gear" nId="32" nTotalStatus="1" nWidth="60" nHeigth="60" nFileSize="10840" enumPicType="0" bTransparent="1" cTransColor="11592943"/>
 		<G_bmp szFilename="200x60" nId="33" nTotalStatus="1" nWidth="200" nHeigth="60" nFileSize="36040" bTransparent="0" cTransColor="0" enumPicType="0"/>
 		<G_bmp szFilename="280x60" nId="34" nTotalStatus="1" nWidth="280" nHeigth="60" nFileSize="50440" bTransparent="1" cTransColor="0" enumPicType="0"/>

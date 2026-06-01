@@ -79,7 +79,7 @@ function composeSvg(spec, iconRoot) {
   const ty = (spec.height - spec.size) / 2 + spec.size;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${spec.width}" height="${spec.height}" viewBox="0 0 ${spec.width} ${spec.height}">
-  <rect width="100%" height="100%" fill="#fff"/>
+  <rect width="100%" height="100%" fill="#000"/>
   <rect x="${pad}" y="${pad}" width="${spec.width - pad * 2}" height="${spec.height - pad * 2}" rx="${radius}" ry="${radius}" fill="${spec.accent}"/>
   <g transform="translate(${tx} ${ty}) scale(${scale})">
     ${materialIconBody(iconRoot, spec.icon)}

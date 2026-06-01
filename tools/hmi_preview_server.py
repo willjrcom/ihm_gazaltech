@@ -428,6 +428,8 @@ def render_screen(root: ET.Element, screen_file: str, screen_number_map: dict[st
 
                 if part_type == "keystoke" and general.get("Area"):
                     x, y, width, height = area(general.get("Area"))
+                    if general.get("Transparent") == "1" and width <= 1 and height <= 1:
+                        continue
                     image_id = general.get("BmpIndex")
                     labels = labels_by_status(part)
                     label_text = labels.get("0") or ""
