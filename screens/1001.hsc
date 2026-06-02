@@ -23,7 +23,7 @@
 <General Area="12 124 468 206" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xffffff -1" BgColor="0xffffff -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="String" PartName="STR_0">
-<General Desc="STR_0" Area="24 134 456 196" WordAddr="HSW45" Fast="0" stCount="15" IsInput="0" WriteAddr="HSW45" KbdScreen="-1" IsPopKeyBrod="0" FigureFile="" BorderColor="0xd7dee8 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" CharSize="304" IsHideNum="0" Transparent="0" IsShowPwd="0" IsIndirectR="0" IsIndirectW="0" IsInputDefault="0" IsDWord="0" IsHiLowRever="0" Align="3"/>
+<General Desc="STR_0" Area="24 134 456 196" WordAddr="HSW45" Fast="0" stCount="15" IsInput="0" WriteAddr="HSW45" KbdScreen="-1" IsPopKeyBrod="0" FigureFile="" BorderColor="0xffffff 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" CharSize="304" IsHideNum="0" Transparent="0" IsShowPwd="0" IsIndirectR="0" IsIndirectW="0" IsInputDefault="0" IsDWord="0" IsHiLowRever="0" Align="3"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2"/></PartInfo>
 <PartInfo PartType="Rect" PartName="KEY_PANEL">

@@ -158,6 +158,25 @@ def style_string_readout(part: str, area: str, char_size: str = "233") -> str:
     )
 
 
+def remove_readonly_field_border(part: str) -> str:
+    general = re.search(r"<General\b[^>]*", part)
+    if not general or 'IsInput="0"' not in general.group(0):
+        return part
+
+    background = xml_attr(general.group(0), "BgColor")
+    background_color = background.split()[0] if background else CARD
+    return set_attr(part, "General", "BorderColor", f"{background_color} 0")
+
+
+def remove_all_readonly_field_borders() -> None:
+    pattern = r'<PartInfo\b(?=[^>]*\bPartType="(?:Numeric|String)")[^>]*>.*?</PartInfo>'
+    for path in sorted(SCREENS.glob("*.hsc")):
+        src = read_screen(path.name)
+        updated = re.sub(pattern, lambda match: remove_readonly_field_border(match.group(0)), src, flags=re.S)
+        if updated != src:
+            path.write_text(updated, encoding="utf-8")
+
+
 def style_recipe_name(part: str, area: str, char_size: str = "233") -> str:
     part = style_string(part, area, char_size)
     return set_attrs(
@@ -1654,6 +1673,7 @@ def main() -> None:
     for recipe_no, file_name in enumerate(["10.hsc", "11.hsc", "12.hsc", "13.hsc", "14.hsc", "15.hsc"], start=1):
         modernize_recipe_editor(file_name, recipe_no)
     modernize_screen_16()
+    remove_all_readonly_field_borders()
 
 
 if __name__ == "__main__":
