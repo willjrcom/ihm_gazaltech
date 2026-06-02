@@ -218,13 +218,13 @@ ENDIF
 <General Area="24 688 456 792" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xffffff -1" BgColor="0xffffff -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="BitSwitch" PartName="BS_3">
-<General Desc="BS_3" Area="52 696 116 760" OperateAddr="SP_EDIT_flag" Fast="0" BitFunc="1" Monitor="1" MonitorAddr="SP_EDIT_flag" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="127" LaStartPt="24 24" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
+<General Desc="BS_3" Area="52 696 116 760" OperateAddr="SP_EDIT_flag" Fast="0" BitFunc="1" Monitor="1" MonitorAddr="SP_EDIT_flag" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="144" LaStartPt="16 16" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/>
 <Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_FOOT_EDIT">
-<General TextContent="Editar" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="58 764"/>
+<General TextContent="Aj. Manual" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="44 764"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="BitSwitch" PartName="BS_0">
 <General Desc="BS_0" Area="208 696 272 760" OperateAddr="ECO_ON" Fast="0" BitFunc="1" Monitor="1" MonitorAddr="ECO_ON" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="123" LaStartPt="32 32" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>

@@ -697,7 +697,7 @@ def modernize_screen_0() -> None:
             "BgColor": "0x10213a -1",
         },
     )
-    edit = style_bit_icon(part_by_name(src, "BS_3"), "52 696 116 760", "127", "24 24")
+    edit = style_bit_icon(part_by_name(src, "BS_3"), "52 696 116 760", "144", "16 16")
     eco = style_bit_icon(part_by_name(src, "BS_0"), "208 696 272 760", "123", "32 32")
     footer_recipe = function_switch("FS_FOOT_RECIPE", "364 696 428 760", screen_no="8", bmp_index="30", start="8 8")
     diagnostic = style_numeric(part_by_name(src, "Numeric Input/Display0"), "470 4 476 10", "6 12")
@@ -758,7 +758,7 @@ def modernize_screen_0() -> None:
             min_speed,
             rect("FOOTER_BG", "24 688 456 792", CARD, BORDER),
             edit,
-            text("TXT_FOOT_EDIT", "Editar", "58 764", "8 16", MUTED),
+            text("TXT_FOOT_EDIT", "Aj. Manual", "44 764", "8 16", MUTED),
             eco,
             text("TXT_FOOT_ECO", "Eco", "226 764", "8 16", MUTED),
             footer_recipe,
@@ -838,7 +838,7 @@ def modernize_screen_3() -> None:
         message,
         "Label",
         {
-            "LaIndexID": "PASSO 1 DE 4&#10;Preparar&#10;&#10;O ajuste pode ser feito com o forno quente ou frio.&#10;&#10;Deixe a esteira livre e toque em Avancar."
+            "LaIndexID": "PASSO 1 DE 4&#10;Preparar&#10;&#10;O ajuste pode ser feito com o forno quente ou frio.&#10;&#10;Deixe a esteira livre e toque em Proximo."
         },
         status="0",
     )
@@ -846,25 +846,25 @@ def modernize_screen_3() -> None:
         message,
         "Label",
         {
-            "LaIndexID": "PASSO 2 DE 4&#10;Posicionar objeto&#10;&#10;Coloque um objeto pequeno no inicio do tunel, no lado oposto ao painel.&#10;&#10;Depois toque em Avancar."
+            "LaIndexID": "PASSO 2 DE 4&#10;Posicionar objeto&#10;&#10;Coloque um objeto pequeno no inicio do tunel, no lado oposto ao painel.&#10;&#10;Depois toque em Proximo."
         },
         status="1",
     )
     message = set_attrs(
         message,
         "Label",
-        {"LaIndexID": "PASSO 3 DE 4&#10;Medir percurso&#10;&#10;A esteira esta em teste.&#10;&#10;Quando o objeto sair do tunel, toque em Avancar."},
+        {"LaIndexID": "PASSO 3 DE 4&#10;Medir percurso&#10;&#10;A esteira esta em teste.&#10;&#10;Quando o objeto sair do tunel, toque em Proximo."},
         status="2",
     )
     message = set_attrs(
         message,
         "Label",
-        {"LaIndexID": "PASSO 4 DE 4&#10;Concluido&#10;&#10;Calibracao salva no parametro SPd.r.&#10;&#10;Confira o valor na tela anterior e feche."},
+        {"LaIndexID": "PASSO 4 DE 4&#10;Concluido&#10;&#10;Calibracao salva no parametro SPd.r.&#10;&#10;Confira o valor na tela anterior e use a seta para voltar."},
         status="3",
     )
     message = set_attrs(message, "Label", {"LaFrnColor": f"{GREEN} -1", "Bold": "1"}, status="3")
     restart = style_word_button_label(part_by_name(src, "WS_1"), "48 488 210 548", GRAY, "Reiniciar")
-    advance = style_word_button_label(part_by_name(src, "WS_0"), "270 488 432 548", GREEN, "Avancar")
+    advance = style_word_button_label(part_by_name(src, "WS_0"), "270 488 432 548", GREEN, "Proximo")
     write_screen(
         "3.hsc",
         "31",
@@ -1017,8 +1017,8 @@ def modernize_screen_7() -> None:
             *rows,
             rect("SAVE_INFO", "24 586 456 746", CARD, BORDER),
             rect("ACCENT_SAVE", "24 586 30 746", GREEN),
-            text("TXT_SAVE", "Salvar receita", "48 620", "233", TEXT, "1"),
-            text("TXT_SAVE_SUB", "Aplica o perfil selecionado.", "48 654", "8 16", MUTED),
+            text("TXT_SAVE", "Aplicar receita", "48 620", "233", TEXT, "1"),
+            text("TXT_SAVE_SUB", "Ativa o perfil selecionado no forno.", "48 654", "8 16", MUTED),
             bitmap("BMP_SAVE_ACTION", "374 634", "64", "64", "126"),
             save,
             *timers,
@@ -1086,7 +1086,7 @@ def modernize_screen_21() -> None:
         "21",
         [
             background,
-            *header("Editar Setpoint", "Temperatura e tempo ativos", GREEN, left=menu_button(), right=save),
+            *header("Ajuste Manual", "Temperatura e tempo ativos", GREEN, left=menu_button(), right=save),
             rect("CARD_TEMP", "24 132 456 280", CARD, BORDER),
             rect("ACCENT_TEMP", "24 132 30 280", RED),
             text("TXT_TEMP", "Nova temperatura", "48 154", "233", TEXT, "1"),
@@ -1120,7 +1120,7 @@ def modernize_screen_22() -> None:
     acknowledge = style_bit_button(part_by_name(src, "BS_0"), "292 626 432 704", RED, "Reconhecer", "Reconhecer")
     write_screen(
         "22.hsc",
-        "9",
+        "32",
         [
             rect("BG_0", "0 0 480 800", BG),
             rect("HEADER_BG", "0 0 480 112", RED),
@@ -1364,7 +1364,7 @@ def modernize_screen_1006() -> None:
             ]
         )
     blocks.append(style_hidden(part_by_name(src, "WS_0")))
-    write_screen("1006.hsc", "0", blocks)
+    write_screen("1006.hsc", "1006", blocks)
 
 
 def modernize_screen_1007() -> None:
@@ -1401,7 +1401,7 @@ def modernize_screen_1007() -> None:
                 style_bit_switch(part_by_name(src, part_name), area),
             ]
         )
-    write_screen("1007.hsc", "1", blocks, script_block(src), screen_size="1")
+    write_screen("1007.hsc", "1007", blocks, script_block(src), screen_size="1")
 
 
 def modernize_screen_1008() -> None:
@@ -1438,7 +1438,7 @@ def modernize_screen_1008() -> None:
             bitmap("ICO_CLEAR_ALL", "104 658", "28", "28", "130"),
         ]
     )
-    write_screen("1008.hsc", "0", blocks, script_block(src))
+    write_screen("1008.hsc", "1008", blocks, script_block(src))
 
 
 def modernize_screen_1009() -> None:
@@ -1459,7 +1459,7 @@ def modernize_screen_1009() -> None:
 
     write_screen(
         "1009.hsc",
-        "0",
+        "1009",
         [
             *header("Periodo Manutencao", "Configuracao de validade", AMBER, left=menu_button(), right=save),
             rect("CARD_PERIOD", "24 132 456 360", CARD, BORDER),
@@ -1502,7 +1502,7 @@ def modernize_screen_1010() -> None:
 
     write_screen(
         "1010.hsc",
-        "1",
+        "1010",
         [
             *header("Periodo Atual", "Validacao de manutencao", AMBER, left=menu_button(), right=enter),
             rect("CARD_PERIOD", "24 140 456 270", CARD, BORDER),
@@ -1531,7 +1531,7 @@ def modernize_screen_1011() -> None:
 
     write_screen(
         "1011.hsc",
-        "0",
+        "1011",
         [
             *header("Login", "Acesso de usuario", INDIGO, left=menu_button(), right=ok),
             rect("CARD_USER", "24 166 456 308", CARD, BORDER),
@@ -1558,7 +1558,7 @@ def modernize_screen_1012() -> None:
 
     write_screen(
         "1012.hsc",
-        "0",
+        "1012",
         [
             *header("Alterar Senha", "Atualize o acesso do usuario", INDIGO, left=menu_button(), right=ok),
             rect("CARD_USER", "24 128 456 224", CARD, BORDER),

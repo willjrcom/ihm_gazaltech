@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrInfo ScreenNo="0" ScreenType="" ScreenSize="0">
+<ScrInfo ScreenNo="1008" ScreenType="" ScreenSize="0">
 <PartInfo PartType="Rect" PartName="BG_0">
 <General Area="0 0 480 800" BorderColor="0xf4f7fb 0" Pattern="1" FrnColor="0xf4f7fb -1" BgColor="0xf4f7fb -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
