@@ -304,6 +304,35 @@ def style_bit_button(part: str, area: str, color: str, off_label: str, on_label:
     return part
 
 
+def style_bit_switch(part: str, area: str) -> str:
+    part = set_attrs(
+        part,
+        "General",
+        {
+            "Area": area,
+            "FigureFile": "TFT-type style\\TFT001.pvg",
+            "BorderColor": f"{CARD} 0",
+            "FrnColor": f"{CARD} -1",
+            "BgColor": f"{CARD} -1",
+            "BmpIndex": "143",
+            "LaStartPt": "0 0",
+            "Align": "3",
+        },
+    )
+    part = set_attrs(
+        part,
+        "Label",
+        {"Pattern": "1", "FrnColor": f"{CARD} 0", "BgColor": f"{CARD} 0", "LaIndexID": "", "CharSize": "6 12", "LaFrnColor": f"{CARD} -1"},
+        status="0",
+    )
+    return set_attrs(
+        part,
+        "Label",
+        {"Pattern": "1", "FrnColor": f"{CARD} 0", "BgColor": f"{CARD} 0", "LaIndexID": "", "CharSize": "6 12", "LaFrnColor": f"{CARD} -1"},
+        status="1",
+    )
+
+
 def style_word_button(part: str, area: str, color: str, start: str) -> str:
     part = set_attrs(
         part,
@@ -883,29 +912,29 @@ def modernize_screen_4() -> None:
 
 def modernize_screen_5() -> None:
     src = read_screen("5.hsc")
-    reset = style_bit_button(part_by_name(src, "BS_0"), "264 226 432 286", RED, "RESET", "RESET")
-    password = style_string_readout(part_by_name(src, "STR_0"), "260 384 432 430", "233")
-    alarm = style_bit_button(part_by_name(src, "BS_1"), "264 516 432 576", GREEN, "ON/OFF", "ON/OFF")
+    alarm = style_bit_switch(part_by_name(src, "BS_1"), "336 162 432 214")
+    password = style_string_readout(part_by_name(src, "STR_0"), "260 324 432 370", "233")
+    reset = style_bit_button(part_by_name(src, "BS_0"), "264 520 432 580", RED, "RESET", "RESET")
     write_screen(
         "5.hsc",
         "5",
         [
             *header("Sistema", "Reset e seguranca", GRAY, left=menu_button()),
-            rect("CARD_RESET", "24 128 456 320", CARD, BORDER),
-            rect("ACCENT_RESET", "24 128 30 320", RED),
-            text("TXT_CAUTION", "CUIDADO", "48 154", "304", RED, "1"),
-            text("TXT_RESET", "Reset de fabrica", "48 198", "233", TEXT, "1"),
-            text("TXT_RESET_SUB", "Segure para resetar.", "48 234", "8 16", MUTED),
-            reset,
-            rect("CARD_PASS", "24 350 456 456", CARD, BORDER),
-            rect("ACCENT_PASS", "24 350 30 456", GRAY),
-            text("TXT_PASS", "Senha", "48 386", "233", TEXT, "1"),
-            password,
-            rect("CARD_ALARM", "24 486 456 606", CARD, BORDER),
-            rect("ACCENT_ALARM", "24 486 30 606", GREEN),
-            text("TXT_ALARM", "Alarme do gas", "48 516", "233", TEXT, "1"),
-            text("TXT_ALARM_SUB", "Liga/desliga saida.", "48 552", "8 16", MUTED),
+            rect("CARD_ALARM", "24 128 456 258", CARD, BORDER),
+            rect("ACCENT_ALARM", "24 128 30 258", GREEN),
+            text("TXT_ALARM", "Alarme do gas", "48 158", "233", TEXT, "1"),
+            text("TXT_ALARM_SUB", "Liga/desliga saida.", "48 194", "8 16", MUTED),
             alarm,
+            rect("CARD_PASS", "24 288 456 394", CARD, BORDER),
+            rect("ACCENT_PASS", "24 288 30 394", GRAY),
+            text("TXT_PASS", "Senha", "48 324", "233", TEXT, "1"),
+            password,
+            rect("CARD_RESET", "24 424 456 626", CARD, BORDER),
+            rect("ACCENT_RESET", "24 424 30 626", RED),
+            text("TXT_CAUTION", "CUIDADO", "48 450", "304", RED, "1"),
+            text("TXT_RESET", "Reset de fabrica", "48 494", "233", TEXT, "1"),
+            text("TXT_RESET_SUB", "Segure para resetar.", "48 530", "8 16", MUTED),
+            reset,
         ],
         script_block(src),
     )
@@ -1345,10 +1374,10 @@ def modernize_screen_1007() -> None:
     cancel = style_hidden(part_by_name(src, "Word Switch0"))
     enter = style_word_icon(part_by_name(src, "Word Switch1"), "400 28 456 84", "126")
     line_switches = [
-        ("Bit Switch0", "Linha 1", "142 454 222 506", "48 470"),
-        ("Bit Switch2", "Linha 3", "340 454 420 506", "246 470"),
-        ("Bit Switch1", "Linha 2", "142 552 222 604", "48 568"),
-        ("Bit Switch3", "Linha 4", "340 552 420 604", "246 568"),
+        ("Bit Switch0", "Linha 1", "134 458 218 504", "48 470"),
+        ("Bit Switch2", "Linha 3", "344 458 428 504", "246 470"),
+        ("Bit Switch1", "Linha 2", "134 556 218 602", "48 568"),
+        ("Bit Switch3", "Linha 4", "344 556 428 602", "246 568"),
     ]
     blocks = [
         *header("Faixa de Dados", "Periodo das tendencias", INDIGO, left=menu_button(), right=enter),
@@ -1366,11 +1395,10 @@ def modernize_screen_1007() -> None:
     ]
     blocks.append(cancel)
     for index, (part_name, label, area, point) in enumerate(line_switches):
-        color = SKY if index % 2 == 0 else GREEN
         blocks.extend(
             [
                 text(f"TXT_LINE_{index}", label, point, "14", TEXT, "1"),
-                style_bit_button(part_by_name(src, part_name), area, color, "OFF", "ON"),
+                style_bit_switch(part_by_name(src, part_name), area),
             ]
         )
     write_screen("1007.hsc", "1", blocks, script_block(src), screen_size="1")

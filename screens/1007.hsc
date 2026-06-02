@@ -78,35 +78,35 @@
 <General TextContent="Linha 1" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="48 470"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="BitSwitch" PartName="Bit Switch0">
-		<General Desc="BS_0" OperateAddr="HSX8780.00" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="HSX8780.00" FigureFile="TFT-type style\TFT010.pvg" BorderColor="0x0ea5e9 -1" BmpIndex="-1" LaStartPt="36 13" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" Area="142 454 222 506" FrnColor="0x0ea5e9 -1" BgColor="0x0ea5e9 -1" Align="3"/>
+		<General Desc="BS_0" OperateAddr="HSX8780.00" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="HSX8780.00" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="143" LaStartPt="0 0" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" Area="134 458 218 504" FrnColor="0xffffff -1" BgColor="0xffffff -1" Align="3"/>
 		<Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 		<MoveZoom DataFormatMZ="2"/>
-		<Label Status="0" Pattern="1" FrnColor="0x0ea5e9 1" BgColor="0x0ea5e9 0" Bold="0" LaIndexID="OFF" CharSize="14" LaFrnColor="0xffffff -1"/>
-		<Label Status="1" FrnColor="0x22c55e 0" BgColor="0x22c55e 0" Bold="0" LaIndexID="ON" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1"/></PartInfo>
+		<Label Status="0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xffffff -1"/>
+		<Label Status="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xffffff -1" Pattern="1"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_LINE_1">
 <General TextContent="Linha 3" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="246 470"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="BitSwitch" PartName="Bit Switch2">
-		<General Desc="BS_0" OperateAddr="HSX8780.02" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="HSX8780.02" FigureFile="TFT-type style\TFT010.pvg" BorderColor="0x22c55e -1" BmpIndex="-1" LaStartPt="36 13" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" Area="340 454 420 506" FrnColor="0x22c55e -1" BgColor="0x22c55e -1" Align="3"/>
+		<General Desc="BS_0" OperateAddr="HSX8780.02" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="HSX8780.02" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="143" LaStartPt="0 0" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" Area="344 458 428 504" FrnColor="0xffffff -1" BgColor="0xffffff -1" Align="3"/>
 		<Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 		<MoveZoom DataFormatMZ="2"/>
-		<Label Status="0" Pattern="1" FrnColor="0x22c55e 1" BgColor="0x22c55e 0" Bold="0" LaIndexID="OFF" CharSize="14" LaFrnColor="0xffffff -1"/>
-		<Label Status="1" Pattern="1" FrnColor="0x22c55e 0" BgColor="0x22c55e 0" Bold="0" LaIndexID="ON" CharSize="14" LaFrnColor="0xffffff -1"/></PartInfo>
+		<Label Status="0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xffffff -1"/>
+		<Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_LINE_2">
 <General TextContent="Linha 2" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="48 568"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="BitSwitch" PartName="Bit Switch1">
-		<General Desc="BS_0" OperateAddr="HSX8780.01" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="HSX8780.01" FigureFile="TFT-type style\TFT010.pvg" BorderColor="0x0ea5e9 -1" BmpIndex="-1" LaStartPt="36 13" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" Area="142 552 222 604" FrnColor="0x0ea5e9 -1" BgColor="0x0ea5e9 -1" Align="3"/>
+		<General Desc="BS_0" OperateAddr="HSX8780.01" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="HSX8780.01" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="143" LaStartPt="0 0" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" Area="134 556 218 602" FrnColor="0xffffff -1" BgColor="0xffffff -1" Align="3"/>
 		<Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 		<MoveZoom DataFormatMZ="2"/>
-		<Label Status="0" Pattern="1" FrnColor="0x0ea5e9 1" BgColor="0x0ea5e9 0" Bold="0" LaIndexID="OFF" CharSize="14" LaFrnColor="0xffffff -1"/>
-		<Label Status="1" FrnColor="0x22c55e 0" BgColor="0x22c55e 0" Bold="0" LaIndexID="ON" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1"/></PartInfo>
+		<Label Status="0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xffffff -1"/>
+		<Label Status="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xffffff -1" Pattern="1"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_LINE_3">
 <General TextContent="Linha 4" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="246 568"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="BitSwitch" PartName="Bit Switch3">
-		<General Desc="BS_0" OperateAddr="HSX8780.03" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="HSX8780.03" FigureFile="TFT-type style\TFT010.pvg" BorderColor="0x22c55e -1" BmpIndex="-1" LaStartPt="36 13" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" Area="340 552 420 604" FrnColor="0x22c55e -1" BgColor="0x22c55e -1" Align="3"/>
+		<General Desc="BS_0" OperateAddr="HSX8780.03" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="HSX8780.03" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="143" LaStartPt="0 0" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" Area="344 556 428 602" FrnColor="0xffffff -1" BgColor="0xffffff -1" Align="3"/>
 		<Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 		<MoveZoom DataFormatMZ="2"/>
-		<Label Status="0" Pattern="1" FrnColor="0x22c55e 1" BgColor="0x22c55e 0" Bold="0" LaIndexID="OFF" CharSize="14" LaFrnColor="0xffffff -1"/>
-		<Label Status="1" FrnColor="0x22c55e 0" BgColor="0x22c55e 0" Bold="0" LaIndexID="ON" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1"/></PartInfo></ScrInfo>
+		<Label Status="0" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xffffff -1"/>
+		<Label Status="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" LaIndexID="" CharSize="6 12" LaFrnColor="0xffffff -1" Pattern="1"/></PartInfo></ScrInfo>
