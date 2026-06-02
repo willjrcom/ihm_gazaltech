@@ -29,8 +29,11 @@
 <PartInfo PartType="Text" PartName="TXT_OFFSET_0">
 <General TextContent="Low Point" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="233" Bold="1" StartPt="48 148"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="Text" PartName="TXT_OFFSET_HINT_0">
-<General TextContent="0 a 40" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12 24" Bold="0" StartPt="48 184"/>
+<PartInfo PartType="Text" PartName="TXT_OFFSET_MIN_0">
+<General TextContent="Min: 0" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="48 184"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="Text" PartName="TXT_OFFSET_MAX_0">
+<General TextContent="Max: 40" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="48 212"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="NUM_0">
 <General Desc="NUM_0" Area="286 148 436 212" WordAddr="1:410373" Fast="0" IsInput="1" WriteAddr="1:410373" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xd7dee8 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
@@ -46,8 +49,11 @@
 <PartInfo PartType="Text" PartName="TXT_OFFSET_1">
 <General TextContent="Low Offset" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="233" Bold="1" StartPt="48 282"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="Text" PartName="TXT_OFFSET_HINT_1">
-<General TextContent="-50 a 50" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12 24" Bold="0" StartPt="48 318"/>
+<PartInfo PartType="Text" PartName="TXT_OFFSET_MIN_1">
+<General TextContent="Min: -50" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="48 318"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="Text" PartName="TXT_OFFSET_MAX_1">
+<General TextContent="Max: 50" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="48 346"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="Numeric Input/Display0">
 <General Desc="NUM_0" Area="286 282 436 346" WordAddr="1:410374" Fast="0" IsInput="1" WriteAddr="1:410374" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xd7dee8 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
@@ -63,8 +69,11 @@
 <PartInfo PartType="Text" PartName="TXT_OFFSET_2">
 <General TextContent="High Point" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="233" Bold="1" StartPt="48 416"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="Text" PartName="TXT_OFFSET_HINT_2">
-<General TextContent="200 a 400" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12 24" Bold="0" StartPt="48 452"/>
+<PartInfo PartType="Text" PartName="TXT_OFFSET_MIN_2">
+<General TextContent="Min: 200" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="48 452"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="Text" PartName="TXT_OFFSET_MAX_2">
+<General TextContent="Max: 400" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="48 480"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="Numeric Input/Display1">
 <General Desc="NUM_0" Area="286 416 436 480" WordAddr="1:410375" Fast="0" IsInput="1" WriteAddr="1:410375" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xd7dee8 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
@@ -80,8 +89,11 @@
 <PartInfo PartType="Text" PartName="TXT_OFFSET_3">
 <General TextContent="High Offset" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="233" Bold="1" StartPt="48 550"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="Text" PartName="TXT_OFFSET_HINT_3">
-<General TextContent="-500 a 500" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12 24" Bold="0" StartPt="48 586"/>
+<PartInfo PartType="Text" PartName="TXT_OFFSET_MIN_3">
+<General TextContent="Min: -500" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="48 586"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="Text" PartName="TXT_OFFSET_MAX_3">
+<General TextContent="Max: 500" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="48 614"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="Numeric Input/Display2">
 <General Desc="NUM_0" Area="286 550 436 614" WordAddr="1:410376" Fast="0" IsInput="1" WriteAddr="1:410376" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xd7dee8 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>

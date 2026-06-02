@@ -33,8 +33,11 @@
 <PartInfo PartType="Text" PartName="TXT_TEMP">
 <General TextContent="Temperatura eco" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="233" Bold="1" StartPt="48 154"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="Text" PartName="TXT_TEMP_HINT">
-<General TextContent="Valores entre 180 e 400" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12 24" Bold="0" StartPt="48 190"/>
+<PartInfo PartType="Text" PartName="TXT_TEMP_MIN">
+<General TextContent="Min: 180 C" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="48 190"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="Text" PartName="TXT_TEMP_MAX">
+<General TextContent="Max: 400 C" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="48 222"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="Numeric Input/Display0">
 <General Desc="NUM_0" Area="286 166 410 246" WordAddr="SP_Temperatura_ECO" Fast="0" IsInput="1" WriteAddr="SP_Temperatura_ECO" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xd7dee8 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
@@ -53,8 +56,11 @@
 <PartInfo PartType="Text" PartName="TXT_TIME">
 <General TextContent="Tempo economico" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="233" Bold="1" StartPt="48 366"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
-<PartInfo PartType="Text" PartName="TXT_TIME_HINT">
-<General TextContent="Valores entre 1.30 e 9.59 min" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12 24" Bold="0" StartPt="48 402"/>
+<PartInfo PartType="Text" PartName="TXT_TIME_MIN">
+<General TextContent="Min: 1.30 min" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="48 402"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="Text" PartName="TXT_TIME_MAX">
+<General TextContent="Max: 9.59 min" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="48 434"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="NUM_0">
 <General Desc="NUM_0" Area="286 386 410 466" WordAddr="SP_speed_ECO" Fast="0" IsInput="1" WriteAddr="SP_speed_ECO" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xd7dee8 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>

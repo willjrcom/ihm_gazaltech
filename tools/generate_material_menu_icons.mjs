@@ -22,6 +22,7 @@ const specs = [
   { file: "img9", icon: "home", width: 64, height: 64, accent: "#0ea5e9", ppm: 3780, size: 46, mode: "glyph" },
   { file: "menu", icon: "menu", width: 64, height: 64, accent: "#0ea5e9", ppm: 3780, size: 46, mode: "glyph" },
   { file: "return1", icon: "arrow_back", width: 48, height: 48, accent: "#cbd5e1", ppm: 3780, size: 34, mode: "glyph" },
+  { file: "forward1", icon: "arrow_forward", width: 48, height: 48, accent: "#cbd5e1", ppm: 3780, size: 34, mode: "glyph" },
   { file: "save1", icon: "save", width: 48, height: 48, accent: "#22c55e", ppm: 3780, size: 34, mode: "glyph" },
   { file: "edit2", icon: "edit", width: 48, height: 48, accent: "#f59e0b", ppm: 3780, size: 34, mode: "glyph" },
   { file: "ir", icon: "space_bar", width: 48, height: 48, accent: "#64748b", ppm: 3780, size: 34, mode: "glyph" },

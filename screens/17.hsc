@@ -35,7 +35,7 @@
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_DATE_SEP1">
-<General TextContent="/" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="304" Bold="0" StartPt="248 182"/>
+<General TextContent="/" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="304" Bold="0" StartPt="252 194"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="Numeric Input/Display1">
 <General Desc="NUM_0" Area="270 176 324 238" WordAddr="HSW29" Fast="0" IsInput="1" WriteAddr="HSW29" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xd7dee8 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="1" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
@@ -43,7 +43,7 @@
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_DATE_SEP2">
-<General TextContent="/" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="304" Bold="0" StartPt="336 182"/>
+<General TextContent="/" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="304" Bold="0" StartPt="340 194"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="Numeric Input/Display2">
 <General Desc="NUM_0" Area="356 176 434 238" WordAddr="HSW28" Fast="0" IsInput="1" WriteAddr="HSW28" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xd7dee8 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="1" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
@@ -65,7 +65,7 @@
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_TIME_SEP">
-<General TextContent=":" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="304" Bold="0" StartPt="315 360"/>
+<General TextContent=":" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="304" Bold="0" StartPt="318 372"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="Numeric Input/Display3">
 <General Desc="NUM_0" Area="338 354 398 416" WordAddr="HSW32" Fast="0" IsInput="1" WriteAddr="HSW32" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xd7dee8 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="1" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>

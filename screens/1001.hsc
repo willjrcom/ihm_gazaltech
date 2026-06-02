@@ -7,14 +7,18 @@
 <General Area="0 0 480 112" BorderColor="0xf172a 0" Pattern="1" FrnColor="0xf172a -1" BgColor="0xf172a -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TITLE_0">
-<General TextContent="Teclado de Texto" LaFrnColor="0xffffff -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="304" Bold="1" StartPt="28 22"/>
+<General TextContent="Teclado de Texto" LaFrnColor="0xffffff -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="304" Bold="1" StartPt="92 22"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="SUBTITLE_0">
-<General TextContent="Edicao de nomes e textos" LaFrnColor="0xcbd5e1 -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="233" Bold="0" StartPt="28 60"/>
+<General TextContent="Edicao de nomes e textos" LaFrnColor="0xcbd5e1 -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="233" Bold="0" StartPt="92 60"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Rect" PartName="HEADER_ACCENT">
-<General Area="28 92 140 97" BorderColor="0x6366f1 0" Pattern="1" FrnColor="0x6366f1 -1" BgColor="0x6366f1 -1" ActiveColor="0"/>
+<General Area="92 92 204 97" BorderColor="0x6366f1 0" Pattern="1" FrnColor="0x6366f1 -1" BgColor="0x6366f1 -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="keystoke" PartName="KY_38">
+<General Area="24 28 80 84" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xf172a 0" BmpIndex="128" Align="3" LaStartPt="0 0" FrnColor="0xf172a -1" BgColor="0xf172a -1" Transparent="0"/>
+<Key IsCtrlKey="1" CtrlKey="3" ASCIIKey="A" IsInputMethod="0"/>
+<Label Status="0" Bold="0" LaIndexID="" CharSize="14" LaFrnColor="0xf172a -1" Pattern="1" FrnColor="0xf172a 0" BgColor="0xf172a 0"/></PartInfo>
 <PartInfo PartType="Rect" PartName="DISPLAY_CARD">
 <General Area="12 124 468 206" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xffffff -1" BgColor="0xffffff -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
@@ -22,10 +26,6 @@
 <General Desc="STR_0" Area="24 134 456 196" WordAddr="HSW45" Fast="0" stCount="15" IsInput="0" WriteAddr="HSW45" KbdScreen="-1" IsPopKeyBrod="0" FigureFile="" BorderColor="0xd7dee8 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" CharSize="304" IsHideNum="0" Transparent="0" IsShowPwd="0" IsIndirectR="0" IsIndirectW="0" IsInputDefault="0" IsDWord="0" IsHiLowRever="0" Align="3"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2"/></PartInfo>
-<PartInfo PartType="keystoke" PartName="KY_38">
-<General Area="368 30 444 86" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xd7dee8 0" BmpIndex="128" Align="3" LaStartPt="0 0" FrnColor="0xffffff -1" BgColor="0xffffff -1" Transparent="0"/>
-<Key IsCtrlKey="1" CtrlKey="3" ASCIIKey="A" IsInputMethod="0"/>
-<Label Status="0" Bold="0" LaIndexID="" CharSize="14" LaFrnColor="0xffffff -1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0"/></PartInfo>
 <PartInfo PartType="Rect" PartName="KEY_PANEL">
 <General Area="8 222 472 718" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xe9eef6 -1" BgColor="0xe9eef6 -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>

@@ -353,14 +353,26 @@ def render_screen(root: ET.Element, screen_file: str, screen_number_map: dict[st
                     labels = labels_by_status(part)
                     did_emit_control = False
                     if image_id in IMAGE_MAP:
+                        extra_classes = []
+                        if part_type == "WordShow":
+                            extra_classes.append("word-show-image")
+                        if part_type == "BitSwitch":
+                            extra_classes.append("bit-switch-image")
                         emit(
-                            '<img class="bitmap control-image' + (" word-show-image" if part_type == "WordShow" else "") + '" '
+                            '<img class="bitmap control-image'
+                            + (" " + " ".join(extra_classes) if extra_classes else "")
+                            + '" '
                             + attrs(
                                 src=f"/asset/{image_id}",
                                 style=style_from_box(x, y, width, height, f"z-index:{z_index};"),
                                 data_addr=general.get("WordAddr") if part_type == "WordShow" else None,
+                                data_bit_addr=(
+                                    general.get("MonitorAddr") or general.get("OperateAddr") or ""
+                                    if part_type == "BitSwitch"
+                                    else None
+                                ),
                                 data_const=general.get("Const") if part_type == "WordShow" else None,
-                                data_image_id=image_id if part_type == "WordShow" else None,
+                                data_image_id=image_id if part_type in {"WordShow", "BitSwitch"} else None,
                                 alt="",
                             )
                             + ">"
@@ -436,12 +448,15 @@ def render_screen(root: ET.Element, screen_file: str, screen_number_map: dict[st
                     key = part.find("Key")
                     if not label_text and key is not None:
                         ctrl = key.get("CtrlKey")
-                        if ctrl == "1":
-                            label_text = "Apagar caractere"
-                        elif ctrl == "2":
-                            label_text = "Limpar tudo"
-                        elif ctrl == "3":
-                            label_text = "Voltar"
+                        if key.get("IsCtrlKey") == "1":
+                            if ctrl == "1":
+                                label_text = "Apagar caractere"
+                            elif ctrl == "2":
+                                label_text = "Limpar tudo"
+                            elif ctrl == "3":
+                                label_text = "Voltar"
+                            else:
+                                label_text = "Salvar"
                         elif key.get("ASCIIKey") == " ":
                             label_text = "Espaco"
                         else:
@@ -469,6 +484,15 @@ def render_screen(root: ET.Element, screen_file: str, screen_number_map: dict[st
                             ),
                             type="button",
                             title=f"Tecla: {label_text}",
+                            onclick="keyboardKey("
+                            + ",".join(
+                                [
+                                    json.dumps(key.get("IsCtrlKey") if key is not None else ""),
+                                    json.dumps(key.get("CtrlKey") if key is not None else ""),
+                                    json.dumps(key.get("ASCIIKey") if key is not None else ""),
+                                ]
+                            )
+                            + ")",
                         )
                         + f">{content}</button>"
                     )
@@ -479,11 +503,14 @@ def render_screen(root: ET.Element, screen_file: str, screen_number_map: dict[st
                     read_addr = general.get("WordAddr") or ""
                     write_addr = general.get("WriteAddr") or read_addr
                     field_type = "String" if part_type == "DownList" else part_type
+                    keyboard_file = screen_number_map.get(general.get("KbdScreen") or "")
                     initial = "000" if part_type == "Numeric" else clean_text(general.get("Remark")) or write_addr or "Texto"
                     class_name = "field numeric-field" if part_type == "Numeric" else "field string-field"
                     is_transparent = general.get("Transparent") == "1"
+                    is_input = general.get("IsInput") == "1"
+                    field_tag = "button" if is_input else "div"
                     emit(
-                        f'<button class="{class_name}" '
+                        f'<{field_tag} class="{class_name}" '
                         + attrs(
                             style=style_from_box(
                                 x,
@@ -500,9 +527,12 @@ def render_screen(root: ET.Element, screen_file: str, screen_number_map: dict[st
                             ),
                             data_addr=write_addr,
                             data_type=field_type,
+                            data_input=general.get("IsInput") or "0",
+                            data_kbd_file=keyboard_file,
+                            type="button" if is_input else None,
                             title=f"{part_type}: {write_addr}",
                         )
-                        + f"><span>{html.escape(initial)}</span></button>"
+                        + f"><span>{html.escape(initial)}</span></{field_tag}>"
                     )
                     z_index += 1
 
@@ -1002,6 +1032,7 @@ def render_app() -> bytes:
     const FIRST_SCREEN = {json.dumps(first)};
     const registers = Object.create(null);
     let activePopup = null;
+    let activeKeyboard = null;
 
     function initialValue(addr, type) {{
       if (!addr) return type === 'String' ? '' : '0';
@@ -1018,6 +1049,7 @@ def render_app() -> bytes:
     function goToScreen(file) {{
       if (!SCREENS[file]) return;
       activePopup = null;
+      activeKeyboard = null;
       location.hash = encodeURIComponent(file);
       renderScreen(file);
     }}
@@ -1033,6 +1065,23 @@ def render_app() -> bytes:
       renderPopup();
     }}
 
+    function openKeyboard(event, addr, type, keyboardFile) {{
+      event.stopPropagation();
+      if (!addr) return;
+      const current = initialValue(addr, type);
+      activeKeyboard = {{
+        addr,
+        type,
+        keyboardFile,
+        returnFile: currentScreenFromHash(),
+        returnPopup: event.currentTarget.closest('#popupLayer') ? activePopup : null,
+        buffer: type === 'Numeric' && String(current) === '0' ? '' : String(current),
+      }};
+      activePopup = null;
+      location.hash = encodeURIComponent(keyboardFile);
+      renderScreen(keyboardFile);
+    }}
+
     function editValue(event, addr, type) {{
       event.stopPropagation();
       if (!addr) return;
@@ -1043,10 +1092,50 @@ def render_app() -> bytes:
       renderScreen(currentScreenFromHash());
     }}
 
+    function closeKeyboard(save) {{
+      if (!activeKeyboard) return;
+      const target = activeKeyboard;
+      if (save) {{
+        const next = target.type === 'Numeric' ? (target.buffer || '0') : target.buffer;
+        registers[target.addr] = next;
+      }}
+      activeKeyboard = null;
+      activePopup = target.returnPopup;
+      location.hash = encodeURIComponent(target.returnFile);
+      renderScreen(target.returnFile);
+    }}
+
+    function keyboardKey(isCtrl, ctrlKey, asciiKey) {{
+      if (!activeKeyboard) {{
+        if (isCtrl === '1' && ctrlKey === '3') goToScreen(FIRST_SCREEN);
+        return;
+      }}
+      if (isCtrl === '1') {{
+        if (ctrlKey === '1') {{
+          activeKeyboard.buffer = activeKeyboard.buffer.slice(0, -1);
+          renderScreen(currentScreenFromHash());
+          return;
+        }}
+        if (ctrlKey === '2') {{
+          activeKeyboard.buffer = '';
+          renderScreen(currentScreenFromHash());
+          return;
+        }}
+        if (ctrlKey === '3') {{
+          closeKeyboard(false);
+          return;
+        }}
+        closeKeyboard(true);
+        return;
+      }}
+      activeKeyboard.buffer += asciiKey === ' ' ? ' ' : String(asciiKey || '');
+      renderScreen(currentScreenFromHash());
+    }}
+
     function toggleBit(addr) {{
       if (!addr) return;
       registers[addr] = registers[addr] === '1' ? '0' : '1';
-      renderInspector(currentScreenFromHash());
+      renderScreen(currentScreenFromHash());
     }}
 
     function wordSwitch(addr, func, constant, limit) {{
@@ -1074,6 +1163,7 @@ def render_app() -> bytes:
     window.closePopup = closePopup;
     window.toggleBit = toggleBit;
     window.wordSwitch = wordSwitch;
+    window.keyboardKey = keyboardKey;
     window.resetRegisters = resetRegisters;
 
     function renderScreenList(active) {{
@@ -1089,8 +1179,9 @@ def render_app() -> bytes:
       }}
     }}
 
-    function bindFields(shell) {{
-      for (const field of shell.querySelectorAll('.field')) {{
+    function bindFields(shell, file) {{
+      const fields = Array.from(shell.querySelectorAll('.field'));
+      for (const [index, field] of fields.entries()) {{
         const addr = field.dataset.addr || '';
         const type = field.dataset.type || 'Numeric';
         if (type === 'TimeDisplay') {{
@@ -1098,9 +1189,19 @@ def render_app() -> bytes:
           field.onclick = null;
           continue;
         }}
+        if (activeKeyboard && file === activeKeyboard.keyboardFile && index === 0) {{
+          field.querySelector('span').textContent = activeKeyboard.buffer || (activeKeyboard.type === 'Numeric' ? '0' : '');
+          field.onclick = null;
+          continue;
+        }}
         const value = initialValue(addr, type);
         field.querySelector('span').textContent = type === 'String' ? value : String(value).padStart(3, '0').slice(-6);
-        field.onclick = event => editValue(event, addr, type);
+        if (field.dataset.input === '1') {{
+          const keyboardFile = field.dataset.kbdFile || '';
+          field.onclick = keyboardFile ? event => openKeyboard(event, addr, type, keyboardFile) : event => editValue(event, addr, type);
+        }} else {{
+          field.onclick = null;
+        }}
       }}
     }}
 
@@ -1123,6 +1224,13 @@ def render_app() -> bytes:
         const value = String(Number(initialValue(addr, 'Numeric')) || 0);
         wordShow.src = `/asset/${{encodeURIComponent(imageId)}}?status=${{encodeURIComponent(value)}}`;
         wordShow.classList.toggle('selected-word-show', wordShow.dataset.const === value);
+      }}
+      for (const bitSwitch of shell.querySelectorAll('.bit-switch-image')) {{
+        const addr = bitSwitch.dataset.bitAddr || '';
+        const imageId = bitSwitch.dataset.imageId || '';
+        if (!addr || !imageId) continue;
+        const value = String(Number(initialValue(addr, 'Numeric')) || 0);
+        bitSwitch.src = `/asset/${{encodeURIComponent(imageId)}}?status=${{encodeURIComponent(value)}}`;
       }}
     }}
 
@@ -1147,7 +1255,7 @@ def render_app() -> bytes:
       document.getElementById('activeMeta').textContent = `ScreenNo ${{screen.number}} / ${{screen.partCount}} partes`;
       const shell = document.getElementById('screenShell');
       shell.innerHTML = screen.html + '<div class="popup-layer" id="popupLayer"></div>';
-      bindFields(shell);
+      bindFields(shell, screen.file);
       bindWordShows(shell);
       renderPopup();
       renderScreenList(screen.file);
@@ -1165,7 +1273,7 @@ def render_app() -> bytes:
       }}
       layer.classList.add('active');
       layer.innerHTML = SCREENS[activePopup].html;
-      bindFields(layer);
+      bindFields(layer, activePopup);
       bindWordShows(layer);
     }}
 

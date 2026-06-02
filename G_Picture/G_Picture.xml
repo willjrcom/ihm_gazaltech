@@ -298,5 +298,6 @@
 		<G_bmp szFilename="hourIcon" nId="147" nTotalStatus="1" nWidth="96" nHeigth="96" nFileSize="27688" bTransparent="1" cTransColor="0" enumPicType="0"/>
 		<G_bmp szFilename="resetIcon1" nId="148" nTotalStatus="1" nWidth="144" nHeigth="144" nFileSize="62248" bTransparent="1" cTransColor="0" enumPicType="0"/>
 		<G_bmp szFilename="hourIcon1" nId="149" nTotalStatus="1" nWidth="240" nHeigth="240" nFileSize="172840" bTransparent="1" cTransColor="0" enumPicType="0"/>
-		<G_bmp szFilename="resetIcon2" nId="150" nTotalStatus="1" nWidth="240" nHeigth="240" nFileSize="172840" bTransparent="1" cTransColor="0" enumPicType="0"/></G_bmplib>
+		<G_bmp szFilename="resetIcon2" nId="150" nTotalStatus="1" nWidth="240" nHeigth="240" nFileSize="172840" bTransparent="1" cTransColor="0" enumPicType="0"/>
+		<G_bmp szFilename="forward1" nId="151" nTotalStatus="1" nWidth="48" nHeigth="48" nFileSize="6952" bTransparent="1" cTransColor="0" enumPicType="0"/></G_bmplib>
 </G_Picture>
