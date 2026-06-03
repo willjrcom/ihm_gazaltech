@@ -44,16 +44,18 @@
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="WordSwitch" PartName="WS_1">
-<General Desc="WS_0" Area="27 126 378 190" WordAddr="HDW100" WriteAddr="HDW100" DataFormat="2" ClickTime="2000" Const="1" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="-1" LaStartPt="215 32" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0"/>
+<General Desc="WS_0" Area="27 126 378 190" WordAddr="recipe" WriteAddr="recipe" DataFormat="2" ClickTime="2000" Const="1" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="-1" LaStartPt="215 32" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0"/>
 <Extension IsCheck="0" UseShowHide="0" HideType="0" IsHideAllTime="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="16 32 16 32 16 32 16 32 16 32 16 32 16 32 16 32" LaFrnColor="0x0 0"/></PartInfo>
-<PartInfo PartType="BitSwitch" PartName="BS_0">
-<General Desc="BS_1" Area="390 134 438 182" OperateAddr="edit" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="edit" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="127" LaStartPt="24 24" BitShowReverse="0" UseGlint="0" UseShowHide="1" TrigHideAddr="HDX100.0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
-<Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+<PartInfo PartType="Bitmap" PartName="BMP_EDIT_1">
+<General StartPt="390 134" Width="48" Height="48" BmpIndex="127"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="FunctionSwitch" PartName="FS_EDIT_1">
+<General Desc="FS_EDIT_1" Area="390 134 438 182" ScrSwitch="1" ScreenNo="10" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
-<Label Status="0" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/>
-<Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
+<Label Status="0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="WordShow" PartName="WL_2">
 <General Desc="WL_0" Area="27 194 457 258" WordAddr="recipe" StatsNum="7" Fast="0" DataFormat="2" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" BmpIndex="94" LaStartPt="215 32" StatusCovType="0" AnimaReturn="0" ByAddr="0" Trigger="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" isNautomatic="1" IsCtrlStaTextByAddr="0" Const="2" isReturn="0" isStateControl="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
@@ -70,16 +72,18 @@
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="WordSwitch" PartName="WS_3">
-<General Desc="WS_0" Area="27 194 378 258" WordAddr="HDW100" WriteAddr="HDW100" DataFormat="2" ClickTime="2000" Const="2" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="-1" LaStartPt="215 32" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0"/>
+<General Desc="WS_0" Area="27 194 378 258" WordAddr="recipe" WriteAddr="recipe" DataFormat="2" ClickTime="2000" Const="2" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="-1" LaStartPt="215 32" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0"/>
 <Extension IsCheck="0" UseShowHide="0" HideType="0" IsHideAllTime="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="16 32 16 32 16 32 16 32 16 32 16 32 16 32 16 32" LaFrnColor="0x0 0"/></PartInfo>
-<PartInfo PartType="BitSwitch" PartName="BS_3">
-<General Desc="BS_1" Area="390 202 438 250" OperateAddr="edit" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="edit" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="127" LaStartPt="24 24" BitShowReverse="0" UseGlint="0" UseShowHide="1" TrigHideAddr="HDX100.1" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
-<Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+<PartInfo PartType="Bitmap" PartName="BMP_EDIT_2">
+<General StartPt="390 202" Width="48" Height="48" BmpIndex="127"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="FunctionSwitch" PartName="FS_EDIT_2">
+<General Desc="FS_EDIT_2" Area="390 202 438 250" ScrSwitch="1" ScreenNo="11" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
-<Label Status="0" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/>
-<Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
+<Label Status="0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="WordShow" PartName="WL_1">
 <General Desc="WL_0" Area="27 262 457 326" WordAddr="recipe" StatsNum="7" Fast="0" DataFormat="2" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" BmpIndex="95" LaStartPt="215 32" StatusCovType="0" AnimaReturn="0" ByAddr="0" Trigger="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" isNautomatic="1" IsCtrlStaTextByAddr="0" ClickTime="20" Const="3" isReturn="0" isStateControl="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
@@ -96,16 +100,18 @@
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="WordSwitch" PartName="WS_2">
-<General Desc="WS_0" Area="27 262 378 326" WordAddr="HDW100" WriteAddr="HDW100" DataFormat="2" ClickTime="2000" Const="4" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="-1" LaStartPt="215 32" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0"/>
+<General Desc="WS_0" Area="27 262 378 326" WordAddr="recipe" WriteAddr="recipe" DataFormat="2" ClickTime="2000" Const="3" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="-1" LaStartPt="215 32" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0"/>
 <Extension IsCheck="0" UseShowHide="0" HideType="0" IsHideAllTime="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="16 32 16 32 16 32 16 32 16 32 16 32 16 32 16 32" LaFrnColor="0x0 0"/></PartInfo>
-<PartInfo PartType="BitSwitch" PartName="BS_4">
-<General Desc="BS_1" Area="390 270 438 318" OperateAddr="edit" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="edit" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="127" LaStartPt="24 24" BitShowReverse="0" UseGlint="0" UseShowHide="1" TrigHideAddr="HDX100.2" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
-<Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+<PartInfo PartType="Bitmap" PartName="BMP_EDIT_3">
+<General StartPt="390 270" Width="48" Height="48" BmpIndex="127"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="FunctionSwitch" PartName="FS_EDIT_3">
+<General Desc="FS_EDIT_3" Area="390 270 438 318" ScrSwitch="1" ScreenNo="12" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
-<Label Status="0" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/>
-<Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
+<Label Status="0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="WordShow" PartName="WL_0">
 <General Desc="WL_0" Area="27 330 457 394" WordAddr="recipe" StatsNum="7" Fast="0" DataFormat="2" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" BmpIndex="96" LaStartPt="215 32" StatusCovType="0" AnimaReturn="0" ByAddr="0" Trigger="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" isNautomatic="1" IsCtrlStaTextByAddr="0" ClickTime="20" Const="4" isReturn="0" isStateControl="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
@@ -122,16 +128,18 @@
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="WordSwitch" PartName="WS_4">
-<General Desc="WS_0" Area="27 330 378 394" WordAddr="HDW100" WriteAddr="HDW100" DataFormat="2" ClickTime="2000" Const="8" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="-1" LaStartPt="215 32" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0"/>
+<General Desc="WS_0" Area="27 330 378 394" WordAddr="recipe" WriteAddr="recipe" DataFormat="2" ClickTime="2000" Const="4" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="-1" LaStartPt="215 32" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0"/>
 <Extension IsCheck="0" UseShowHide="0" HideType="0" IsHideAllTime="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="16 32 16 32 16 32 16 32 16 32 16 32 16 32 16 32" LaFrnColor="0x0 0"/></PartInfo>
-<PartInfo PartType="BitSwitch" PartName="BS_5">
-<General Desc="BS_1" Area="390 338 438 386" OperateAddr="edit" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="edit" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="127" LaStartPt="24 24" BitShowReverse="0" UseGlint="0" UseShowHide="1" TrigHideAddr="HDX100.3" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
-<Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+<PartInfo PartType="Bitmap" PartName="BMP_EDIT_4">
+<General StartPt="390 338" Width="48" Height="48" BmpIndex="127"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="FunctionSwitch" PartName="FS_EDIT_4">
+<General Desc="FS_EDIT_4" Area="390 338 438 386" ScrSwitch="1" ScreenNo="13" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
-<Label Status="0" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/>
-<Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
+<Label Status="0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="WordShow" PartName="WL_4">
 <General Desc="WL_0" Area="27 398 457 462" WordAddr="recipe" StatsNum="7" Fast="0" DataFormat="2" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" BmpIndex="97" LaStartPt="215 32" StatusCovType="0" AnimaReturn="0" ByAddr="0" Trigger="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" isNautomatic="1" IsCtrlStaTextByAddr="0" Const="5" isReturn="0" isStateControl="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
@@ -148,16 +156,18 @@
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="WordSwitch" PartName="WS_5">
-<General Desc="WS_0" Area="27 398 378 462" WordAddr="HDW100" WriteAddr="HDW100" DataFormat="2" ClickTime="2000" Const="16" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="-1" LaStartPt="215 32" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0"/>
+<General Desc="WS_0" Area="27 398 378 462" WordAddr="recipe" WriteAddr="recipe" DataFormat="2" ClickTime="2000" Const="5" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="-1" LaStartPt="215 32" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0"/>
 <Extension IsCheck="0" UseShowHide="0" HideType="0" IsHideAllTime="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="16 32 16 32 16 32 16 32 16 32 16 32 16 32 16 32" LaFrnColor="0x0 0"/></PartInfo>
-<PartInfo PartType="BitSwitch" PartName="BS_6">
-<General Desc="BS_1" Area="390 406 438 454" OperateAddr="edit" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="edit" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="127" LaStartPt="24 24" BitShowReverse="0" UseGlint="0" UseShowHide="1" TrigHideAddr="HDX100.4" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
-<Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+<PartInfo PartType="Bitmap" PartName="BMP_EDIT_5">
+<General StartPt="390 406" Width="48" Height="48" BmpIndex="127"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="FunctionSwitch" PartName="FS_EDIT_5">
+<General Desc="FS_EDIT_5" Area="390 406 438 454" ScrSwitch="1" ScreenNo="14" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
-<Label Status="0" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/>
-<Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
+<Label Status="0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="WordShow" PartName="WL_5">
 <General Desc="WL_0" Area="27 466 457 530" WordAddr="recipe" StatsNum="7" Fast="0" DataFormat="2" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xcccccc 0" BmpIndex="98" LaStartPt="215 32" StatusCovType="0" AnimaReturn="0" ByAddr="0" Trigger="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0" isNautomatic="1" IsCtrlStaTextByAddr="0" ClickTime="20" Const="6" isReturn="0" isStateControl="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
@@ -174,16 +184,18 @@
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="WordSwitch" PartName="WS_6">
-<General Desc="WS_0" Area="27 466 378 530" WordAddr="HDW100" WriteAddr="HDW100" DataFormat="2" ClickTime="2000" Const="32" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="-1" LaStartPt="175 32" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0"/>
+<General Desc="WS_0" Area="27 466 378 530" WordAddr="recipe" WriteAddr="recipe" DataFormat="2" ClickTime="2000" Const="6" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="-1" LaStartPt="175 32" IsIndirectR="0" IsIndirectW="0" IsWordOrder="0"/>
 <Extension IsCheck="0" UseShowHide="0" HideType="0" IsHideAllTime="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="16 32 16 32 16 32 16 32 16 32 16 32 16 32 16 32" LaFrnColor="0x0 0"/></PartInfo>
-<PartInfo PartType="BitSwitch" PartName="BS_7">
-<General Desc="BS_1" Area="390 474 438 522" OperateAddr="edit" Fast="0" BitFunc="3" Monitor="1" MonitorAddr="edit" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="127" LaStartPt="24 24" BitShowReverse="0" UseGlint="0" UseShowHide="1" TrigHideAddr="HDX100.5" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
-<Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
+<PartInfo PartType="Bitmap" PartName="BMP_EDIT_6">
+<General StartPt="390 474" Width="48" Height="48" BmpIndex="127"/>
+<MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
+<PartInfo PartType="FunctionSwitch" PartName="FS_EDIT_6">
+<General Desc="FS_EDIT_6" Area="390 474 438 522" ScrSwitch="1" ScreenNo="15" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
-<Label Status="0" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/>
-<Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
+<Label Status="0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="Rect" PartName="SAVE_INFO">
 <General Area="24 586 456 746" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xffffff -1" BgColor="0xffffff -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>

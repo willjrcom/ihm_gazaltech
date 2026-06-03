@@ -22,9 +22,9 @@ sleepA(8000)
 @W_1:4664 = 0	' AL1L = 0		- AL1L = 0
 @W_1:4665 = 400	' AL1L = 400	- AL1H = 400
 
-IF @W_1:4667 = 0 THEN 	
+IF @W_1:4667 = 0 THEN
 	@W_1:4667 = 1	' HAL1 = 1		- Histerese de alarme = 1 ºC
-ENDIF 
+ENDIF
 
 @W_1:4670 = 0	' AL2t = 0		- Alarme 2 desligado
 @W_1:4678 = 0	' AL3t = 0		- Alarme 3 desligado
@@ -39,7 +39,7 @@ if @recipe = 0 then    ' caso nenhuma receita esteja selecionada seleciona a 1ª
 @recipe = 1
 endif
 
-@tempocofig= 5  'tempo para abrir o menu de configuração 
+@tempocofig= 5  'tempo para abrir o menu de configuração
 @tempotransicao = 1 'tempo para inibir o bug em 1.0 segundo
 
 @W_1:453 = 0 ' modo FULL

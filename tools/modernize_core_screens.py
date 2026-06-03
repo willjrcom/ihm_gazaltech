@@ -625,6 +625,10 @@ def drawer_item(
     ]
 
 
+def normalize_block(block: str) -> str:
+    return block.replace("\r\n", "\n").replace("\r", "\n")
+
+
 def write_screen(name: str, screen_no: str, blocks: list[str], script: str = "", screen_size: str = "0") -> None:
     content = "\n".join(blocks)
     (SCREENS / name).write_text(
@@ -838,7 +842,7 @@ def modernize_screen_3() -> None:
         message,
         "Label",
         {
-            "LaIndexID": "PASSO 1 DE 4&#10;Preparar&#10;&#10;O ajuste pode ser feito com o forno quente ou frio.&#10;&#10;Deixe a esteira livre e toque em Proximo."
+            "LaIndexID": "PASSO 1 DE 4&#10;Preparar&#10;&#10;O ajuste pode ser feito com o forno quente ou frio.&#10;&#10;Deixe a esteira livre e toque em Avancar."
         },
         status="0",
     )
@@ -846,25 +850,25 @@ def modernize_screen_3() -> None:
         message,
         "Label",
         {
-            "LaIndexID": "PASSO 2 DE 4&#10;Posicionar objeto&#10;&#10;Coloque um objeto pequeno no inicio do tunel, no lado oposto ao painel.&#10;&#10;Depois toque em Proximo."
+            "LaIndexID": "PASSO 2 DE 4&#10;Posicionar objeto&#10;&#10;Coloque um objeto pequeno no inicio do tunel, no lado oposto ao painel.&#10;&#10;Depois toque em Avancar."
         },
         status="1",
     )
     message = set_attrs(
         message,
         "Label",
-        {"LaIndexID": "PASSO 3 DE 4&#10;Medir percurso&#10;&#10;A esteira esta em teste.&#10;&#10;Quando o objeto sair do tunel, toque em Proximo."},
+        {"LaIndexID": "PASSO 3 DE 4&#10;Medir percurso&#10;&#10;A esteira esta em teste.&#10;&#10;Quando o objeto sair do tunel, toque em Avancar."},
         status="2",
     )
     message = set_attrs(
         message,
         "Label",
-        {"LaIndexID": "PASSO 4 DE 4&#10;Concluido&#10;&#10;Calibracao salva no parametro SPd.r.&#10;&#10;Confira o valor na tela anterior e use a seta para voltar."},
+        {"LaIndexID": "PASSO 4 DE 4&#10;Concluido&#10;&#10;Calibracao salva no parametro SPd.r.&#10;&#10;Use a seta do topo para fechar."},
         status="3",
     )
     message = set_attrs(message, "Label", {"LaFrnColor": f"{GREEN} -1", "Bold": "1"}, status="3")
     restart = style_word_button_label(part_by_name(src, "WS_1"), "48 488 210 548", GRAY, "Reiniciar")
-    advance = style_word_button_label(part_by_name(src, "WS_0"), "270 488 432 548", GREEN, "Proximo")
+    advance = style_word_button_label(part_by_name(src, "WS_0"), "270 488 432 548", GREEN, "Avancar")
     write_screen(
         "3.hsc",
         "31",
@@ -995,19 +999,22 @@ def modernize_screen_7() -> None:
     ]
     rows: list[str] = []
     row_specs = [
-        ("WL_3", "STR_3", "WS_1", "BS_0", "126 190", "80 129 374 187", "27 126 378 190", "390 134 438 182"),
-        ("WL_2", "STR_2", "WS_3", "BS_3", "194 258", "80 197 374 255", "27 194 378 258", "390 202 438 250"),
-        ("WL_1", "STR_1", "WS_2", "BS_4", "262 326", "80 265 374 323", "27 262 378 326", "390 270 438 318"),
-        ("WL_0", "STR_0", "WS_4", "BS_5", "330 394", "80 333 374 391", "27 330 378 394", "390 338 438 386"),
-        ("WL_4", "STR_4", "WS_5", "BS_6", "398 462", "80 401 374 459", "27 398 378 462", "390 406 438 454"),
-        ("WL_5", "STR_5", "WS_6", "BS_7", "466 530", "80 469 374 527", "27 466 378 530", "390 474 438 522"),
+        (1, "WL_3", "STR_3", "WS_1", "126 190", "80 129 374 187", "27 126 378 190", "390 134 438 182"),
+        (2, "WL_2", "STR_2", "WS_3", "194 258", "80 197 374 255", "27 194 378 258", "390 202 438 250"),
+        (3, "WL_1", "STR_1", "WS_2", "262 326", "80 265 374 323", "27 262 378 326", "390 270 438 318"),
+        (4, "WL_0", "STR_0", "WS_4", "330 394", "80 333 374 391", "27 330 378 394", "390 338 438 386"),
+        (5, "WL_4", "STR_4", "WS_5", "398 462", "80 401 374 459", "27 398 378 462", "390 406 438 454"),
+        (6, "WL_5", "STR_5", "WS_6", "466 530", "80 469 374 527", "27 466 378 530", "390 474 438 522"),
     ]
-    for word_show, string, word_switch, edit, word_area, str_area, switch_area, edit_area in row_specs:
+    for recipe_no, word_show, string, word_switch, word_area, str_area, switch_area, edit_area in row_specs:
         wl = move_general(part_by_name(src, word_show), f"27 {word_area.split()[0]} 457 {word_area.split()[1]}")
         st = style_recipe_name(part_by_name(src, string), str_area, "233")
         ws = move_general(part_by_name(src, word_switch), switch_area)
-        ed = style_bit_icon(part_by_name(src, edit), edit_area, "127", "24 24")
-        rows.extend([wl, st, ws, ed])
+        ws = set_attrs(ws, "General", {"WordAddr": "recipe", "WriteAddr": "recipe", "Const": str(recipe_no)})
+        edit_x1, edit_y1, edit_x2, edit_y2 = edit_area.split()
+        ed_icon = bitmap(f"BMP_EDIT_{recipe_no}", f"{edit_x1} {edit_y1}", str(int(edit_x2) - int(edit_x1)), str(int(edit_y2) - int(edit_y1)), "127")
+        ed_touch = function_switch(f"FS_EDIT_{recipe_no}", edit_area, screen_no=str(9 + recipe_no), transparent=True)
+        rows.extend([normalize_block(wl), normalize_block(st), normalize_block(ws), ed_icon, ed_touch])
     write_screen(
         "7.hsc",
         "8",

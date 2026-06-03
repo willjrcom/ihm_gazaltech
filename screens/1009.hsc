@@ -4,17 +4,17 @@
 		<TimerAction/>
 		<TrigAction>
 			<Trigger Action="1" BitAddr="HSX4077.0">'设置期数加1
-@w_HSW004077 =0 
+@w_HSW004077 =0
 if @w_HSW004079&lt; @w_HSW004088 then   '当前设置的期数小于总期数
    @w_HSW004079=@w_HSW004079+1
  @W_HSW4073 =1 ' 用于触发当前期数信息给start Unit
-  
+
 endif
 
 
 </Trigger>
 			<Trigger Action="1" BitAddr="HSX4078.00">'设置期数减1
-@w_HSW4078 =0 
+@w_HSW4078 =0
 if @w_HSW4079&gt;1 then   '当前设置的期数&gt;0
    @w_HSW4079=@w_HSW4079-1
    @w_HSW4073=1 '用于触发当前期数信息给start Unit

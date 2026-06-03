@@ -3,8 +3,8 @@
 <Script>
 		<InitialAction>@iniciotransicao = 1 'tempo para inibir bug da ihm
 
-if @des = 0 then 
-@des = 60 
+if @des = 0 then
+@des = 60
 endif
 </InitialAction>
 		<TrigAction>
@@ -28,8 +28,8 @@ endif
 @W_1:4656 = 3	' o2F = AL 		- Função da saída out2 = Alarme de temperatura
 
 ' Alarme ação reversa
-@W_1:4658 = 1	' o2AC = ReU 
-@W_1:4658 = 0	' o2AC = ReU 
+@W_1:4658 = 1	' o2AC = ReU
+@W_1:4658 = 0	' o2AC = ReU
 
 'ELSE
 '	@W_1:415 = 2 ' modo stand-by
@@ -49,7 +49,7 @@ endif
 
 </Trigger>
 			<Trigger Action="4" BitAddr="liga_desliga">@W_1:415 = 2 ' modo controle stand-by
-@W_1:4656 = 0	' o2F = none	
+@W_1:4656 = 0	' o2F = none
 @W_1:4658 = 0	' o2AC = dir
 
 @B_1:4550.0 = 0 ' out3 = OFF liga ventilacao e esteira
