@@ -101,10 +101,10 @@ ENDIF
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="Text" PartName="TITLE_0">
-<General TextContent="Forno Gazal" LaFrnColor="0xffffff -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="304" Bold="1" StartPt="92 22"/>
+<General TextContent="Forno Gazal" LaFrnColor="0xffffff -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="164" Bold="1" StartPt="92 22"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="SUBTITLE_0">
-<General TextContent="Painel principal" LaFrnColor="0xcbd5e1 -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="233" Bold="0" StartPt="92 60"/>
+<General TextContent="Painel principal" LaFrnColor="0xcbd5e1 -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="143" Bold="0" StartPt="92 60"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Rect" PartName="HEADER_ACCENT">
 <General Area="92 94 204 100" BorderColor="0x22c55e 0" Pattern="1" FrnColor="0x22c55e -1" BgColor="0x22c55e -1" ActiveColor="0"/>
@@ -113,10 +113,10 @@ ENDIF
 <General Area="292 20 456 88" BorderColor="0x22324c 0" Pattern="1" FrnColor="0x10213a -1" BgColor="0x10213a -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_CLOCK_HEAD">
-<General TextContent="Horario" LaFrnColor="0xcbd5e1 -1" IsBackColor="0" BgColor="0x10213a 0" CharSize="8 16" Bold="0" StartPt="316 28"/>
+<General TextContent="Horario" LaFrnColor="0xcbd5e1 -1" IsBackColor="0" BgColor="0x10213a 0" CharSize="6 12" Bold="0" StartPt="316 28"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="TimeDisplay" PartName="TIME_0">
-<General Desc="TIME_0" Area="312 42 448 84" FigureFile="" BorderColor="0x10213a 0" FrnColor="0xffffff -1" BgColor="0x10213a -1" CharSize="304" Transparent="0"/>
+<General Desc="TIME_0" Area="312 42 448 84" FigureFile="" BorderColor="0x10213a 0" FrnColor="0xffffff -1" BgColor="0x10213a -1" CharSize="164" Transparent="0"/>
 <MoveZoom DataFormatMZ="4" DataLimitMZ="1174011904 1176256512" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Rect" PartName="CARD_RECIPE">
 <General Area="24 128 456 242" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xffffff -1" BgColor="0xffffff -1" ActiveColor="0"/>
@@ -125,10 +125,10 @@ ENDIF
 <General Area="24 128 30 242" BorderColor="0xf59e0b 0" Pattern="1" FrnColor="0xf59e0b -1" BgColor="0xf59e0b -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_RECIPE">
-<General TextContent="Receita ativa" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="233" Bold="1" StartPt="48 150"/>
+<General TextContent="Receita ativa" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="143" Bold="1" StartPt="48 150"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="String" PartName="STR_0">
-<General Desc="STR_0" Area="48 180 432 226" WordAddr="nome_tela_0" Fast="0" stCount="13" IsInput="0" WriteAddr="nome_tela_0" KbdScreen="1001" IsPopKeyBrod="0" FigureFile="" Remark="Receita nº 1" BorderColor="0xffffff 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" CharSize="233" Align="1" IsHideNum="0" Transparent="0" IsShowPwd="0" IsIndirectR="0" IsIndirectW="0" IsInputDefault="0" IsDWord="1" IsHiLowRever="0"/>
+<General Desc="STR_0" Area="48 180 432 226" WordAddr="nome_tela_0" Fast="0" stCount="13" IsInput="0" WriteAddr="nome_tela_0" KbdScreen="1001" IsPopKeyBrod="0" FigureFile="" Remark="Receita nº 1" BorderColor="0xffffff 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" CharSize="143" Align="1" IsHideNum="0" Transparent="0" IsShowPwd="0" IsIndirectR="0" IsIndirectW="0" IsInputDefault="0" IsDWord="1" IsHiLowRever="0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Rect" PartName="CARD_CURRENT">
@@ -141,18 +141,18 @@ ENDIF
 <General StartPt="48 278" Width="46" Height="46" BmpIndex="141"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_CURRENT">
-<General TextContent="Atual" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="233" Bold="1" StartPt="104 278"/>
+<General TextContent="Atual" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="143" Bold="1" StartPt="104 278"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_CURRENT_SUB">
-<General TextContent="Temperatura" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="104 312"/>
+<General TextContent="Temperatura" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="104 312"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="NUM_0">
 <General Desc="NUM_0" Area="44 342 180 426" WordAddr="1:41" Fast="0" IsInput="0" WriteAddr="1:41" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xffffff 0" FrnColor="0xef4444 -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
-<DispFormat DispType="6" DigitCount="3 0" DataLimit="3296313344 1148829696" DataRange="-999.000000 999.000000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="304" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
+<DispFormat DispType="6" DigitCount="3 0" DataLimit="3296313344 1148829696" DataRange="-999.000000 999.000000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="164" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_CURRENT_UNIT">
-<General TextContent="C" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="233" Bold="0" StartPt="184 372"/>
+<General TextContent="C" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="143" Bold="0" StartPt="184 372"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Rect" PartName="CARD_DESIRED">
 <General Area="252 258 456 450" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xffffff -1" BgColor="0xffffff -1" ActiveColor="0"/>
@@ -164,18 +164,18 @@ ENDIF
 <General StartPt="276 278" Width="46" Height="46" BmpIndex="141"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_DESIRED">
-<General TextContent="Desejada" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="233" Bold="1" StartPt="332 278"/>
+<General TextContent="Desejada" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="143" Bold="1" StartPt="332 278"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_DESIRED_SUB">
-<General TextContent="Setpoint" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="332 312"/>
+<General TextContent="Setpoint" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="332 312"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="NUM_1">
 <General Desc="NUM_0" Area="272 342 408 426" WordAddr="1:46" Fast="0" IsInput="0" WriteAddr="1:46" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xffffff 0" FrnColor="0x22c55e -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="0" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
-<DispFormat DispType="6" DigitCount="3 0" DataLimit="0 1148829696" DataRange="0.000000 999.000000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="304" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
+<DispFormat DispType="6" DigitCount="3 0" DataLimit="0 1148829696" DataRange="0.000000 999.000000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="164" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_DESIRED_UNIT">
-<General TextContent="C" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="233" Bold="0" StartPt="412 372"/>
+<General TextContent="C" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="143" Bold="0" StartPt="412 372"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Rect" PartName="CARD_TIME">
 <General Area="24 470 228 676" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xffffff -1" BgColor="0xffffff -1" ActiveColor="0"/>
@@ -187,15 +187,15 @@ ENDIF
 <General StartPt="48 498" Width="42" Height="42" BmpIndex="139"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_TIME">
-<General TextContent="Tempo" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="233" Bold="1" StartPt="104 498"/>
+<General TextContent="Tempo" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="143" Bold="1" StartPt="104 498"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="NUM_2">
 <General Desc="NUM_0" Area="48 570 166 642" WordAddr="1:4692" Fast="0" IsInput="0" WriteAddr="1:4692" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xffffff 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="1" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
-<DispFormat DispType="2" DigitCount="1 2" DataLimit="0 1092605706" DataRange="0.000000 9.990000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="262" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
+<DispFormat DispType="2" DigitCount="1 2" DataLimit="0 1092605706" DataRange="0.000000 9.990000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="164" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_TIME_UNIT">
-<General TextContent="min" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="170 595"/>
+<General TextContent="min" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="170 595"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Rect" PartName="CARD_MIN">
 <General Area="252 470 456 676" BorderColor="0xd7dee8 0" Pattern="1" FrnColor="0xffffff -1" BgColor="0xffffff -1" ActiveColor="0"/>
@@ -207,11 +207,11 @@ ENDIF
 <General StartPt="276 498" Width="42" Height="42" BmpIndex="145"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_MIN">
-<General TextContent="Min. esteira" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="233" Bold="1" StartPt="322 498"/>
+<General TextContent="Min. esteira" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="143" Bold="1" StartPt="322 498"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Numeric" PartName="NUM_3">
 <General Desc="NUM_0" Area="298 570 412 642" WordAddr="1:4690" Fast="0" IsInput="0" WriteAddr="1:4690" KbdScreen="1000" IsPopKeyBrod="0" FigureFile="" BorderColor="0xffffff 0" FrnColor="0xf172a -1" BgColor="0xffffff -1" BmpIndex="-1" Transparent="0" IsHideNum="0" HighZeroPad="1" IsShowPwd="0" UseGlint="0" GlintFgClr="0x0 0" ZeroNoDisplay="0" IsIndirectR="0" IsIndirectW="0" IsAddFrame="0" IsWordOrder="0"/>
-<DispFormat DispType="2" DigitCount="2 2" DataLimit="0 1120402145" DataRange="0.000000 99.990000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="262" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
+<DispFormat DispType="2" DigitCount="2 2" DataLimit="0 1120402145" DataRange="0.000000 99.990000" IsVar="0" Zoom="0" Mutiple="1.000000" Round="0" CharSize="164" IsInputLabelL="0" IsInputLabelR="0" IsInputDefault="0" bShowRange="0" IsVar1="0" ColorHText="0x0 0" ColorHBag="0x0 0" ColorLText="0x0 0" ColorLBag="0x0 0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" LockMode="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Rect" PartName="FOOTER_BG">
@@ -224,7 +224,7 @@ ENDIF
 <Label Status="0" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/>
 <Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_FOOT_EDIT">
-<General TextContent="Aj. Manual" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="44 764"/>
+<General TextContent="Aj. Manual" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="44 764"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="BitSwitch" PartName="BS_0">
 <General Desc="BS_0" Area="208 696 272 760" OperateAddr="ECO_ON" Fast="0" BitFunc="1" Monitor="1" MonitorAddr="ECO_ON" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 0" BmpIndex="123" LaStartPt="32 32" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
@@ -233,7 +233,7 @@ ENDIF
 <Label Status="0" Pattern="1" FrnColor="0xffffff 1" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/>
 <Label Status="1" Pattern="1" FrnColor="0xffffff 0" BgColor="0xffffff 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_FOOT_ECO">
-<General TextContent="Eco" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="226 764"/>
+<General TextContent="Eco" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="226 764"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_FOOT_RECIPE">
 <General Desc="FS_FOOT_RECIPE" Area="364 696 428 760" ScrSwitch="1" ScreenNo="8" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="TFT-type style\TFT001.pvg" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="30" LaStartPt="8 8" Transparent="0" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
@@ -241,7 +241,7 @@ ENDIF
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
 <PartInfo PartType="Text" PartName="TXT_FOOT_RECIPE">
-<General TextContent="Receitas" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="368 764"/>
+<General TextContent="Receitas" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="368 764"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="NewTimer" PartName="Timer_0">
 <General Area="9 101 51 153" Timer_Describe="config" Timer_Unit="1" Timer_FuncSwitch="master" Timer_TimerRun="config" Timer_SetTimerEdit="tempocofig" Timer_BitAddrEdit="outconfig" Timer_SetTimerCanChange="0" Timer_Repead_Trigger="0" Timer_BitAddr="1" Timer_WordAddr="0" Timer_PassedTime="0" Timer_ResetPassedTime="0" Const="1"/></PartInfo>

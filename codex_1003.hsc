@@ -10,10 +10,10 @@
 <General Area="0 0 280 96" BorderColor="0xf172a 0" Pattern="1" FrnColor="0xf172a -1" BgColor="0xf172a -1" ActiveColor="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_TITLE">
-<General TextContent="Menu" LaFrnColor="0xffffff -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="304" Bold="1" StartPt="20 20"/>
+<General TextContent="Menu" LaFrnColor="0xffffff -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="164" Bold="1" StartPt="20 20"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_SUBTITLE">
-<General TextContent="Navegacao" LaFrnColor="0xcbd5e1 -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="12 24" Bold="0" StartPt="20 58"/>
+<General TextContent="Navegacao" LaFrnColor="0xcbd5e1 -1" IsBackColor="0" BgColor="0xf172a 0" CharSize="6 12" Bold="0" StartPt="20 58"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Rect" PartName="DRAWER_ACCENT">
 <General Area="20 82 120 88" BorderColor="0x22c55e 0" Pattern="1" FrnColor="0x22c55e -1" BgColor="0x22c55e -1" ActiveColor="0"/>
@@ -33,10 +33,10 @@
 <General StartPt="28 116" Width="32" Height="32" BmpIndex="125"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_0">
-<General TextContent="Home" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 113"/>
+<General TextContent="Home" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8" Bold="1" StartPt="72 113"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_0">
-<General TextContent="Tela principal" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 137"/>
+<General TextContent="Tela principal" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="72 137"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_DRAWER_HOME">
 <General Desc="FS_DRAWER_HOME" Area="12 104 268 160" ScrSwitch="1" ScreenNo="0" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
@@ -53,10 +53,10 @@
 <General StartPt="28 178" Width="32" Height="32" BmpIndex="142"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_1">
-<General TextContent="Economico" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 175"/>
+<General TextContent="Economico" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8" Bold="1" StartPt="72 175"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_1">
-<General TextContent="Modo eco" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 199"/>
+<General TextContent="Modo eco" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="72 199"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_DRAWER_ECONOMICO">
 <General Desc="FS_DRAWER_ECONOMICO" Area="12 166 268 222" ScrSwitch="1" ScreenNo="2" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
@@ -73,10 +73,10 @@
 <General StartPt="28 240" Width="32" Height="32" BmpIndex="141"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_2">
-<General TextContent="Temperatura" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 237"/>
+<General TextContent="Temperatura" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8" Bold="1" StartPt="72 237"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_2">
-<General TextContent="Delta chama" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 261"/>
+<General TextContent="Delta chama" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="72 261"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_DRAWER_TEMPERATURA">
 <General Desc="FS_DRAWER_TEMPERATURA" Area="12 228 268 284" ScrSwitch="1" ScreenNo="4" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
@@ -93,10 +93,10 @@
 <General StartPt="28 302" Width="32" Height="32" BmpIndex="145"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_3">
-<General TextContent="Esteira" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 299"/>
+<General TextContent="Esteira" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8" Bold="1" StartPt="72 299"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_3">
-<General TextContent="Calibracao" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 323"/>
+<General TextContent="Calibracao" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="72 323"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_DRAWER_ESTEIRA">
 <General Desc="FS_DRAWER_ESTEIRA" Area="12 290 268 346" ScrSwitch="1" ScreenNo="6" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
@@ -113,10 +113,10 @@
 <General StartPt="28 364" Width="32" Height="32" BmpIndex="30"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_4">
-<General TextContent="Receitas" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 361"/>
+<General TextContent="Receitas" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8" Bold="1" StartPt="72 361"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_4">
-<General TextContent="Perfis" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 385"/>
+<General TextContent="Perfis" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="72 385"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_DRAWER_RECEITAS">
 <General Desc="FS_DRAWER_RECEITAS" Area="12 352 268 408" ScrSwitch="1" ScreenNo="8" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
@@ -133,10 +133,10 @@
 <General StartPt="28 426" Width="32" Height="32" BmpIndex="149"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_5">
-<General TextContent="Data e Hora" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 423"/>
+<General TextContent="Data e Hora" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8" Bold="1" StartPt="72 423"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_5">
-<General TextContent="Relogio" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 447"/>
+<General TextContent="Relogio" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="72 447"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_DRAWER_DATA_E_HORA">
 <General Desc="FS_DRAWER_DATA_E_HORA" Area="12 414 268 470" ScrSwitch="1" ScreenNo="3" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
@@ -153,10 +153,10 @@
 <General StartPt="28 488" Width="32" Height="32" BmpIndex="150"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_6">
-<General TextContent="Sistema" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 485"/>
+<General TextContent="Sistema" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8" Bold="1" StartPt="72 485"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_6">
-<General TextContent="Reset" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 509"/>
+<General TextContent="Reset" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="72 509"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_DRAWER_SISTEMA">
 <General Desc="FS_DRAWER_SISTEMA" Area="12 476 268 532" ScrSwitch="1" ScreenNo="5" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
@@ -173,10 +173,10 @@
 <General StartPt="28 550" Width="32" Height="32" BmpIndex="144"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_7">
-<General TextContent="Offset" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 547"/>
+<General TextContent="Offset" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8" Bold="1" StartPt="72 547"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_7">
-<General TextContent="Calibracao" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 571"/>
+<General TextContent="Calibracao" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="72 571"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_DRAWER_OFFSET">
 <General Desc="FS_DRAWER_OFFSET" Area="12 538 268 594" ScrSwitch="1" ScreenNo="7" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
@@ -193,10 +193,10 @@
 <General StartPt="28 612" Width="32" Height="32" BmpIndex="32"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_8">
-<General TextContent="Diagnostico" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 609"/>
+<General TextContent="Diagnostico" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8" Bold="1" StartPt="72 609"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_8">
-<General TextContent="Variaveis" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 633"/>
+<General TextContent="Variaveis" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="72 633"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_DRAWER_DIAGNOSTICO">
 <General Desc="FS_DRAWER_DIAGNOSTICO" Area="12 600 268 656" ScrSwitch="1" ScreenNo="30" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
@@ -213,10 +213,10 @@
 <General StartPt="28 674" Width="32" Height="32" BmpIndex="32"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_9">
-<General TextContent="Login" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 671"/>
+<General TextContent="Login" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8" Bold="1" StartPt="72 671"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_9">
-<General TextContent="Usuario" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 695"/>
+<General TextContent="Usuario" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="72 695"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_DRAWER_LOGIN">
 <General Desc="FS_DRAWER_LOGIN" Area="12 662 268 718" ScrSwitch="1" ScreenNo="1011" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
@@ -233,10 +233,10 @@
 <General StartPt="28 736" Width="32" Height="32" BmpIndex="146"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_10">
-<General TextContent="Manutencao" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 733"/>
+<General TextContent="Manutencao" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8" Bold="1" StartPt="72 733"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_10">
-<General TextContent="Validade" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 757"/>
+<General TextContent="Validade" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="6 12" Bold="0" StartPt="72 757"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_DRAWER_MANUTENCAO">
 <General Desc="FS_DRAWER_MANUTENCAO" Area="12 724 268 780" ScrSwitch="1" ScreenNo="1009" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
