@@ -219,7 +219,7 @@
 <General TextContent="Usuario" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 695"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_DRAWER_LOGIN">
-<General Desc="FS_DRAWER_LOGIN" Area="12 662 268 718" ScrSwitch="1" ScreenNo="1011" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<General Desc="FS_DRAWER_LOGIN" Area="12 662 268 718" ScrSwitch="0" FuncFunc="2" ScreenNo="-1" ScreenNo2="1011" PointPos="0 0" PopupScreenType="1" PopupCloseWithParent="1" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
 <Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="1" PartPasswordLev="1" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo>
@@ -239,7 +239,7 @@
 <General TextContent="Validade" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 757"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="FunctionSwitch" PartName="FS_DRAWER_MANUTENCAO">
-<General Desc="FS_DRAWER_MANUTENCAO" Area="12 724 268 780" ScrSwitch="1" ScreenNo="1009" ScreenNo2="-1" PointPos="0 0" PopupScreenType="0" PopupCloseWithParent="0" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
+<General Desc="FS_DRAWER_MANUTENCAO" Area="12 724 268 780" ScrSwitch="0" FuncFunc="2" ScreenNo="-1" ScreenNo2="1009" PointPos="0 0" PopupScreenType="1" PopupCloseWithParent="1" FigureFile="" BorderColor="0xffffff 16777215" FrnColor="0x0 0" BgColor="0x0 0" BmpIndex="-1" LaStartPt="0 0" Transparent="1" UseShowHide="0" HideType="0" IsHideAllTime="0"/>
 <Extension Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="1" IsSetLowerLev="1" PartPasswordLev="1" IsUseUserAuthority="0"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/>
 <Label Status="0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1"/></PartInfo></ScrInfo>
