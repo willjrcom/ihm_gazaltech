@@ -93,6 +93,7 @@
 		<PartPassword UsePassword="1" Default="0" Grade1="2601" Grade2="6384" Grade3="2601" Grade4="2601" Grade5="2601" Grade6="" Grade7="" Grade8="" Grade9="" Grade10="" Grade11="" Grade12="" GradeIndependent="0"/></SysSet>
 	<ScreenSet>
 <ScreenInfo ScrnNo="0" Child="0" ScrnName="inicial" Height="800" Width="480" Filled="1" BkColor="0x329492" FnColor="0xd8e9ec" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="0.hsc" Opened="1"/>
+<ScreenInfo ScrnNo="1" Child="0" ScrnName="menu" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="2" Child="0" ScrnName="config_modo_eco" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="2.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="3" Child="0" ScrnName="config_data" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="17.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="4" Child="0" ScrnName="config_temperatura" Height="800" Width="480" Filled="1" BkColor="0x8080" FnColor="0x0" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="4.hsc" Opened="0"/>
@@ -115,7 +116,7 @@
 <ScreenInfo ScrnNo="1000" Child="1" ScrnName="BuilNum" Height="800" Width="480" Filled="1" BkColor="0x800000" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1000.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="1001" Child="1" ScrnName="BuilKey" Height="660" Width="480" Filled="1" BkColor="0x800000" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1001.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="1002" Child="0" ScrnName="Common Window" Height="800" Width="480" Filled="1" BkColor="0xffffff" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1002.hsc" Opened="0"/>
-<ScreenInfo ScrnNo="1003" Child="1" ScrnName="Menu lateral" Height="800" Width="280" Filled="1" BkColor="0xffffff" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1003.hsc" Opened="0"/>
+<ScreenInfo ScrnNo="1003" Child="1" ScrnName="Fast Selection" Height="746" Width="59" Filled="1" BkColor="0xffffff" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1003.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="1004" Child="1" ScrnName="UserPwdKb" Height="616" Width="480" Filled="1" BkColor="0x800000" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1004.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="1006" Child="1" ScrnName="UserTimeKb" Height="796" Width="479" Filled="1" BkColor="0xcccccc" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1006.hsc" Opened="0"/>
 <ScreenInfo ScrnNo="1007" Child="1" ScrnName="UserTrdKb" Height="796" Width="479" Filled="1" BkColor="0xcccccc" FnColor="0xffffff" Pattern="0" BmpIndex="-1" RightClass="0" ScrnFile="1007.hsc" Opened="0"/>
