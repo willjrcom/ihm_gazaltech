@@ -33,7 +33,7 @@
 <General StartPt="28 116" Width="32" Height="32" BmpIndex="125"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_0">
-<General TextContent="Home" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 113"/>
+<General TextContent="Home" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12" Bold="1" StartPt="72 113"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_0">
 <General TextContent="Tela principal" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 137"/>
@@ -53,7 +53,7 @@
 <General StartPt="28 178" Width="32" Height="32" BmpIndex="142"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_1">
-<General TextContent="Economico" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 175"/>
+<General TextContent="Economico" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12" Bold="1" StartPt="72 175"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_1">
 <General TextContent="Modo eco" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 199"/>
@@ -73,7 +73,7 @@
 <General StartPt="28 240" Width="32" Height="32" BmpIndex="141"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_2">
-<General TextContent="Temperatura" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 237"/>
+<General TextContent="Temperatura" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12" Bold="1" StartPt="72 237"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_2">
 <General TextContent="Delta chama" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 261"/>
@@ -93,7 +93,7 @@
 <General StartPt="28 302" Width="32" Height="32" BmpIndex="145"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_3">
-<General TextContent="Esteira" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 299"/>
+<General TextContent="Esteira" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12" Bold="1" StartPt="72 299"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_3">
 <General TextContent="Calibracao" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 323"/>
@@ -113,7 +113,7 @@
 <General StartPt="28 364" Width="32" Height="32" BmpIndex="30"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_4">
-<General TextContent="Receitas" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 361"/>
+<General TextContent="Receitas" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12" Bold="1" StartPt="72 361"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_4">
 <General TextContent="Perfis" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 385"/>
@@ -133,7 +133,7 @@
 <General StartPt="28 426" Width="32" Height="32" BmpIndex="149"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_5">
-<General TextContent="Data e Hora" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 423"/>
+<General TextContent="Data e Hora" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12" Bold="1" StartPt="72 423"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_5">
 <General TextContent="Relogio" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 447"/>
@@ -153,7 +153,7 @@
 <General StartPt="28 488" Width="32" Height="32" BmpIndex="150"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_6">
-<General TextContent="Sistema" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 485"/>
+<General TextContent="Sistema" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12" Bold="1" StartPt="72 485"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_6">
 <General TextContent="Reset" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 509"/>
@@ -173,7 +173,7 @@
 <General StartPt="28 550" Width="32" Height="32" BmpIndex="144"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_7">
-<General TextContent="Offset" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 547"/>
+<General TextContent="Offset" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12" Bold="1" StartPt="72 547"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_7">
 <General TextContent="Calibracao" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 571"/>
@@ -193,7 +193,7 @@
 <General StartPt="28 612" Width="32" Height="32" BmpIndex="32"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_8">
-<General TextContent="Diagnostico" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 609"/>
+<General TextContent="Diagnostico" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12" Bold="1" StartPt="72 609"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_8">
 <General TextContent="Variaveis" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 633"/>
@@ -213,7 +213,7 @@
 <General StartPt="28 674" Width="32" Height="32" BmpIndex="32"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_9">
-<General TextContent="Login" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 671"/>
+<General TextContent="Login" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12" Bold="1" StartPt="72 671"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_9">
 <General TextContent="Usuario" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 695"/>
@@ -233,7 +233,7 @@
 <General StartPt="28 736" Width="32" Height="32" BmpIndex="146"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_TEXT_10">
-<General TextContent="Manutencao" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="14" Bold="1" StartPt="72 733"/>
+<General TextContent="Manutencao" LaFrnColor="0xf172a -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="12" Bold="1" StartPt="72 733"/>
 <MoveZoom DataFormatMZ="2" DataLimitMZ="0 1199570688" MutipleMZ="1.000000"/></PartInfo>
 <PartInfo PartType="Text" PartName="DRAWER_ITEM_SUB_10">
 <General TextContent="Validade" LaFrnColor="0x64748b -1" IsBackColor="0" BgColor="0xffffff 0" CharSize="8 16" Bold="0" StartPt="72 757"/>
