@@ -218,7 +218,7 @@
 <Label Status="0" Pattern="1" FrnColor="0xf4f7fb 0" BgColor="0xf4f7fb 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1" LaIndexID=""/>
 <Label Status="1" Pattern="1" FrnColor="0xf4f7fb 0" BgColor="0xf4f7fb 0" Bold="0" CharSize="6 12" LaFrnColor="0xffffff -1" LaIndexID=""/></PartInfo>
 <PartInfo PartType="NewTimer" PartName="Timer_0">
-<General Area="0 0 1 1" Timer_Describe="config" Timer_Unit="1" Timer_FuncSwitch="master" Timer_TimerRun="config" Timer_SetTimerEdit="tempocofig" Timer_BitAddrEdit="outconfig" Timer_SetTimerCanChange="0" Timer_Repead_Trigger="0" Timer_BitAddr="1" Timer_WordAddr="0" Timer_PassedTime="0" Timer_ResetPassedTime="0" Const="1"/></PartInfo>
+<General Area="0 0 1 1" Timer_Describe="config" Timer_Unit="1" Timer_FuncSwitch="master" Timer_TimerRun="config" Timer_SetTimerEdit="tempocofig" Timer_BitAddrEdit="outconfig" Timer_WordAddrEdit="timer_config_word" Timer_PassedTimeEdit="timer_config_passed" Timer_ResetPassedTimeEdit="timer_config_reset" Timer_SetTimerCanChange="0" Timer_Repead_Trigger="0" Timer_BitAddr="1" Timer_WordAddr="1" Timer_PassedTime="1" Timer_ResetPassedTime="1" Const="1"/></PartInfo>
 <PartInfo PartType="BitSwitch" PartName="BS_2">
 <General Desc="BS_1" Area="0 0 1 1" OperateAddr="config" Fast="0" BitFunc="2" Monitor="1" MonitorAddr="config" FigureFile="" BorderColor="0xcccccc 0" BmpIndex="-1" LaStartPt="25 25" BitShowReverse="0" UseGlint="0" UseShowHide="0" HideType="0" IsHideAllTime="0" IsIndirectR="0" IsIndirectW="0"/>
 <Extension IsCheck="0" Lockmate="0" DrawLock="0" IsShowGrayScale="0" LockMode="0" TouchState="1" Buzzer="1" IsUesPartPassword="0" IsSetLowerLev="0" IsUseUserAuthority="0"/>

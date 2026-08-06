@@ -80,7 +80,13 @@
 		<Address Index="82" AddrType="W" AddrVal="8180" TypeIndex="12" ConnIndex="-1" StatNO="-1" BitVal="0" Name="teste_debug"/>
 		<Address Index="83" AddrType="B" AddrVal="1000" TypeIndex="120" ConnIndex="-1" StatNO="-1" BitVal="1" Name="ECO_ON"/>
 		<Address Index="84" AddrType="B" AddrVal="1000" TypeIndex="120" ConnIndex="-1" StatNO="-1" BitVal="2" Name="ECO_OFF"/>
-		<Address Index="85" AddrType="B" AddrVal="1000" TypeIndex="120" ConnIndex="-1" StatNO="-1" BitVal="3" Name="ECO"/></AddressLib><StringLib Language="0"/><AlarmSet/>
+		<Address Index="85" AddrType="B" AddrVal="1000" TypeIndex="120" ConnIndex="-1" StatNO="-1" BitVal="3" Name="ECO"/>
+		<Address Index="86" AddrType="W" AddrVal="8181" TypeIndex="12" ConnIndex="-1" StatNO="-1" BitVal="0" Name="timer_config_word"/>
+		<Address Index="87" AddrType="W" AddrVal="8182" TypeIndex="12" ConnIndex="-1" StatNO="-1" BitVal="0" Name="timer_config_passed"/>
+		<Address Index="88" AddrType="B" AddrVal="1023" TypeIndex="120" ConnIndex="-1" StatNO="-1" BitVal="0" Name="timer_config_reset"/>
+		<Address Index="89" AddrType="W" AddrVal="8183" TypeIndex="12" ConnIndex="-1" StatNO="-1" BitVal="0" Name="timer_trans_word"/>
+		<Address Index="90" AddrType="W" AddrVal="8184" TypeIndex="12" ConnIndex="-1" StatNO="-1" BitVal="0" Name="timer_trans_passed"/>
+		<Address Index="91" AddrType="B" AddrVal="1024" TypeIndex="120" ConnIndex="-1" StatNO="-1" BitVal="0" Name="timer_trans_reset"/></AddressLib><StringLib Language="0"/><AlarmSet/>
 	<TrendSet/>
 	<XYSet/>
 	<DiscSet/>
